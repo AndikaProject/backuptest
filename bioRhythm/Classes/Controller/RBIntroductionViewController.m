@@ -14,10 +14,8 @@
 
 @property (strong, nonatomic) IBOutlet UIButton *buttonImIn;
 
-@property (strong, nonatomic) IBOutlet UIImageView *imageViewSleep;
-@property (strong, nonatomic) IBOutlet UIImageView *imageViewActivity;
-@property (strong, nonatomic) IBOutlet UIImageView *imageViewMental;
-@property (strong, nonatomic) IBOutlet UIImageView *imageViewBio;
+@property (strong, nonatomic) IBOutlet UIImageView *imageView;
+
 
 @end
 
@@ -44,16 +42,25 @@
     _buttonImIn.layer.borderColor = [UIColor colorWithRed:(79/255.0) green:(193/255.0) blue:(233/255.0) alpha:1].CGColor;
     
     // set image view
-    [_imageViewSleep setImage:[UIImage imageNamed:@"plan_icon_sleep_big.png"]];
-    [_imageViewActivity setImage:[UIImage imageNamed:@"plan_icon_activity_big.png"]];
-    [_imageViewMental setImage:[UIImage imageNamed:@"plan_icon_mental_big.png"]];
-    [_imageViewBio setImage:[UIImage imageNamed:@"plan_icon_bio_big.png"]];
+    [_imageView setImage:[UIImage imageNamed:@"all_plans.png"]];
 
     UISwipeGestureRecognizer *swipeleft = [[UISwipeGestureRecognizer alloc]initWithTarget:self action:@selector(swipeleft:)];
     swipeleft.direction = UISwipeGestureRecognizerDirectionLeft;
     [self.view addGestureRecognizer:swipeleft];
     
 }
+
+-(void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    [self.navigationController setNavigationBarHidden:YES];   //it hides
+}
+
+//-(void)viewWillDisappear:(BOOL)animated
+//{
+//    [super viewWillDisappear:animated];
+//    [self.navigationController setNavigationBarHidden:NO];    // it shows
+//}
 
 - (void)didReceiveMemoryWarning
 {

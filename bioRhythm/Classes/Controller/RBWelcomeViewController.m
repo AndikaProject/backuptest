@@ -13,6 +13,9 @@
 @property (strong, nonatomic) IBOutlet UIButton *buttonNewUser;
 @property (strong, nonatomic) IBOutlet UIButton *buttonExistingUser;
 
+@property (strong, nonatomic) IBOutlet UIImageView *imageViewTree;
+@property (strong, nonatomic) IBOutlet UIImageView *imageViewLogo;
+
 @property (assign) BOOL clicked;
 
 - (IBAction)buttonNewUserPressed:(id)sender;
@@ -37,8 +40,6 @@
     // Do any additional setup after loading the view.
     //[self.navigationController.navigationBar setBarTintColor:[UIColor whiteColor]];
     
-    //[[self navigationController] setNavigationBarHidden:YES animated:YES];
-    
     // set round corner button
     _buttonNewUser.layer.cornerRadius = 5;
     _buttonExistingUser.layer.cornerRadius = 5;
@@ -48,8 +49,23 @@
     
     // set border color
     _buttonExistingUser.layer.borderColor = [UIColor colorWithRed:(79/255.0) green:(193/255.0) blue:(233/255.0) alpha:1].CGColor;
-
+    
+    // set image view
+    [_imageViewTree setImage:[UIImage imageNamed:@"vitality_tree.png"]];
+    [_imageViewLogo setImage:[UIImage imageNamed:@"ASML_logo.png"]];
 }
+
+-(void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    [self.navigationController setNavigationBarHidden:YES];   //it hides
+}
+
+//-(void)viewWillDisappear:(BOOL)animated
+//{
+//    [super viewWillDisappear:animated];
+//    [self.navigationController setNavigationBarHidden:NO];    // it shows
+//}
 
 - (void)didReceiveMemoryWarning
 {

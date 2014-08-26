@@ -69,6 +69,13 @@
     
 }
 
+-(void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+    
+    [self.navigationController setNavigationBarHidden:NO];  // it shows navigation bar
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];

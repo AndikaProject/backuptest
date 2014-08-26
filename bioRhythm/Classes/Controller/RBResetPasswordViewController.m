@@ -9,15 +9,17 @@
 #import "RBResetPasswordViewController.h"
 
 #import "RBForgotPasswordSuccessViewController.h"
+#import "RBLoginViewController.h"
 
 @interface RBResetPasswordViewController ()
 @property (strong, nonatomic) IBOutlet UIButton *buttonResetPassword;
 @property (strong, nonatomic) IBOutlet UITextField *textFieldEmail;
 @property (strong, nonatomic) IBOutlet UILabel *labelUnknownEmail;
+@property (strong, nonatomic) IBOutlet UIButton *buttonBackToLogin;
 
 @property (strong, nonatomic) IBOutlet UIImageView *imageViewEmail;
 
-@property (strong, nonatomic) IBOutlet UINavigationBar *navigationBar;
+- (IBAction)buttonBackToLoginPressed:(id)sender;
 
 @end
 
@@ -46,11 +48,19 @@
     _imageViewEmail.layer.borderColor = [UIColor lightGrayColor].CGColor;
     _imageViewEmail.layer.cornerRadius = 5.0;
     
-    [_navigationBar setBarTintColor:[UIColor colorWithRed:(79/255.0) green:(193/255.0) blue:(233/255.0) alpha:1]];
-    
-    _navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName : [UIColor whiteColor]};
-    
 }
+
+-(void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    [self.navigationController setNavigationBarHidden:YES];   //it hides
+}
+
+//-(void)viewWillDisappear:(BOOL)animated
+//{
+//    [super viewWillDisappear:animated];
+//    [self.navigationController setNavigationBarHidden:NO];    // it shows
+//}
 
 - (void)didReceiveMemoryWarning
 {
@@ -69,7 +79,7 @@
     }
     else{
         RBForgotPasswordSuccessViewController *controller = [RBForgotPasswordSuccessViewController controllerWithStoryBoard:self.storyboard];
-        [self presentViewController:controller animated:YES completion:nil];
+        [self.navigationController pushViewController:controller animated:YES];
     }
 }
 
@@ -81,6 +91,12 @@
 - (IBAction)dismissKeypad:(id)sender
 {
     [_textFieldEmail resignFirstResponder];
+}
+
+- (IBAction)buttonBackToLoginPressed:(id)sender
+{
+    RBLoginViewController *controller = [RBLoginViewController controllerWithStoryBoard:self.storyboard];
+    [self.navigationController pushViewController:controller animated:YES];
 }
 
 
