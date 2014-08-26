@@ -58,6 +58,8 @@
     
     self.navigationController.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName : [UIColor whiteColor]};
     
+    [self.navigationController setNavigationBarHidden:NO]; // it shows nav bar
+    
     self.tabBarController.tabBar.barTintColor =  [UIColor colorWithRed:(79/255.0) green:(193/255.0) blue:(233/255.0) alpha:1];
     
     self.tabBarController.tabBar.tintColor = [UIColor whiteColor];
@@ -82,6 +84,18 @@
     
 }
 
+//-(void)viewWillAppear:(BOOL)animated
+//{
+//    [super viewWillAppear:animated];
+//    [self.navigationController setNavigationBarHidden:YES];   //it hides
+//}
+
+-(void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+    [self.navigationController setNavigationBarHidden:NO];    // it shows
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
@@ -102,7 +116,7 @@
 - (IBAction)buttonTestCal:(id)sender
 {
     RBCalibrationViewController *controller = [RBCalibrationViewController controllerWithStoryBoard:self.storyboard];
-    [self presentViewController:controller animated:YES completion:nil];
+    [self.navigationController pushViewController:controller animated:YES];
 
 }
 
