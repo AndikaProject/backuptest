@@ -1059,7 +1059,6 @@
         <!--Second View Controller - COACH-->
         <scene sceneID="yd5-om-srO">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="lGP-bj-D8q" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="RBSecondViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="qCe-Nj-BdS" customClass="RBSecondViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="myJ-F2-2E6">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
@@ -1334,6 +1333,7 @@
                         <outlet property="scrollerCoach" destination="eyh-pG-7Eo" id="BBf-1v-LPq"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lGP-bj-D8q" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-425" y="3481"/>
         </scene>
@@ -1788,6 +1788,15 @@
                     <view key="view" contentMode="scaleToFill" id="qGO-3P-aQW">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="UTf-IG-fvJ">
+                                <rect key="frame" x="139" y="298" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Blog" id="hWy-2i-AnO"/>
