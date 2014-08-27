@@ -70,9 +70,9 @@
 
 #pragma mark - action
 
-- (IBAction)buttonMenuPressed:(id)sender {
-    [self.slidingViewController anchorTopViewToRightAnimated:YES];
-}
+//- (IBAction)buttonMenuPressed:(id)sender {
+//    [self.slidingViewController anchorTopViewToRightAnimated:YES];
+//}
 
 
 /*

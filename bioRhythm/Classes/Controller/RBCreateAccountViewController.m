@@ -11,6 +11,7 @@
 #import "RBFirstCalIntroViewController.h"
 
 @interface RBCreateAccountViewController ()
+
 @property (strong, nonatomic) IBOutlet UIButton *buttonCreateAccount;
 @property (strong, nonatomic) IBOutlet UIButton *buttonTermsAndCondition;
 @property (strong, nonatomic) IBOutlet UILabel *labelPasswordDoNotMatch;
@@ -21,6 +22,9 @@
 @property (strong, nonatomic) IBOutlet UIImageView *imageViewEmail;
 @property (strong, nonatomic) IBOutlet UIImageView *imageViewPassword;
 @property (strong, nonatomic) IBOutlet UIImageView *imageViewRepeatPass;
+@property (strong, nonatomic) IBOutlet UIImageView *imageViewEmailField;
+@property (strong, nonatomic) IBOutlet UIImageView *imageViewPasswordField;
+@property (strong, nonatomic) IBOutlet UIImageView *imageViewRpasswordField;
 
 @end
 
@@ -45,9 +49,11 @@
     [_imageViewEmail setImage:[UIImage imageNamed:@"textField.png"]];
     [_imageViewPassword setImage:[UIImage imageNamed:@"textField.png"]];
     [_imageViewRepeatPass setImage:[UIImage imageNamed:@"textField.png"]];
+    [_imageViewEmailField setImage:[UIImage imageNamed:@"username.png"]];
+    [_imageViewPasswordField setImage:[UIImage imageNamed:@"password.png"]];
+    [_imageViewRpasswordField setImage:[UIImage imageNamed:@"password.png"]];
     
     // set border image
-    
     _imageViewEmail.layer.borderWidth = 1.0;
     _imageViewEmail.layer.borderColor = [UIColor lightGrayColor].CGColor;
     _imageViewEmail.layer.cornerRadius = 5.0;
@@ -84,22 +90,25 @@
 #pragma mark - action
 
 - (IBAction)buttonCreateAccountPressed:(id)sender {
+    
     NSString *password = _textFieldPassword.text;
     NSString *rpassword = _textFieldRepeatPassword.text;
+    NSString *email = _textFieldEmail.text;
     
-    if (password.length == 0 || rpassword.length == 0) {
+    if ((email.length == 0 && password.length == 0 && rpassword.length == 0) || (email.length != 0 && password.length == 0 && rpassword.length == 0) || (email.length != 0 && password.length != 0 && rpassword.length == 0))
+    {
+        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Warning" message:@"Please fill the all field" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+        [alertView show];
+    }
+    else if (![password isEqualToString:rpassword])
+    {
         _labelPasswordDoNotMatch.text = @"Password do not match";
     }
-    else
+    else if (([password isEqualToString:rpassword]) && (email.length != 0 && password.length != 0 && rpassword.length != 0))
     {
         RBFirstCalIntroViewController *controller = [RBFirstCalIntroViewController controllerWithStoryBoard:self.storyboard];
         [self.navigationController pushViewController:controller animated:YES];
     }
-//    }
-//    else if (checked == NO){
-//        alertView = [[UIAlertView alloc] initWithTitle:@"Warning" message:@"Agree and terms conditions is uncheck" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
-//        [alertView show];
-//    }
 }
 
 - (IBAction)buttonTACPressed:(id)sender {

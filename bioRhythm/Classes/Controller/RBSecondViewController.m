@@ -14,6 +14,12 @@
 
 @interface RBSecondViewController ()
 
+@property (strong, nonatomic) IBOutlet UILabel *labelFirstDescription;
+@property (strong, nonatomic) IBOutlet UILabel *labelFirstTime;
+@property (strong, nonatomic) IBOutlet UILabel *labelSecondDescription;
+@property (strong, nonatomic) IBOutlet UILabel *labelSecondTime;
+@property (strong, nonatomic) IBOutlet UILabel *labelThirdDescription;
+@property (strong, nonatomic) IBOutlet UILabel *labelThirdTime;
 @property (strong, nonatomic) IBOutlet UILabel *labelFourDescription;
 @property (strong, nonatomic) IBOutlet UILabel *labelFourTime;
 
@@ -69,10 +75,16 @@
     [self.navigationController.navigationBar setBarTintColor:[UIColor colorWithRed:(79/255.0) green:(193/255.0) blue:(233/255.0) alpha:1]];
     
     // set text to label description
+    self.labelFirstDescription.text = @"Mauris ipsum lectus, placerat id diam non, laoreet egestas tortor. Cras at ullamcorper turpis, sodales scelerisque libero. Quisque suscipit leo eu felis volutpat, sed aliquam nulla hendrerit.";
+    self.labelSecondDescription.text = @"Mauris ipsum lectus, placerat id diam non, laoreet egestas tortor. Cras at ullamcorper turpis, sodales scelerisque libero. Quisque suscipit leo eu felis volutpat, sed aliquam nulla hendrerit.";
+    self.labelThirdDescription.text = @"Mauris ipsum lectus, placerat id diam non, laoreet egestas tortor. Cras at ullamcorper turpis, sodales scelerisque libero. Quisque suscipit leo eu felis volutpat, sed aliquam nulla hendrerit.";
     self.labelFourDescription.text = @"Mauris ipsum lectus, placerat id diam non, laoreet egestas tortor. Cras at ullamcorper turpis, sodales scelerisque libero. Quisque suscipit leo eu felis volutpat, sed aliquam nulla hendrerit.";
     
     // set text to label time
-    self.labelFourTime.text = @"11:20";
+    self.labelFirstTime.text = @"22:20";
+    self.labelSecondTime.text = @"12:30";
+    self.labelThirdTime.text = @"08:00";
+    self.labelFourTime.text = @"Yesterday";
     
     // set progress view
     self.progressViewCoach.progress=0.15f;
@@ -104,9 +116,9 @@
 
 #pragma mark - action
 
-- (IBAction)buttonMenuPressed:(id)sender {
-    [self.slidingViewController anchorTopViewToRightAnimated:YES];
-}
+//- (IBAction)buttonMenuPressed:(id)sender {
+//    [self.slidingViewController anchorTopViewToRightAnimated:YES];
+//}
 
 - (IBAction)buttonFourPressed:(id)sender {
     UIAlertView *alertView4 = [[UIAlertView alloc] initWithTitle:@"Welcome!" message:@"Mauris ipsum lectus, placerat id diam non, laoreet egestas tortor. Cras at ullamcorper turpis, sodales scelerisque libero. Quisque suscipit leo eu felis volutpat, sed aliquam nulla hendrerit." delegate:nil cancelButtonTitle:@"Close" otherButtonTitles:nil, nil];

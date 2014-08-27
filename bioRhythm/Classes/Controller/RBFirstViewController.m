@@ -23,6 +23,8 @@
 @property (strong, nonatomic) IBOutlet UILabel *labelBioIcon;
 @property (strong, nonatomic) IBOutlet UILabel *labelBioPlan;
 
+@property (strong, nonatomic) IBOutlet UINavigationBar *navBar;
+
 @end
 
 @implementation RBFirstViewController
@@ -91,9 +93,9 @@
 
 #pragma mark - action
 
-- (IBAction)buttonMenuPressed:(id)sender {
-    [self.slidingViewController anchorTopViewToRightAnimated:YES];
-}
+//- (IBAction)buttonMenuPressed:(id)sender {
+//    [self.slidingViewController anchorTopViewToRightAnimated:YES];
+//}
 
 /*
  #pragma mark - Navigation

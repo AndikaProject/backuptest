@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "3C6417FD197A336F0066A389"
-               BuildableName = "bioRhythm.app"
+               BuildableName = "Brightr.app"
                BlueprintName = "Brightr"
                ReferencedContainer = "container:Brightr.xcodeproj">
             </BuildableReference>
@@ -33,7 +33,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "3C641818197A336F0066A389"
-               BuildableName = "bioRhythmTests.xctest"
+               BuildableName = "BrightrTests.xctest"
                BlueprintName = "BrightrTests"
                ReferencedContainer = "container:Brightr.xcodeproj">
             </BuildableReference>
@@ -43,7 +43,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "3C6417FD197A336F0066A389"
-            BuildableName = "bioRhythm.app"
+            BuildableName = "Brightr.app"
             BlueprintName = "Brightr"
             ReferencedContainer = "container:Brightr.xcodeproj">
          </BuildableReference>
@@ -62,7 +62,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "3C6417FD197A336F0066A389"
-            BuildableName = "bioRhythm.app"
+            BuildableName = "Brightr.app"
             BlueprintName = "Brightr"
             ReferencedContainer = "container:Brightr.xcodeproj">
          </BuildableReference>
@@ -80,7 +80,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "3C6417FD197A336F0066A389"
-            BuildableName = "bioRhythm.app"
+            BuildableName = "Brightr.app"
             BlueprintName = "Brightr"
             ReferencedContainer = "container:Brightr.xcodeproj">
          </BuildableReference>

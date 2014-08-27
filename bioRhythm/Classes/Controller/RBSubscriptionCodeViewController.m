@@ -81,11 +81,11 @@
 - (IBAction)buttonContinuePressed:(id)sender {
     NSString *subscription = _textFieldSubscription.text;
     
-    if (![subscription  isEqual: @"ASML123"])
+    if (![subscription  isEqual: @"ASML1234"])
     {
         _labelInvalidCode.text = @"Invalid code";
     }
-    else if ([subscription isEqual:@"ASML123"])
+    else if ([subscription isEqual:@"ASML1234"])
     {
         RBCreateAccountViewController *controller = [RBCreateAccountViewController controllerWithStoryBoard:self.storyboard];
         [self.navigationController pushViewController:controller animated:YES];
