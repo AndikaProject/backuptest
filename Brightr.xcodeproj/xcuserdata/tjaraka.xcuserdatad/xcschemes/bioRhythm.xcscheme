@@ -16,8 +16,8 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "3C6417FD197A336F0066A389"
                BuildableName = "bioRhythm.app"
-               BlueprintName = "bioRhythm"
-               ReferencedContainer = "container:bioRhythm.xcodeproj">
+               BlueprintName = "Brightr"
+               ReferencedContainer = "container:Brightr.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -34,8 +34,8 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "3C641818197A336F0066A389"
                BuildableName = "bioRhythmTests.xctest"
-               BlueprintName = "bioRhythmTests"
-               ReferencedContainer = "container:bioRhythm.xcodeproj">
+               BlueprintName = "BrightrTests"
+               ReferencedContainer = "container:Brightr.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -44,8 +44,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "3C6417FD197A336F0066A389"
             BuildableName = "bioRhythm.app"
-            BlueprintName = "bioRhythm"
-            ReferencedContainer = "container:bioRhythm.xcodeproj">
+            BlueprintName = "Brightr"
+            ReferencedContainer = "container:Brightr.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -63,8 +63,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "3C6417FD197A336F0066A389"
             BuildableName = "bioRhythm.app"
-            BlueprintName = "bioRhythm"
-            ReferencedContainer = "container:bioRhythm.xcodeproj">
+            BlueprintName = "Brightr"
+            ReferencedContainer = "container:Brightr.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -81,8 +81,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "3C6417FD197A336F0066A389"
             BuildableName = "bioRhythm.app"
-            BlueprintName = "bioRhythm"
-            ReferencedContainer = "container:bioRhythm.xcodeproj">
+            BlueprintName = "Brightr"
+            ReferencedContainer = "container:Brightr.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

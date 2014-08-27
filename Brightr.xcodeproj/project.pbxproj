@@ -42,7 +42,7 @@
 		3C64181C197A336F0066A389 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C641801197A336F0066A389 /* Foundation.framework */; };
 		3C64181D197A336F0066A389 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C641805197A336F0066A389 /* UIKit.framework */; };
 		3C641825197A336F0066A389 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3C641823197A336F0066A389 /* InfoPlist.strings */; };
-		3C641827197A336F0066A389 /* bioRhythmTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C641826197A336F0066A389 /* bioRhythmTests.m */; };
+		3C641827197A336F0066A389 /* BrightrTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C641826197A336F0066A389 /* BrightrTests.m */; };
 		3C8F788819820A040008C547 /* RBSideMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C8F788719820A040008C547 /* RBSideMenuViewController.m */; };
 		3C8F788B1982385E0008C547 /* RBSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C8F788A1982385E0008C547 /* RBSecondViewController.m */; };
 		3C8F788E1990ABDD0008C547 /* RBThirdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C8F788D1990ABDD0008C547 /* RBThirdViewController.m */; };
@@ -115,19 +115,19 @@
 		3C43088619A341B80085DD3A /* RBThirdCalIntroViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RBThirdCalIntroViewController.m; sourceTree = "<group>"; };
 		3C602954197EB5970024345A /* RBIntroductionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RBIntroductionViewController.h; sourceTree = "<group>"; };
 		3C602955197EB5970024345A /* RBIntroductionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RBIntroductionViewController.m; sourceTree = "<group>"; };
-		3C6417FE197A336F0066A389 /* bioRhythm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = bioRhythm.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3C6417FE197A336F0066A389 /* Brightr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Brightr.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C641801197A336F0066A389 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		3C641803197A336F0066A389 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		3C641805197A336F0066A389 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		3C641809197A336F0066A389 /* bioRhythm-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "bioRhythm-Info.plist"; sourceTree = "<group>"; };
+		3C641809197A336F0066A389 /* Brightr-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Brightr-Info.plist"; sourceTree = "<group>"; };
 		3C64180B197A336F0066A389 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		3C64180D197A336F0066A389 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		3C64180F197A336F0066A389 /* bioRhythm-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "bioRhythm-Prefix.pch"; sourceTree = "<group>"; };
-		3C641819197A336F0066A389 /* bioRhythmTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = bioRhythmTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3C64180F197A336F0066A389 /* Brightr-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Brightr-Prefix.pch"; sourceTree = "<group>"; };
+		3C641819197A336F0066A389 /* BrightrTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BrightrTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C64181A197A336F0066A389 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		3C641822197A336F0066A389 /* bioRhythmTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "bioRhythmTests-Info.plist"; sourceTree = "<group>"; };
+		3C641822197A336F0066A389 /* BrightrTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BrightrTests-Info.plist"; sourceTree = "<group>"; };
 		3C641824197A336F0066A389 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		3C641826197A336F0066A389 /* bioRhythmTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = bioRhythmTests.m; sourceTree = "<group>"; };
+		3C641826197A336F0066A389 /* BrightrTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BrightrTests.m; sourceTree = "<group>"; };
 		3C8F788619820A040008C547 /* RBSideMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RBSideMenuViewController.h; sourceTree = "<group>"; };
 		3C8F788719820A040008C547 /* RBSideMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RBSideMenuViewController.m; sourceTree = "<group>"; };
 		3C8F78891982385E0008C547 /* RBSecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RBSecondViewController.h; sourceTree = "<group>"; };
@@ -389,8 +389,8 @@
 			children = (
 				3C8F7DB71991F2560008C547 /* CorePlot */,
 				3C19E3C8197BB70A00B35857 /* ECSlidingViewController */,
-				3C641807197A336F0066A389 /* bioRhythm */,
-				3C641820197A336F0066A389 /* bioRhythmTests */,
+				3C641807197A336F0066A389 /* Brightr */,
+				3C641820197A336F0066A389 /* BrightrTests */,
 				3C641800197A336F0066A389 /* Frameworks */,
 				3C6417FF197A336F0066A389 /* Products */,
 			);
@@ -399,8 +399,8 @@
 		3C6417FF197A336F0066A389 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				3C6417FE197A336F0066A389 /* bioRhythm.app */,
-				3C641819197A336F0066A389 /* bioRhythmTests.xctest */,
+				3C6417FE197A336F0066A389 /* Brightr.app */,
+				3C641819197A336F0066A389 /* BrightrTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -416,7 +416,7 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		3C641807197A336F0066A389 /* bioRhythm */ = {
+		3C641807197A336F0066A389 /* Brightr */ = {
 			isa = PBXGroup;
 			children = (
 				3C19E3EE197C0D4900B35857 /* interfaces */,
@@ -424,33 +424,35 @@
 				3C19E35C197A629E00B35857 /* Resources */,
 				3C641808197A336F0066A389 /* Supporting Files */,
 			);
+			name = Brightr;
 			path = bioRhythm;
 			sourceTree = "<group>";
 		};
 		3C641808197A336F0066A389 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				3C641809197A336F0066A389 /* bioRhythm-Info.plist */,
+				3C641809197A336F0066A389 /* Brightr-Info.plist */,
 				3C64180A197A336F0066A389 /* InfoPlist.strings */,
 				3C64180D197A336F0066A389 /* main.m */,
-				3C64180F197A336F0066A389 /* bioRhythm-Prefix.pch */,
+				3C64180F197A336F0066A389 /* Brightr-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		3C641820197A336F0066A389 /* bioRhythmTests */ = {
+		3C641820197A336F0066A389 /* BrightrTests */ = {
 			isa = PBXGroup;
 			children = (
-				3C641826197A336F0066A389 /* bioRhythmTests.m */,
+				3C641826197A336F0066A389 /* BrightrTests.m */,
 				3C641821197A336F0066A389 /* Supporting Files */,
 			);
+			name = BrightrTests;
 			path = bioRhythmTests;
 			sourceTree = "<group>";
 		};
 		3C641821197A336F0066A389 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				3C641822197A336F0066A389 /* bioRhythmTests-Info.plist */,
+				3C641822197A336F0066A389 /* BrightrTests-Info.plist */,
 				3C641823197A336F0066A389 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
@@ -553,9 +555,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		3C6417FD197A336F0066A389 /* bioRhythm */ = {
+		3C6417FD197A336F0066A389 /* Brightr */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3C64182A197A336F0066A389 /* Build configuration list for PBXNativeTarget "bioRhythm" */;
+			buildConfigurationList = 3C64182A197A336F0066A389 /* Build configuration list for PBXNativeTarget "Brightr" */;
 			buildPhases = (
 				3C6417FA197A336F0066A389 /* Sources */,
 				3C6417FB197A336F0066A389 /* Frameworks */,
@@ -565,14 +567,14 @@
 			);
 			dependencies = (
 			);
-			name = bioRhythm;
+			name = Brightr;
 			productName = bioRhythm;
-			productReference = 3C6417FE197A336F0066A389 /* bioRhythm.app */;
+			productReference = 3C6417FE197A336F0066A389 /* Brightr.app */;
 			productType = "com.apple.product-type.application";
 		};
-		3C641818197A336F0066A389 /* bioRhythmTests */ = {
+		3C641818197A336F0066A389 /* BrightrTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3C64182D197A336F0066A389 /* Build configuration list for PBXNativeTarget "bioRhythmTests" */;
+			buildConfigurationList = 3C64182D197A336F0066A389 /* Build configuration list for PBXNativeTarget "BrightrTests" */;
 			buildPhases = (
 				3C641815197A336F0066A389 /* Sources */,
 				3C641816197A336F0066A389 /* Frameworks */,
@@ -583,9 +585,9 @@
 			dependencies = (
 				3C64181F197A336F0066A389 /* PBXTargetDependency */,
 			);
-			name = bioRhythmTests;
+			name = BrightrTests;
 			productName = bioRhythmTests;
-			productReference = 3C641819197A336F0066A389 /* bioRhythmTests.xctest */;
+			productReference = 3C641819197A336F0066A389 /* BrightrTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -603,7 +605,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 3C6417F9197A336F0066A389 /* Build configuration list for PBXProject "bioRhythm" */;
+			buildConfigurationList = 3C6417F9197A336F0066A389 /* Build configuration list for PBXProject "Brightr" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -616,8 +618,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				3C6417FD197A336F0066A389 /* bioRhythm */,
-				3C641818197A336F0066A389 /* bioRhythmTests */,
+				3C6417FD197A336F0066A389 /* Brightr */,
+				3C641818197A336F0066A389 /* BrightrTests */,
 			);
 		};
 /* End PBXProject section */
@@ -688,7 +690,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3C641827197A336F0066A389 /* bioRhythmTests.m in Sources */,
+				3C641827197A336F0066A389 /* BrightrTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -697,7 +699,7 @@
 /* Begin PBXTargetDependency section */
 		3C64181F197A336F0066A389 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 3C6417FD197A336F0066A389 /* bioRhythm */;
+			target = 3C6417FD197A336F0066A389 /* Brightr */;
 			targetProxy = 3C64181E197A336F0066A389 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -802,15 +804,15 @@
 					"$(PROJECT_DIR)/CorePlot_1.4/Binaries/MacOS",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "bioRhythm/bioRhythm-Prefix.pch";
-				INFOPLIST_FILE = "bioRhythm/bioRhythm-Info.plist";
+				GCC_PREFIX_HEADER = "bioRhythm/Brightr-Prefix.pch";
+				INFOPLIST_FILE = "bioRhythm/Brightr-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/CorePlot_1.4/Binaries/iOS",
 					"$(PROJECT_DIR)",
 				);
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Brightr;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -825,15 +827,15 @@
 					"$(PROJECT_DIR)/CorePlot_1.4/Binaries/MacOS",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "bioRhythm/bioRhythm-Prefix.pch";
-				INFOPLIST_FILE = "bioRhythm/bioRhythm-Info.plist";
+				GCC_PREFIX_HEADER = "bioRhythm/Brightr-Prefix.pch";
+				INFOPLIST_FILE = "bioRhythm/Brightr-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/CorePlot_1.4/Binaries/iOS",
 					"$(PROJECT_DIR)",
 				);
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Brightr;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -853,8 +855,8 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = "bioRhythmTests/bioRhythmTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				INFOPLIST_FILE = "bioRhythmTests/BrightrTests-Info.plist";
+				PRODUCT_NAME = BrightrTests;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -871,8 +873,8 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "bioRhythm/bioRhythm-Prefix.pch";
-				INFOPLIST_FILE = "bioRhythmTests/bioRhythmTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				INFOPLIST_FILE = "bioRhythmTests/BrightrTests-Info.plist";
+				PRODUCT_NAME = BrightrTests;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -881,7 +883,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		3C6417F9197A336F0066A389 /* Build configuration list for PBXProject "bioRhythm" */ = {
+		3C6417F9197A336F0066A389 /* Build configuration list for PBXProject "Brightr" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3C641828197A336F0066A389 /* Debug */,
@@ -890,7 +892,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3C64182A197A336F0066A389 /* Build configuration list for PBXNativeTarget "bioRhythm" */ = {
+		3C64182A197A336F0066A389 /* Build configuration list for PBXNativeTarget "Brightr" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3C64182B197A336F0066A389 /* Debug */,
@@ -899,7 +901,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3C64182D197A336F0066A389 /* Build configuration list for PBXNativeTarget "bioRhythmTests" */ = {
+		3C64182D197A336F0066A389 /* Build configuration list for PBXNativeTarget "BrightrTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3C64182E197A336F0066A389 /* Debug */,
