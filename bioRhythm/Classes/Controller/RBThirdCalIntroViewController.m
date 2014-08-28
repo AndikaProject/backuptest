@@ -99,14 +99,19 @@
 
 - (IBAction)buttonCalibrate:(id)sender
 {
+//    RBSecondViewController *controller = [RBSecondViewController controllerWithStoryBoard:self.storyboard];
+//    [self.navigationController pushViewController:controller animated:YES];
+//    [self dismissViewControllerAnimated:YES completion:nil];
     RBSecondViewController *controller = [RBSecondViewController controllerWithStoryBoard:self.storyboard];
-    [self.navigationController pushViewController:controller animated:YES];
+   [self.navigationController pushViewController:controller animated:YES];
+    
 }
 
 - (IBAction)buttonSkip:(id)sender
 {
-    RBFirstViewController *controller = [RBFirstViewController controllerWithStoryBoard:self.storyboard];
-    [self.navigationController pushViewController:controller animated:YES];
+//    RBPlanNavigationViewController *controller = [RBPlanNavigationViewController controllerWithStoryBoard:self.storyboard];
+//    [self.navigationController pushViewController:controller animated:YES];
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 /*

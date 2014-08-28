@@ -10,4 +10,6 @@
 
 @interface RBWeeksSleepPlanViewController : UIViewController
 
++ (instancetype)controllerWithStoryBoard:(UIStoryboard *)storyboard;
+
 @end

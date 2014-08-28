@@ -46,6 +46,12 @@
 
 @implementation RBWeeksSleepPlanViewController
 
++ (instancetype)controllerWithStoryBoard:(UIStoryboard *)storyboard {
+    RBWeeksSleepPlanViewController *controller = [storyboard instantiateViewControllerWithIdentifier:@"RBWeeksSleepPlanViewController"];
+    
+    return controller;
+}
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -59,6 +65,8 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    [self.tabBarController.tabBar setHidden:NO];
     
     [_navigationBar setBarTintColor:[UIColor colorWithRed:(79/255.0) green:(193/255.0) blue:(233/255.0) alpha:1]];
     _navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName : [UIColor whiteColor]};

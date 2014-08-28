@@ -52,6 +52,8 @@
 		3CA870F519A7054B00B29070 /* RBWeeksSleepPlanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CA870F419A7054B00B29070 /* RBWeeksSleepPlanViewController.m */; };
 		3CA870F819A7295600B29070 /* RBStopCalibrationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CA870F719A7295600B29070 /* RBStopCalibrationViewController.m */; };
 		3CA870FB19A734F700B29070 /* RBCalDoneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CA870FA19A734F700B29070 /* RBCalDoneViewController.m */; };
+		AEBD8C5F19AED4AD00F4C235 /* RBPopUpSleepPlanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AEBD8C5E19AED4AD00F4C235 /* RBPopUpSleepPlanViewController.m */; };
+		AEBD8C6219AED81B00F4C235 /* RBManualInputViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AEBD8C6119AED81B00F4C235 /* RBManualInputViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -223,6 +225,10 @@
 		3CA870F719A7295600B29070 /* RBStopCalibrationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RBStopCalibrationViewController.m; sourceTree = "<group>"; };
 		3CA870F919A734F700B29070 /* RBCalDoneViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RBCalDoneViewController.h; sourceTree = "<group>"; };
 		3CA870FA19A734F700B29070 /* RBCalDoneViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RBCalDoneViewController.m; sourceTree = "<group>"; };
+		AEBD8C5D19AED4AD00F4C235 /* RBPopUpSleepPlanViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RBPopUpSleepPlanViewController.h; sourceTree = "<group>"; };
+		AEBD8C5E19AED4AD00F4C235 /* RBPopUpSleepPlanViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RBPopUpSleepPlanViewController.m; sourceTree = "<group>"; };
+		AEBD8C6019AED81B00F4C235 /* RBManualInputViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RBManualInputViewController.h; sourceTree = "<group>"; };
+		AEBD8C6119AED81B00F4C235 /* RBManualInputViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RBManualInputViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -312,6 +318,10 @@
 				3CA870F719A7295600B29070 /* RBStopCalibrationViewController.m */,
 				3CA870F919A734F700B29070 /* RBCalDoneViewController.h */,
 				3CA870FA19A734F700B29070 /* RBCalDoneViewController.m */,
+				AEBD8C5D19AED4AD00F4C235 /* RBPopUpSleepPlanViewController.h */,
+				AEBD8C5E19AED4AD00F4C235 /* RBPopUpSleepPlanViewController.m */,
+				AEBD8C6019AED81B00F4C235 /* RBManualInputViewController.h */,
+				AEBD8C6119AED81B00F4C235 /* RBManualInputViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -666,6 +676,7 @@
 				3C19E3D9197BB70A00B35857 /* ECSlidingSegue.m in Sources */,
 				3C43088419A33FB30085DD3A /* RBSecondCalIntroViewController.m in Sources */,
 				3C19E361197A629E00B35857 /* RBAppDelegate.m in Sources */,
+				AEBD8C6219AED81B00F4C235 /* RBManualInputViewController.m in Sources */,
 				3CA870F519A7054B00B29070 /* RBWeeksSleepPlanViewController.m in Sources */,
 				3C8F788819820A040008C547 /* RBSideMenuViewController.m in Sources */,
 				3C19E3DA197BB70A00B35857 /* ECSlidingViewController.m in Sources */,
@@ -683,6 +694,7 @@
 				3CA870FB19A734F700B29070 /* RBCalDoneViewController.m in Sources */,
 				3C19E3EA197C0A9200B35857 /* RBResetPasswordViewController.m in Sources */,
 				3C43088719A341B80085DD3A /* RBThirdCalIntroViewController.m in Sources */,
+				AEBD8C5F19AED4AD00F4C235 /* RBPopUpSleepPlanViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

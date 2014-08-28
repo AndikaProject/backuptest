@@ -59,6 +59,10 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
+    self.navigationItem.hidesBackButton = YES;
+    
+    [self.tabBarController.tabBar setHidden:NO];
+    
     [self.slidingViewController.topViewController.view addGestureRecognizer:self.slidingViewController.panGesture];
     self.slidingViewController.topViewAnchoredGesture = ECSlidingViewControllerAnchoredGestureTapping | ECSlidingViewControllerAnchoredGesturePanning;
     
@@ -66,9 +70,9 @@
     
     [self.navigationController setNavigationBarHidden:NO]; // it shows nav bar
     
-    self.tabBarController.tabBar.barTintColor =  [UIColor colorWithRed:(79/255.0) green:(193/255.0) blue:(233/255.0) alpha:1];
-    
-    self.tabBarController.tabBar.tintColor = [UIColor whiteColor];
+//    self.tabBarController.tabBar.barTintColor =  [UIColor colorWithRed:(79/255.0) green:(193/255.0) blue:(233/255.0) alpha:1];
+//    
+//    [[UITabBar appearance] setTintColor:[UIColor whiteColor]];
     
     [_scrollerCoach setScrollEnabled:YES];
     
@@ -105,7 +109,7 @@
 -(void)viewWillDisappear:(BOOL)animated
 {
     [super viewWillDisappear:animated];
-    [self.navigationController setNavigationBarHidden:NO];    // it shows
+    [self.navigationController setNavigationBarHidden:NO]; // it shows
 }
 
 - (void)didReceiveMemoryWarning

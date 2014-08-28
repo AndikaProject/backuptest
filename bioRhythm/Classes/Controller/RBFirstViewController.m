@@ -9,6 +9,7 @@
 #import "RBFirstViewController.h"
 
 #import "RBCalibrationViewController.h"
+#import "RBPopUpSleepPlanViewController.h"
 
 #import "UIViewController+ECSlidingViewController.h"
 
@@ -23,7 +24,11 @@
 @property (strong, nonatomic) IBOutlet UILabel *labelBioIcon;
 @property (strong, nonatomic) IBOutlet UILabel *labelBioPlan;
 
-@property (strong, nonatomic) IBOutlet UINavigationBar *navBar;
+//@property (strong, nonatomic) IBOutlet UINavigationBar *navBar;
+
+@property (strong, nonatomic) IBOutlet UIButton *buttonSleep;
+
+- (IBAction)buttonSleepPressed:(id)sender;
 
 @end
 
@@ -52,13 +57,19 @@
 //    self.labelMental.textColor = [UIColor colorWithRed:(97/255.0) green:(65/255.0) blue:(38/255.0) alpha:1];
 //    self.labelBioPlan.textColor = [UIColor colorWithRed:(255/255.0) green:(0/255.0) blue:(0/255.0) alpha:1];
     
+    [self.tabBarController.tabBar setHidden:NO];
+    
+    self.navigationItem.hidesBackButton = YES;
+    
     [self.navigationController.navigationBar setBarTintColor:[UIColor colorWithRed:(79/255.0) green:(193/255.0) blue:(233/255.0) alpha:1]];
     
     self.navigationController.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName : [UIColor whiteColor]};
     
-    self.tabBarController.tabBar.barTintColor =  [UIColor colorWithRed:(79/255.0) green:(193/255.0) blue:(233/255.0) alpha:1];
+//    self.tabBarController.tabBar.barTintColor =  [UIColor colorWithRed:(59/255.0) green:(175/255.0) blue:(218/255.0) alpha:1];
+//    
+//        [[UITabBar appearance] setTintColor:[UIColor whiteColor]];
     
-    [[UITabBarItem appearance] setTitleTextAttributes:@{NSFontAttributeName : [UIFont fontWithName:@"HelveticaNeue-Bold" size:10.0f],NSForegroundColorAttributeName : [UIColor whiteColor]} forState:UIControlStateNormal];
+//    [[UITabBarItem appearance] setTitleTextAttributes:@{NSFontAttributeName : [UIFont fontWithName:@"HelveticaNeue-Bold" size:10.0f],NSForegroundColorAttributeName : [UIColor whiteColor]} forState:UIControlStateNormal];
     
     [self.navigationController setNavigationBarHidden:NO];    // it shows nav bar
 
@@ -96,6 +107,19 @@
 //- (IBAction)buttonMenuPressed:(id)sender {
 //    [self.slidingViewController anchorTopViewToRightAnimated:YES];
 //}
+
+- (IBAction)buttonSleepPressed:(id)sender
+{
+    CATransition* transition = [CATransition animation];
+    transition.duration = 0.3f;
+    transition.type = kCATransitionMoveIn;
+    transition.subtype = kCATransitionFromTop;
+    [self.navigationController.view.layer addAnimation:transition
+                                                forKey:kCATransition];
+    
+    RBPopUpSleepPlanViewController *controller = [RBPopUpSleepPlanViewController controllerWithStoryBoard:self.storyboard];
+    [self.navigationController pushViewController:controller animated:NO];
+}
 
 /*
  #pragma mark - Navigation

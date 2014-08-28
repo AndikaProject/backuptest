@@ -30,6 +30,8 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
+//    [[UITabBar appearance] setTintColor:[UIColor whiteColor]];
+    
     [self.slidingViewController.topViewController.view addGestureRecognizer:self.slidingViewController.panGesture];
     self.slidingViewController.topViewAnchoredGesture = ECSlidingViewControllerAnchoredGestureTapping | ECSlidingViewControllerAnchoredGesturePanning;
     
