@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface RBManualInputViewController : UIViewController
+@interface RBManualInputViewController : UIViewController <UIPickerViewDelegate, UIPickerViewDataSource>
 
 + (instancetype)controllerWithStoryBoard:(UIStoryboard *)storyboard;
 

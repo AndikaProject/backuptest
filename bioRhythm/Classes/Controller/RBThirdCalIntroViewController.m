@@ -11,6 +11,7 @@
 #import "RBFirstViewController.h"
 #import "RBSecondViewController.h"
 #import "RBSecondCalIntroViewController.h"
+#import "RBHomeTabBarController.h"
 
 @interface RBThirdCalIntroViewController ()
 
@@ -101,9 +102,9 @@
 {
 //    RBSecondViewController *controller = [RBSecondViewController controllerWithStoryBoard:self.storyboard];
 //    [self.navigationController pushViewController:controller animated:YES];
-//    [self dismissViewControllerAnimated:YES completion:nil];
-    RBSecondViewController *controller = [RBSecondViewController controllerWithStoryBoard:self.storyboard];
-   [self.navigationController pushViewController:controller animated:YES];
+    [self dismissViewControllerAnimated:YES completion:nil];
+//    RBSecondViewController *controller = [RBSecondViewController controllerWithStoryBoard:self.storyboard];
+//   [self.navigationController pushViewController:controller animated:YES];
     
 }
 
@@ -112,6 +113,8 @@
 //    RBPlanNavigationViewController *controller = [RBPlanNavigationViewController controllerWithStoryBoard:self.storyboard];
 //    [self.navigationController pushViewController:controller animated:YES];
     [self dismissViewControllerAnimated:YES completion:nil];
+    
+    //self.tabBarController.selectedIndex = 0;
 }
 
 /*

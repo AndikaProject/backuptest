@@ -30,6 +30,8 @@
     
     [UITabBarItem.appearance setTitleTextAttributes:
      @{NSForegroundColorAttributeName : [UIColor whiteColor]} forState:UIControlStateNormal];
+    
+    self.selectedIndex = 1;
 
 }
 

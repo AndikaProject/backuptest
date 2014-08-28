@@ -74,8 +74,6 @@
 //    
 //    [[UITabBar appearance] setTintColor:[UIColor whiteColor]];
     
-    [_scrollerCoach setScrollEnabled:YES];
-    
     [self.navigationController.navigationBar setBarTintColor:[UIColor colorWithRed:(79/255.0) green:(193/255.0) blue:(233/255.0) alpha:1]];
     
     // set text to label description
@@ -92,11 +90,6 @@
     
     // set progress view
     self.progressViewCoach.progress=0.15f;
-    
-}
-
-- (void) viewDidAppear:(BOOL)animated {
-    [_scrollerCoach setContentSize:CGSizeMake(320, 640)];
     
 }
 

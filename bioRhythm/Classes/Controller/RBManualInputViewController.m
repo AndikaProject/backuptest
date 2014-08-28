@@ -13,10 +13,16 @@
 
 @interface RBManualInputViewController ()
 
+@property (strong, nonatomic) NSArray *arrayHour;
+@property (strong, nonatomic) NSArray *arrayMinute;
+
 @property (strong, nonatomic) IBOutlet UINavigationBar *navBar;
 
 @property (strong, nonatomic) IBOutlet UIBarButtonItem *buttonClose;
 @property (strong, nonatomic) IBOutlet UIButton *buttonStart;
+
+@property (strong, nonatomic) IBOutlet UIPickerView *pickerViewHour;
+@property (strong, nonatomic) IBOutlet UIPickerView *pickerViewMinute;
 
 - (IBAction)buttonClosePressed:(id)sender;
 - (IBAction)buttonStartPressed:(id)sender;
@@ -50,6 +56,16 @@
     
     // set round corner button
     _buttonStart.layer.cornerRadius = 5;
+    
+    // array jam
+    NSArray *dataHour = [[NSArray alloc] initWithObjects:@"01", @"02", @"03", @"04", @"05", @"06", @"07", @"08", @"09", @"10", @"11", @"12", nil];
+    
+    self.arrayHour = dataHour;
+    
+    // array menit
+    NSArray *dataMinute = [[NSArray alloc] initWithObjects:@"00", @"01", @"02", @"03", @"04", @"05", @"06", @"07", @"08", @"09", @"10", @"11", @"12", @"13", @"14", @"15", @"16", @"17", @"18", @"19", @"20", @"21", @"22", @"23", @"24", @"25", @"26", @"27", @"28", @"29", @"30", @"31", @"32", @"33", @"34", @"35", @"36", @"37", @"38", @"39", @"40", @"41", @"42", @"43", @"44", @"45", @"46", @"47", @"48", @"49", @"50", @"51", @"52", @"53", @"54", @"55", @"56", @"57", @"58", @"59", nil];
+    
+    self.arrayMinute = dataMinute;
 }
 
 -(void)viewWillAppear:(BOOL)animated
@@ -69,6 +85,53 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+#pragma  mark - picker data source methods
+
+- (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView {
+    return 3;
+}
+
+- (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component{
+    
+    NSInteger numberOfRows;
+    if (component == 0)
+    {
+        numberOfRows = [_arrayHour count];
+    }
+    else if (component == 2)
+    {
+        numberOfRows = [_arrayMinute count];
+    }
+    else
+    {
+        numberOfRows = 1;
+    }
+    return numberOfRows;
+    
+}
+
+#pragma mark - picker delegate methods
+
+- (NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component {
+    
+    NSString* title;
+    switch (component) {
+        case 0:
+            title = self.arrayHour[row];
+            break;
+        case 2:
+            title = self.arrayMinute[row];
+            break;
+        case 1:
+            title = @":";
+            break;
+        default:
+            break;
+    }
+    return title;
+    
 }
 
 #pragma mark - action

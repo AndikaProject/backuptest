@@ -71,6 +71,11 @@
     [_navigationBar setBarTintColor:[UIColor colorWithRed:(79/255.0) green:(193/255.0) blue:(233/255.0) alpha:1]];
     _navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName : [UIColor whiteColor]};
     
+    // set image view
+    [_imageViewFirst setImage:[UIImage imageNamed:@"_clock.png"]];
+    [_imageViewSecond setImage:[UIImage imageNamed:@"_goal.png"]];
+    [_imageViewThird setImage:[UIImage imageNamed:@"_performance.png"]];
+    
     // weeks chart
     self.labelWeeksBar0.backgroundColor = [UIColor colorWithRed:(79/255.0) green:(193/255.0) blue:(233/255.0) alpha:1];
     self.labelWeeksBar0.text = @"";
@@ -149,6 +154,12 @@
         [self.labelSleepTime setText:@"4:57"];
         [self.labelGoalTime setText:@"6:10"];
         [self.labelPerfPercent setText:@"76%"];
+        
+        // set image view
+        [_imageViewFirst setImage:[UIImage imageNamed:@"_clock.png"]];
+        [_imageViewSecond setImage:[UIImage imageNamed:@"_goal.png"]];
+        [_imageViewThird setImage:[UIImage imageNamed:@"_performance.png"]];
+        
     }
     else{
         [self.labelSleepTime setText:@"6:10"];
@@ -157,6 +168,10 @@
         
         [self.labelFirst setText:@"Week goal"];
         [self.labelSecond setText:@"Average per night"];
+        
+        [_imageViewFirst setImage:[UIImage imageNamed:@"_goal.png"]];
+        [_imageViewSecond setImage:[UIImage imageNamed:@"_clock.png"]];
+        [_imageViewThird setImage:[UIImage imageNamed:@"_performance.png"]];
     }
 }
 
