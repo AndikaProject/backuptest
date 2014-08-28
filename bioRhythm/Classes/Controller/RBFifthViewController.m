@@ -36,7 +36,7 @@
 }
 
 - (void)viewDidAppear:(BOOL)animated{
-    [_scrollerView setContentSize:CGSizeMake(320, 1000)];
+    [_scrollerView setContentSize:CGSizeMake(320, 528)];
 }
 
 - (void)didReceiveMemoryWarning
@@ -86,7 +86,7 @@
     }
     else if (indexPath.section == 1) {
     
-    RBSettingsCustomCell *cell = [tableView dequeueReusableCellWithIdentifier:@"RBSettingsCustomCell"];
+       RBSettingsCustomCell *cell = [tableView dequeueReusableCellWithIdentifier:@"RBSettingsCustomCell"];
     
        switch (indexPath.row) {
            case 0:

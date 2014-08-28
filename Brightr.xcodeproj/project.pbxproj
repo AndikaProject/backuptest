@@ -56,7 +56,7 @@
 		AEBD8C6219AED81B00F4C235 /* RBManualInputViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AEBD8C6119AED81B00F4C235 /* RBManualInputViewController.m */; };
 		AEBD8C6B19AF2C1300F4C235 /* RBFifthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AEBD8C6A19AF2C1300F4C235 /* RBFifthViewController.m */; };
 		AEBD8C7019AF2F5E00F4C235 /* RBSettingsCustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AEBD8C6F19AF2F5E00F4C235 /* RBSettingsCustomCell.m */; };
-		AEBD8C7319AF3C5500F4C235 /* RBSettingCustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AEBD8C7519AF3C5500F4C235 /* RBSettingCustomCell.xib */; };
+		AEBD8CE519AF3F6B00F4C235 /* RBSettingsCustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AEBD8CE419AF3F6B00F4C235 /* RBSettingsCustomCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -236,7 +236,7 @@
 		AEBD8C6A19AF2C1300F4C235 /* RBFifthViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RBFifthViewController.m; sourceTree = "<group>"; };
 		AEBD8C6E19AF2F5E00F4C235 /* RBSettingsCustomCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RBSettingsCustomCell.h; sourceTree = "<group>"; };
 		AEBD8C6F19AF2F5E00F4C235 /* RBSettingsCustomCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RBSettingsCustomCell.m; sourceTree = "<group>"; };
-		AEBD8C7419AF3C5500F4C235 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/RBSettingCustomCell.xib; sourceTree = "<group>"; };
+		AEBD8CE419AF3F6B00F4C235 /* RBSettingsCustomCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RBSettingsCustomCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -402,7 +402,7 @@
 			isa = PBXGroup;
 			children = (
 				3C19E3EF197C0D8C00B35857 /* RBMenuCustomCell.xib */,
-				AEBD8C7519AF3C5500F4C235 /* RBSettingCustomCell.xib */,
+				AEBD8CE419AF3F6B00F4C235 /* RBSettingsCustomCell.xib */,
 			);
 			name = interfaces;
 			sourceTree = "<group>";
@@ -652,11 +652,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AEBD8C7319AF3C5500F4C235 /* RBSettingCustomCell.xib in Resources */,
 				3C19E363197A629E00B35857 /* Images.xcassets in Resources */,
 				3C19E3F0197C0D8C00B35857 /* RBMenuCustomCell.xib in Resources */,
 				3C64180C197A336F0066A389 /* InfoPlist.strings in Resources */,
 				3C19E362197A629E00B35857 /* main.storyboard in Resources */,
+				AEBD8CE519AF3F6B00F4C235 /* RBSettingsCustomCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -747,14 +747,6 @@
 				3C641824197A336F0066A389 /* en */,
 			);
 			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		AEBD8C7519AF3C5500F4C235 /* RBSettingCustomCell.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				AEBD8C7419AF3C5500F4C235 /* en */,
-			);
-			name = RBSettingCustomCell.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
