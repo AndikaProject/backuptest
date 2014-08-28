@@ -12,8 +12,6 @@
 
 + (instancetype)controllerWithStoryBoard:(UIStoryboard *)storyboard;
 
-@property (strong, nonatomic) IBOutlet UIScrollView *scrollerLogin;
-
 -(IBAction)textFieldReturn:(id)sender;
 
 @end
