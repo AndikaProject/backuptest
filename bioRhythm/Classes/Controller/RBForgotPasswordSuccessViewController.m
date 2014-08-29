@@ -16,8 +16,6 @@
 
 @property (strong, nonatomic) IBOutlet UIImageView *imageViewCheck;
 
-@property (strong, nonatomic) IBOutlet UINavigationBar *navigationBar;
-
 @end
 
 @implementation RBForgotPasswordSuccessViewController
@@ -32,10 +30,6 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
-    [_navigationBar setBarTintColor:[UIColor colorWithRed:(79/255.0) green:(193/255.0) blue:(233/255.0) alpha:1]];
-    
-    _navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName : [UIColor whiteColor]};
     
     // set round corner button
     _buttonGoToLogin.layer.cornerRadius = 5;

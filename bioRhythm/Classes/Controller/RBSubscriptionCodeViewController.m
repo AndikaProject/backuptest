@@ -18,7 +18,7 @@
 @property (strong, nonatomic) IBOutlet UITextField *textFieldSubscription;
 
 @property (strong, nonatomic) IBOutlet UIImageView *imageView;
-
+@property (strong, nonatomic) IBOutlet UIImageView *imageViewIcon;
 @property (strong, nonatomic) IBOutlet UIImageView *imageViewLogo;
 
 @end
@@ -43,6 +43,7 @@
     // set image view
     [_imageView setImage:[UIImage imageNamed:@"textField.png"]];
     [_imageViewLogo setImage:[UIImage imageNamed:@"ASML_logo.png"]];
+    [_imageViewIcon setImage:[UIImage imageNamed:@"password.png"]];
     
     // set border image
     #define kBorderWidth 1.0

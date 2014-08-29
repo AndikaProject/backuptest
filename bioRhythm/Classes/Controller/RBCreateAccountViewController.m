@@ -9,6 +9,8 @@
 #import "RBCreateAccountViewController.h"
 
 #import "RBFirstCalIntroViewController.h"
+#import "RBTermsAndConditionViewController.h"
+#import "RBPrivacyPolicyViewController.h"
 
 @interface RBCreateAccountViewController ()
 
@@ -25,6 +27,11 @@
 @property (strong, nonatomic) IBOutlet UIImageView *imageViewEmailField;
 @property (strong, nonatomic) IBOutlet UIImageView *imageViewPasswordField;
 @property (strong, nonatomic) IBOutlet UIImageView *imageViewRpasswordField;
+@property (strong, nonatomic) IBOutlet UIButton *buttonPrivacyAndPolicy;
+
+- (IBAction)buttonTACPressed:(id)sender;
+- (IBAction)buttonPPPressed:(id)sender;
+
 
 @end
 
@@ -66,6 +73,11 @@
     _imageViewRepeatPass.layer.borderWidth = 1.0;
     _imageViewRepeatPass.layer.borderColor = [UIColor lightGrayColor].CGColor;
     _imageViewRepeatPass.layer.cornerRadius = 5.0;
+    
+    UIFont* italicFont = [UIFont italicSystemFontOfSize:[UIFont systemFontSize]];
+    [_textFieldEmail setValue:italicFont forKeyPath:@"_placeholderLabel.font"];
+    [_textFieldPassword setValue:italicFont forKeyPath:@"_placeholderLabel.font"];
+    [_textFieldRepeatPassword setValue:italicFont forKeyPath:@"_placeholderLabel.font"];
 
 }
 
@@ -97,8 +109,7 @@
     
     if ((email.length == 0 && password.length == 0 && rpassword.length == 0) || (email.length != 0 && password.length == 0 && rpassword.length == 0) || (email.length != 0 && password.length != 0 && rpassword.length == 0))
     {
-        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Warning" message:@"Please fill the all field" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
-        [alertView show];
+        _labelPasswordDoNotMatch.text = @"Please fill all the text field";
     }
     else if (![password isEqualToString:rpassword])
     {
@@ -112,8 +123,27 @@
 }
 
 - (IBAction)buttonTACPressed:(id)sender {
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Terms and Condition" message:@"Mauris ipsum lectus, placerat id diam non, laoreet egestas tortor. Cras at ullamcorper turpis, sodales scelerisque libero. Quisque suscipit leo eu felis volutpat, sed aliquam nulla hendrerit. Mauris ipsum lectus, placerat id diam non, laoreet egestas tortor. Cras at ullamcorper turpis, sodales scelerisque libero. Quisque suscipit leo eu felis volutpat, sed aliquam nulla hendrerit." delegate:nil cancelButtonTitle:@"Close" otherButtonTitles:nil, nil];
-    [alert show];
+    CATransition* transition = [CATransition animation];
+    transition.duration = 0.3f;
+    transition.type = kCATransitionMoveIn;
+    transition.subtype = kCATransitionFromTop;
+    [self.navigationController.view.layer addAnimation:transition
+                                                forKey:kCATransition];
+    
+    RBTermsAndConditionViewController *controller = [RBTermsAndConditionViewController controllerWithStoryBoard:self.storyboard];
+    [self.navigationController pushViewController:controller animated:NO];
+}
+
+- (IBAction)buttonPPPressed:(id)sender {
+    CATransition* transition = [CATransition animation];
+    transition.duration = 0.3f;
+    transition.type = kCATransitionMoveIn;
+    transition.subtype = kCATransitionFromTop;
+    [self.navigationController.view.layer addAnimation:transition
+                                                forKey:kCATransition];
+    
+    RBPrivacyPolicyViewController *controller = [RBPrivacyPolicyViewController controllerWithStoryBoard:self.storyboard];
+    [self.navigationController pushViewController:controller animated:NO];
 }
 
 - (IBAction)textFieldReturn:(id)sender

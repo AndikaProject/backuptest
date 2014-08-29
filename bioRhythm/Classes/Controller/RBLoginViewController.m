@@ -22,6 +22,8 @@
 
 @property (strong, nonatomic) IBOutlet UIImageView *imageViewEmail;
 @property (strong, nonatomic) IBOutlet UIImageView *imageViewPass;
+@property (strong, nonatomic) IBOutlet UIImageView *imageViewIconEmail;
+@property (strong, nonatomic) IBOutlet UIImageView *imageViewIconPass;
 
 - (IBAction)forgotPass:(id)sender;
 
@@ -53,6 +55,8 @@
     // set image view
     [_imageViewEmail setImage:[UIImage imageNamed:@"textField.png"]];
     [_imageViewPass setImage:[UIImage imageNamed:@"textField.png"]];
+    [_imageViewIconEmail setImage:[UIImage imageNamed:@"username.png"]];
+    [_imageViewIconPass setImage:[UIImage imageNamed:@"password.png"]];
     
     // set border image
     
@@ -63,7 +67,10 @@
     _imageViewPass.layer.borderWidth = 1.0;
     _imageViewPass.layer.borderColor = [UIColor lightGrayColor].CGColor;
     _imageViewPass.layer.cornerRadius = 5.0;
-
+    
+    UIFont* italicFont = [UIFont italicSystemFontOfSize:[UIFont systemFontSize]];
+    [_textFieldEmail setValue:italicFont forKeyPath:@"_placeholderLabel.font"];
+    [_textFieldPassword setValue:italicFont forKeyPath:@"_placeholderLabel.font"];
     
 }
 

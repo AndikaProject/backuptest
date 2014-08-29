@@ -60,6 +60,8 @@
 		AEBD8CEA19B02C9B00F4C235 /* RBBlogCustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AEBD8CE919B02C9B00F4C235 /* RBBlogCustomCell.xib */; };
 		AEBD8CED19B02EA800F4C235 /* RBBlogCustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AEBD8CEC19B02EA800F4C235 /* RBBlogCustomCell.m */; };
 		AEBD8CF019B05A1200F4C235 /* RBFourthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AEBD8CEF19B05A1200F4C235 /* RBFourthViewController.m */; };
+		AEBD8CF319B08C3500F4C235 /* RBTermsAndConditionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AEBD8CF219B08C3500F4C235 /* RBTermsAndConditionViewController.m */; };
+		AEBD8CF619B08EEC00F4C235 /* RBPrivacyPolicyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AEBD8CF519B08EEC00F4C235 /* RBPrivacyPolicyViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -245,6 +247,10 @@
 		AEBD8CEC19B02EA800F4C235 /* RBBlogCustomCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RBBlogCustomCell.m; sourceTree = "<group>"; };
 		AEBD8CEE19B05A1200F4C235 /* RBFourthViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RBFourthViewController.h; sourceTree = "<group>"; };
 		AEBD8CEF19B05A1200F4C235 /* RBFourthViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RBFourthViewController.m; sourceTree = "<group>"; };
+		AEBD8CF119B08C3500F4C235 /* RBTermsAndConditionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RBTermsAndConditionViewController.h; sourceTree = "<group>"; };
+		AEBD8CF219B08C3500F4C235 /* RBTermsAndConditionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RBTermsAndConditionViewController.m; sourceTree = "<group>"; };
+		AEBD8CF419B08EEC00F4C235 /* RBPrivacyPolicyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RBPrivacyPolicyViewController.h; sourceTree = "<group>"; };
+		AEBD8CF519B08EEC00F4C235 /* RBPrivacyPolicyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RBPrivacyPolicyViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -342,6 +348,10 @@
 				AEBD8CE719B0264E00F4C235 /* RBTimeToBedViewController.m */,
 				AEBD8CEE19B05A1200F4C235 /* RBFourthViewController.h */,
 				AEBD8CEF19B05A1200F4C235 /* RBFourthViewController.m */,
+				AEBD8CF119B08C3500F4C235 /* RBTermsAndConditionViewController.h */,
+				AEBD8CF219B08C3500F4C235 /* RBTermsAndConditionViewController.m */,
+				AEBD8CF419B08EEC00F4C235 /* RBPrivacyPolicyViewController.h */,
+				AEBD8CF519B08EEC00F4C235 /* RBPrivacyPolicyViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -692,6 +702,7 @@
 				3C19E3E4197BFBF800B35857 /* RBSubscriptionCodeViewController.m in Sources */,
 				3C19E3F6197C0F9C00B35857 /* RBMenuCustomCell.m in Sources */,
 				3C19E360197A629E00B35857 /* RBLoginViewController.m in Sources */,
+				AEBD8CF619B08EEC00F4C235 /* RBPrivacyPolicyViewController.m in Sources */,
 				3CA870F819A7295600B29070 /* RBStopCalibrationViewController.m in Sources */,
 				3C19E3DB197BB70A00B35857 /* UIViewController+ECSlidingViewController.m in Sources */,
 				3C8F788B1982385E0008C547 /* RBSecondViewController.m in Sources */,
@@ -711,6 +722,7 @@
 				3C19E3DA197BB70A00B35857 /* ECSlidingViewController.m in Sources */,
 				AEBD8CE819B0264E00F4C235 /* RBTimeToBedViewController.m in Sources */,
 				3C19E3D7197BB70A00B35857 /* ECSlidingAnimationController.m in Sources */,
+				AEBD8CF319B08C3500F4C235 /* RBTermsAndConditionViewController.m in Sources */,
 				3C19E3D6197BB70A00B35857 /* ECPercentDrivenInteractiveTransition.m in Sources */,
 				AEBD8C7019AF2F5E00F4C235 /* RBSettingsCustomCell.m in Sources */,
 				3C602956197EB5970024345A /* RBIntroductionViewController.m in Sources */,

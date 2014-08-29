@@ -15,11 +15,9 @@
 @property (strong, nonatomic) IBOutlet UIButton *buttonResetPassword;
 @property (strong, nonatomic) IBOutlet UITextField *textFieldEmail;
 @property (strong, nonatomic) IBOutlet UILabel *labelUnknownEmail;
-@property (strong, nonatomic) IBOutlet UIButton *buttonBackToLogin;
 
 @property (strong, nonatomic) IBOutlet UIImageView *imageViewEmail;
-
-- (IBAction)buttonBackToLoginPressed:(id)sender;
+@property (strong, nonatomic) IBOutlet UIImageView *imageViewIcon;
 
 @end
 
@@ -41,12 +39,16 @@
     
     // set image view
     [_imageViewEmail setImage:[UIImage imageNamed:@"textField.png"]];
+    [_imageViewIcon setImage:[UIImage imageNamed:@"username.png"]];
     
     // set border image
     
     _imageViewEmail.layer.borderWidth = 1.0;
     _imageViewEmail.layer.borderColor = [UIColor lightGrayColor].CGColor;
     _imageViewEmail.layer.cornerRadius = 5.0;
+    
+    UIFont* italicFont = [UIFont italicSystemFontOfSize:[UIFont systemFontSize]];
+    [_textFieldEmail setValue:italicFont forKeyPath:@"_placeholderLabel.font"];
     
 }
 

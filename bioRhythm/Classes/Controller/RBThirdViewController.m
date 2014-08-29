@@ -79,7 +79,6 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
 #pragma mark - UITableViewDataSource
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -94,19 +93,19 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-   
+
         return 80;
-    
-    
+
+
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if (indexPath.section ==0){
         
-    
-    RBBlogCustomCell *cell = [tableView dequeueReusableCellWithIdentifier:@"RBBlogCustomCell"];
-    
+        
+        RBBlogCustomCell *cell = [tableView dequeueReusableCellWithIdentifier:@"RBBlogCustomCell"];
+        
         NSDictionary *item = [_postArray objectAtIndex:indexPath.row];
         cell.labelHeader.text = [item objectForKey:@"title"];
         
@@ -116,32 +115,40 @@
         UIImage *image = [UIImage imageWithData:data];
         cell.imageViewArticle.image  = image;
         
-    
-    return cell;
+        cell.labelTime.text =[item objectForKey:@"date"];
+        
+        
+        return cell;
     }
     return nil;
 }
 
-#pragma  mark - UITableViewDelegate
+#pragma mark - UITableViewDelegate
 
-- (void)tableView:(UITableView *)tableView didDeselectRowAtIndexPath:(NSIndexPath *)indexPath{
-    
-    if (indexPath.row == 0){
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
     NSDictionary *item = [_postArray objectAtIndex:indexPath.row];
     
     NSRange r;
-    NSString *header = [item objectForKey:@"title"];
-    NSString *content = [item objectForKey:@"content"];
     
-    while ((r=[content rangeOfString:@"<[^>]+>\\s*" options:NSRegularExpressionSearch]).location != NSNotFound)
-        content = [content stringByReplacingCharactersInRange:r withString:@""];
+    NSString *s = [item objectForKey:@"content"];
+    NSString *u = [item objectForKey:@"title"];
     
-        NSLog(@"this %@",content  );
-    UIAlertView *message = [[UIAlertView alloc]initWithTitle:header message:content delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
     
-    [message show];
-    }
+    while ((r=[s rangeOfString:@"<[^>]+>\\s*" options:NSRegularExpressionSearch]).location != NSNotFound)
+        s = [s stringByReplacingCharactersInRange:r withString:@""];
+    
+    NSLog(@"this %@",s  );
+    
+    
+    UIAlertView *messageAlert = [[UIAlertView alloc]initWithTitle:u message:s delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+    
+    [messageAlert show];
+
 }
+
+
+
 /*
  #pragma mark - Navigation
  

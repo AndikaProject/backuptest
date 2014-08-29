@@ -15,18 +15,19 @@
 
 @interface RBFirstViewController ()
 
-@property (strong, nonatomic) IBOutlet UILabel *labelSleepIcon;
 @property (strong, nonatomic) IBOutlet UILabel *labelSleepPlan;
-@property (strong, nonatomic) IBOutlet UILabel *labelActivityIcon;
 @property (strong, nonatomic) IBOutlet UILabel *labelActivityPlan;
-@property (strong, nonatomic) IBOutlet UILabel *labelMentalIcon;
 @property (strong, nonatomic) IBOutlet UILabel *labelMental;
-@property (strong, nonatomic) IBOutlet UILabel *labelBioIcon;
 @property (strong, nonatomic) IBOutlet UILabel *labelBioPlan;
 
 //@property (strong, nonatomic) IBOutlet UINavigationBar *navBar;
 
 @property (strong, nonatomic) IBOutlet UIButton *buttonSleep;
+
+@property (strong, nonatomic) IBOutlet UIImageView *imageViewSleep;
+@property (strong, nonatomic) IBOutlet UIImageView *imageViewActivity;
+@property (strong, nonatomic) IBOutlet UIImageView *imageViewMental;
+@property (strong, nonatomic) IBOutlet UIImageView *imageViewBiorhythm;
 
 - (IBAction)buttonSleepPressed:(id)sender;
 
@@ -44,6 +45,12 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    // set image view
+    [_imageViewSleep setImage:[UIImage imageNamed:@"_sleep_blue.png"]];
+    [_imageViewActivity setImage:[UIImage imageNamed:@"_activity_orange.png"]];
+    [_imageViewMental setImage:[UIImage imageNamed:@"_mind_green.png"]];
+    [_imageViewBiorhythm setImage:[UIImage imageNamed:@"_shift_red.png"]];
     
 //    // set label icon color
 //    self.labelSleepIcon.backgroundColor = [UIColor colorWithRed:(47/255.0) green:(50/255.0) blue:(191/255.0) alpha:1];

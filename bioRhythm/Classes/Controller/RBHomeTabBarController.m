@@ -14,7 +14,6 @@
 @interface RBHomeTabBarController ()
 
 @property (nonatomic, assign) BOOL firstLaunch;
-@property (strong, nonatomic) IBOutlet UITabBar *tabBarHome;
 
 @end
 
