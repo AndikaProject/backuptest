@@ -126,7 +126,7 @@
 
 - (void)tableView:(UITableView *)tableView didDeselectRowAtIndexPath:(NSIndexPath *)indexPath{
     
-    
+    if (indexPath.row == 0){
     NSDictionary *item = [_postArray objectAtIndex:indexPath.row];
     
     NSRange r;
@@ -140,7 +140,7 @@
     UIAlertView *message = [[UIAlertView alloc]initWithTitle:header message:content delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
     
     [message show];
-    
+    }
 }
 /*
  #pragma mark - Navigation
