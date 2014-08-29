@@ -47,7 +47,6 @@
 		3C8F788B1982385E0008C547 /* RBSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C8F788A1982385E0008C547 /* RBSecondViewController.m */; };
 		3C8F788E1990ABDD0008C547 /* RBThirdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C8F788D1990ABDD0008C547 /* RBThirdViewController.m */; };
 		3C8F7E081991F3410008C547 /* libCorePlot-CocoaTouch.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C8F7E071991F3410008C547 /* libCorePlot-CocoaTouch.a */; };
-		3C8F7E17199474BB0008C547 /* RBSleepPlanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C8F7E16199474BB0008C547 /* RBSleepPlanViewController.m */; };
 		3C8F7E1A199486C60008C547 /* RBCalibrationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C8F7E19199486C60008C547 /* RBCalibrationViewController.m */; };
 		3CA870F519A7054B00B29070 /* RBWeeksSleepPlanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CA870F419A7054B00B29070 /* RBWeeksSleepPlanViewController.m */; };
 		3CA870F819A7295600B29070 /* RBStopCalibrationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CA870F719A7295600B29070 /* RBStopCalibrationViewController.m */; };
@@ -57,6 +56,9 @@
 		AEBD8C6B19AF2C1300F4C235 /* RBFifthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AEBD8C6A19AF2C1300F4C235 /* RBFifthViewController.m */; };
 		AEBD8C7019AF2F5E00F4C235 /* RBSettingsCustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AEBD8C6F19AF2F5E00F4C235 /* RBSettingsCustomCell.m */; };
 		AEBD8CE519AF3F6B00F4C235 /* RBSettingsCustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AEBD8CE419AF3F6B00F4C235 /* RBSettingsCustomCell.xib */; };
+		AEBD8CE819B0264E00F4C235 /* RBTimeToBedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AEBD8CE719B0264E00F4C235 /* RBTimeToBedViewController.m */; };
+		AEBD8CEA19B02C9B00F4C235 /* RBBlogCustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AEBD8CE919B02C9B00F4C235 /* RBBlogCustomCell.xib */; };
+		AEBD8CED19B02EA800F4C235 /* RBBlogCustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AEBD8CEC19B02EA800F4C235 /* RBBlogCustomCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -218,8 +220,6 @@
 		3C8F7E051991F3410008C547 /* NSDecimalNumberExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSDecimalNumberExtensions.h; sourceTree = "<group>"; };
 		3C8F7E061991F3410008C547 /* NSNumberExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSNumberExtensions.h; sourceTree = "<group>"; };
 		3C8F7E071991F3410008C547 /* libCorePlot-CocoaTouch.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libCorePlot-CocoaTouch.a"; sourceTree = "<group>"; };
-		3C8F7E15199474BB0008C547 /* RBSleepPlanViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RBSleepPlanViewController.h; sourceTree = "<group>"; };
-		3C8F7E16199474BB0008C547 /* RBSleepPlanViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RBSleepPlanViewController.m; sourceTree = "<group>"; };
 		3C8F7E18199486C60008C547 /* RBCalibrationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RBCalibrationViewController.h; sourceTree = "<group>"; };
 		3C8F7E19199486C60008C547 /* RBCalibrationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RBCalibrationViewController.m; sourceTree = "<group>"; };
 		3CA870F319A7054B00B29070 /* RBWeeksSleepPlanViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RBWeeksSleepPlanViewController.h; sourceTree = "<group>"; };
@@ -237,6 +237,11 @@
 		AEBD8C6E19AF2F5E00F4C235 /* RBSettingsCustomCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RBSettingsCustomCell.h; sourceTree = "<group>"; };
 		AEBD8C6F19AF2F5E00F4C235 /* RBSettingsCustomCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RBSettingsCustomCell.m; sourceTree = "<group>"; };
 		AEBD8CE419AF3F6B00F4C235 /* RBSettingsCustomCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RBSettingsCustomCell.xib; sourceTree = "<group>"; };
+		AEBD8CE619B0264E00F4C235 /* RBTimeToBedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RBTimeToBedViewController.h; sourceTree = "<group>"; };
+		AEBD8CE719B0264E00F4C235 /* RBTimeToBedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RBTimeToBedViewController.m; sourceTree = "<group>"; };
+		AEBD8CE919B02C9B00F4C235 /* RBBlogCustomCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RBBlogCustomCell.xib; sourceTree = "<group>"; };
+		AEBD8CEB19B02EA800F4C235 /* RBBlogCustomCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RBBlogCustomCell.h; sourceTree = "<group>"; };
+		AEBD8CEC19B02EA800F4C235 /* RBBlogCustomCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RBBlogCustomCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -306,8 +311,6 @@
 				3C8F788A1982385E0008C547 /* RBSecondViewController.m */,
 				3C8F788C1990ABDD0008C547 /* RBThirdViewController.h */,
 				3C8F788D1990ABDD0008C547 /* RBThirdViewController.m */,
-				3C8F7E15199474BB0008C547 /* RBSleepPlanViewController.h */,
-				3C8F7E16199474BB0008C547 /* RBSleepPlanViewController.m */,
 				3C8F7E18199486C60008C547 /* RBCalibrationViewController.h */,
 				3C8F7E19199486C60008C547 /* RBCalibrationViewController.m */,
 				3C43087919A328EC0085DD3A /* RBSecondIntroductionViewController.h */,
@@ -332,6 +335,8 @@
 				AEBD8C6119AED81B00F4C235 /* RBManualInputViewController.m */,
 				AEBD8C6919AF2C1300F4C235 /* RBFifthViewController.h */,
 				AEBD8C6A19AF2C1300F4C235 /* RBFifthViewController.m */,
+				AEBD8CE619B0264E00F4C235 /* RBTimeToBedViewController.h */,
+				AEBD8CE719B0264E00F4C235 /* RBTimeToBedViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -357,6 +362,8 @@
 				3C19E3F5197C0F9C00B35857 /* RBMenuCustomCell.m */,
 				AEBD8C6E19AF2F5E00F4C235 /* RBSettingsCustomCell.h */,
 				AEBD8C6F19AF2F5E00F4C235 /* RBSettingsCustomCell.m */,
+				AEBD8CEB19B02EA800F4C235 /* RBBlogCustomCell.h */,
+				AEBD8CEC19B02EA800F4C235 /* RBBlogCustomCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -403,6 +410,7 @@
 			children = (
 				3C19E3EF197C0D8C00B35857 /* RBMenuCustomCell.xib */,
 				AEBD8CE419AF3F6B00F4C235 /* RBSettingsCustomCell.xib */,
+				AEBD8CE919B02C9B00F4C235 /* RBBlogCustomCell.xib */,
 			);
 			name = interfaces;
 			sourceTree = "<group>";
@@ -652,6 +660,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AEBD8CEA19B02C9B00F4C235 /* RBBlogCustomCell.xib in Resources */,
 				3C19E363197A629E00B35857 /* Images.xcassets in Resources */,
 				3C19E3F0197C0D8C00B35857 /* RBMenuCustomCell.xib in Resources */,
 				3C64180C197A336F0066A389 /* InfoPlist.strings in Resources */,
@@ -681,11 +690,11 @@
 				3CA870F819A7295600B29070 /* RBStopCalibrationViewController.m in Sources */,
 				3C19E3DB197BB70A00B35857 /* UIViewController+ECSlidingViewController.m in Sources */,
 				3C8F788B1982385E0008C547 /* RBSecondViewController.m in Sources */,
-				3C8F7E17199474BB0008C547 /* RBSleepPlanViewController.m in Sources */,
 				3C19E3E1197BBAFF00B35857 /* RBHomeTabBarController.m in Sources */,
 				3C64180E197A336F0066A389 /* main.m in Sources */,
 				3C19E3E7197C067200B35857 /* RBCreateAccountViewController.m in Sources */,
 				3C43088119A33CE40085DD3A /* RBFirstCalIntroViewController.m in Sources */,
+				AEBD8CED19B02EA800F4C235 /* RBBlogCustomCell.m in Sources */,
 				3C19E3D8197BB70A00B35857 /* ECSlidingInteractiveTransition.m in Sources */,
 				3C19E3D9197BB70A00B35857 /* ECSlidingSegue.m in Sources */,
 				3C43088419A33FB30085DD3A /* RBSecondCalIntroViewController.m in Sources */,
@@ -694,6 +703,7 @@
 				3CA870F519A7054B00B29070 /* RBWeeksSleepPlanViewController.m in Sources */,
 				3C8F788819820A040008C547 /* RBSideMenuViewController.m in Sources */,
 				3C19E3DA197BB70A00B35857 /* ECSlidingViewController.m in Sources */,
+				AEBD8CE819B0264E00F4C235 /* RBTimeToBedViewController.m in Sources */,
 				3C19E3D7197BB70A00B35857 /* ECSlidingAnimationController.m in Sources */,
 				3C19E3D6197BB70A00B35857 /* ECPercentDrivenInteractiveTransition.m in Sources */,
 				AEBD8C7019AF2F5E00F4C235 /* RBSettingsCustomCell.m in Sources */,

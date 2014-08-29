@@ -12,4 +12,6 @@
 
 @property (strong, nonatomic) IBOutlet UIScrollView *scrollerView;
 
++ (instancetype)controllerWithStoryBoard:(UIStoryboard *)storyboard;
+
 @end

@@ -9,6 +9,7 @@
 #import "RBFifthViewController.h"
 
 #import "RBSettingsCustomCell.h"
+#import "RBWelcomeViewController.h"
 
 @interface RBFifthViewController ()
 
@@ -17,6 +18,12 @@
 @end
 
 @implementation RBFifthViewController
+
++ (instancetype)controllerWithStoryBoard:(UIStoryboard *)storyboard {
+    RBFifthViewController *controller = [storyboard instantiateViewControllerWithIdentifier:@"RBFifthViewController"];
+    
+    return controller;
+}
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -33,6 +40,12 @@
     // Do any additional setup after loading the view.
     
     [self.tabelViewSetting registerNib:[UINib nibWithNibName:@"RBSettingsCustomCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier: @"RBSettingsCustomCell"];
+    
+    self.navigationItem.hidesBackButton = YES;
+    
+    [self.navigationController.navigationBar setBarTintColor:[UIColor colorWithRed:(79/255.0) green:(193/255.0) blue:(233/255.0) alpha:1]];
+    
+    self.navigationController.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName : [UIColor whiteColor]};
 }
 
 - (void)viewDidAppear:(BOOL)animated{
@@ -80,6 +93,8 @@
         }
         
         cell.textLabel.text = @"ACCOUNT";
+        cell.textLabel.textColor = [UIColor colorWithRed:(158/255.0) green:(167/255.0) blue:(179/255.0) alpha:1];
+        [cell.textLabel setFont:[UIFont systemFontOfSize:16]];
 
         return cell;
         
@@ -112,6 +127,8 @@
         }
         
         cell.textLabel.text = @"VITALITY APP";
+        cell.textLabel.textColor = [UIColor colorWithRed:(158/255.0) green:(167/255.0) blue:(179/255.0) alpha:1];
+        [cell.textLabel setFont:[UIFont systemFontOfSize:16]];
         
         return cell;
         
@@ -153,6 +170,33 @@
     }
     return nil;
 }
+
+#pragma mark - UITableViewDelegate
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    
+    if (indexPath.section == 0) {
+        switch (indexPath.row) {
+                
+            default:
+                break;
+        }
+    }else if (indexPath.section == 1) {
+        switch (indexPath.row) {
+            case 0:
+                //                self.slidingViewController.topViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"RBSleepPlanViewController"];
+                break;
+            case 1:
+
+                break;
+                
+            default:
+                break;
+        }
+    }
+}
+
 
 
 /*

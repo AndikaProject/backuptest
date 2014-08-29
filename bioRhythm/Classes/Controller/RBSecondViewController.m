@@ -9,6 +9,7 @@
 #import "RBSecondViewController.h"
 
 #import "RBCalibrationViewController.h"
+#import "RBTimeToBedViewController.h"
 
 #import "UIViewController+ECSlidingViewController.h"
 
@@ -43,6 +44,7 @@
 @property (strong, nonatomic) IBOutlet UILabel *labelSeventhNumber;
 
 - (IBAction)buttonTestCal:(id)sender;
+- (IBAction)buttonTimeToBedPopUpPressed:(id)sender;
 
 @end
 
@@ -127,6 +129,18 @@
     RBCalibrationViewController *controller = [RBCalibrationViewController controllerWithStoryBoard:self.storyboard];
     [self.navigationController pushViewController:controller animated:YES];
 
+}
+
+- (IBAction)buttonTimeToBedPopUpPressed:(id)sender {
+    CATransition* transition = [CATransition animation];
+    transition.duration = 0.3f;
+    transition.type = kCATransitionMoveIn;
+    transition.subtype = kCATransitionFromTop;
+    [self.navigationController.view.layer addAnimation:transition
+                                                forKey:kCATransition];
+    
+    RBTimeToBedViewController *controller = [RBTimeToBedViewController controllerWithStoryBoard:self.storyboard];
+    [self.navigationController pushViewController:controller animated:NO];
 }
 
 /*

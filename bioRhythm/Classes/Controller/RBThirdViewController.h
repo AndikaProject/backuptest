@@ -10,4 +10,11 @@
 
 @interface RBThirdViewController : UIViewController
 
+@property (strong, nonatomic) IBOutlet UIScrollView *scrollerBlog;
+
++ (instancetype)controllerWithStoryBoard:(UIStoryboard *)storyboard;
+
+@property (strong,nonatomic)NSArray *keys;
+@property (strong,nonatomic)NSArray *postArray;
+
 @end

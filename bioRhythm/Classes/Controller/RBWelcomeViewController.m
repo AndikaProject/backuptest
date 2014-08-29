@@ -25,6 +25,12 @@
 
 @implementation RBWelcomeViewController
 
++ (instancetype)controllerWithStoryBoard:(UIStoryboard *)storyboard {
+    RBWelcomeViewController *controller = [storyboard instantiateViewControllerWithIdentifier:@"RBWelcomeViewController"];
+    
+    return controller;
+}
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
