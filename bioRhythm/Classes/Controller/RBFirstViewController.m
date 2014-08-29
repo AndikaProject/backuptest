@@ -88,6 +88,7 @@
 //{
 //    [super viewWillAppear:animated];
 //    [self.navigationController setNavigationBarHidden:YES];   //it hides
+//    self.tabBarController.tabBar.tintColor = [UIColor redColor];
 //}
 
 //-(void)viewWillDisappear:(BOOL)animated

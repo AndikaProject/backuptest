@@ -59,6 +59,7 @@
 		AEBD8CE819B0264E00F4C235 /* RBTimeToBedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AEBD8CE719B0264E00F4C235 /* RBTimeToBedViewController.m */; };
 		AEBD8CEA19B02C9B00F4C235 /* RBBlogCustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AEBD8CE919B02C9B00F4C235 /* RBBlogCustomCell.xib */; };
 		AEBD8CED19B02EA800F4C235 /* RBBlogCustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AEBD8CEC19B02EA800F4C235 /* RBBlogCustomCell.m */; };
+		AEBD8CF019B05A1200F4C235 /* RBFourthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AEBD8CEF19B05A1200F4C235 /* RBFourthViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -242,6 +243,8 @@
 		AEBD8CE919B02C9B00F4C235 /* RBBlogCustomCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RBBlogCustomCell.xib; sourceTree = "<group>"; };
 		AEBD8CEB19B02EA800F4C235 /* RBBlogCustomCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RBBlogCustomCell.h; sourceTree = "<group>"; };
 		AEBD8CEC19B02EA800F4C235 /* RBBlogCustomCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RBBlogCustomCell.m; sourceTree = "<group>"; };
+		AEBD8CEE19B05A1200F4C235 /* RBFourthViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RBFourthViewController.h; sourceTree = "<group>"; };
+		AEBD8CEF19B05A1200F4C235 /* RBFourthViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RBFourthViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -337,6 +340,8 @@
 				AEBD8C6A19AF2C1300F4C235 /* RBFifthViewController.m */,
 				AEBD8CE619B0264E00F4C235 /* RBTimeToBedViewController.h */,
 				AEBD8CE719B0264E00F4C235 /* RBTimeToBedViewController.m */,
+				AEBD8CEE19B05A1200F4C235 /* RBFourthViewController.h */,
+				AEBD8CEF19B05A1200F4C235 /* RBFourthViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -698,6 +703,7 @@
 				3C19E3D8197BB70A00B35857 /* ECSlidingInteractiveTransition.m in Sources */,
 				3C19E3D9197BB70A00B35857 /* ECSlidingSegue.m in Sources */,
 				3C43088419A33FB30085DD3A /* RBSecondCalIntroViewController.m in Sources */,
+				AEBD8CF019B05A1200F4C235 /* RBFourthViewController.m in Sources */,
 				3C19E361197A629E00B35857 /* RBAppDelegate.m in Sources */,
 				AEBD8C6219AED81B00F4C235 /* RBManualInputViewController.m in Sources */,
 				3CA870F519A7054B00B29070 /* RBWeeksSleepPlanViewController.m in Sources */,

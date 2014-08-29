@@ -14,6 +14,7 @@
 @interface RBHomeTabBarController ()
 
 @property (nonatomic, assign) BOOL firstLaunch;
+@property (strong, nonatomic) IBOutlet UITabBar *tabBarHome;
 
 @end
 
@@ -25,11 +26,6 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     _firstLaunch = YES;
-    
-    [[UITabBar appearance] setTintColor:[UIColor whiteColor]];
-    
-    [UITabBarItem.appearance setTitleTextAttributes:
-     @{NSForegroundColorAttributeName : [UIColor whiteColor]} forState:UIControlStateNormal];
     
     self.selectedIndex = 1;
 
@@ -43,6 +39,33 @@
         [self presentViewController:controller animated:YES completion:nil];
     }
 
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    switch (self.tabBarController.selectedIndex) {
+        case 0:
+            self.tabBarController.tabBar.barTintColor = [UIColor blackColor];
+            break;
+        
+        case 1:
+            self.tabBarController.tabBar.barTintColor = [UIColor whiteColor];
+            break;
+        
+        case 2:
+            self.tabBarController.tabBar.barTintColor = [UIColor greenColor];
+            break;
+            
+        case 3:
+            self.tabBarController.tabBar.barTintColor = [UIColor blueColor];
+            break;
+            
+        case 4:
+            self.tabBarController.tabBar.barTintColor = [UIColor redColor];
+            break;
+        
+        default:
+            break;
+    }
 }
 
 - (void)didReceiveMemoryWarning

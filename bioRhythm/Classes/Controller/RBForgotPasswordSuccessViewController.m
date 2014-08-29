@@ -14,7 +14,7 @@
 
 @property (strong, nonatomic) IBOutlet UIButton *buttonGoToLogin;
 
-@property (strong, nonatomic) IBOutlet UIImageView *imageView;
+@property (strong, nonatomic) IBOutlet UIImageView *imageViewCheck;
 
 @property (strong, nonatomic) IBOutlet UINavigationBar *navigationBar;
 
@@ -45,6 +45,9 @@
     
     // set border color
     _buttonGoToLogin.layer.borderColor = [UIColor colorWithRed:(79/255.0) green:(193/255.0) blue:(233/255.0) alpha:1].CGColor;
+    
+    // set image view
+    [_imageViewCheck setImage:[UIImage imageNamed:@"_checkmark.png"]];
 }
 
 -(void)viewWillAppear:(BOOL)animated
