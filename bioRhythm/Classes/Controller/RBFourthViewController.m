@@ -8,6 +8,8 @@
 
 #import "RBFourthViewController.h"
 
+#import "RBSleepCoachViewController.h"
+
 @interface RBFourthViewController ()
 
 @property (strong, nonatomic) IBOutlet UIImageView *imageViewSleep;
@@ -18,6 +20,11 @@
 @property (strong, nonatomic) IBOutlet UIImageView *imageViewArrow2;
 @property (strong, nonatomic) IBOutlet UIImageView *imageViewArrow3;
 @property (strong, nonatomic) IBOutlet UIImageView *imageViewArrow4;
+
+- (IBAction)buttonSleepPressed:(id)sender;
+- (IBAction)buttonActivityPressed:(id)sender;
+- (IBAction)buttonMindPressed:(id)sender;
+- (IBAction)buttonNutritionPressed:(id)sender;
 
 @end
 
@@ -78,6 +85,21 @@
     // Dispose of any resources that can be recreated.
 }
 
+#pragma mark - action
+- (IBAction)buttonSleepPressed:(id)sender {
+    RBSleepCoachViewController *controller = [RBSleepCoachViewController controllerWithStoryBoard:self.storyboard];
+    [self.navigationController pushViewController:controller animated:YES];
+}
+
+- (IBAction)buttonActivityPressed:(id)sender {
+}
+
+- (IBAction)buttonMindPressed:(id)sender {
+}
+
+- (IBAction)buttonNutritionPressed:(id)sender {
+}
+
 /*
 #pragma mark - Navigation
 
@@ -88,5 +110,6 @@
     // Pass the selected object to the new view controller.
 }
 */
+
 
 @end
