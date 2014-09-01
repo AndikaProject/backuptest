@@ -21,6 +21,8 @@
 @property (strong, nonatomic) IBOutlet UIImageView *imageViewIcon;
 @property (strong, nonatomic) IBOutlet UIImageView *imageViewLogo;
 
+- (IBAction)textFieldClicked:(id)sender;
+
 @end
 
 @implementation RBSubscriptionCodeViewController
@@ -95,6 +97,22 @@
 
 - (IBAction)buttonWebsitePressed:(id)sender {
     [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://www.getbrightr.com/"]];
+}
+
+- (IBAction)textFieldClicked:(id)sender {
+    [_imageViewIcon setImage:[UIImage imageNamed:@"_password_selected.png"]];
+    
+    // set border image
+    #define kBorderWidth 1.0
+    #define kCornerRadius 5.0
+    CALayer *borderLayer = [CALayer layer];
+    CGRect borderFrame = CGRectMake(0, 0, (_imageView.frame.size.width), (_imageView.frame.size.height));
+    [borderLayer setBackgroundColor:[[UIColor clearColor] CGColor]];
+    [borderLayer setFrame:borderFrame];
+    [borderLayer setCornerRadius:kCornerRadius];
+    [borderLayer setBorderWidth:kBorderWidth];
+    [borderLayer setBorderColor:[[UIColor colorWithRed:(79/255.0) green:(193/255.0) blue:(233/255.0) alpha:1] CGColor]];
+    [_imageView.layer addSublayer:borderLayer];
 }
 
 - (IBAction)textFieldReturn:(id)sender

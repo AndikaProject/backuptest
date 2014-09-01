@@ -607,6 +607,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
+                                    <action selector="textFieldClicked:" destination="tdX-DO-OQG" eventType="editingDidBegin" id="xC0-q5-gQs"/>
                                     <action selector="textFieldReturn:" destination="tdX-DO-OQG" eventType="editingDidEndOnExit" id="LKe-X2-9KL"/>
                                 </connections>
                             </textField>
