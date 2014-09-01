@@ -10,4 +10,6 @@
 
 @interface RBFourthViewController : UIViewController
 
++ (instancetype)controllerWithStoryBoard:(UIStoryboard *)storyboard;
+
 @end

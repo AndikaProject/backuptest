@@ -1153,11 +1153,11 @@
             </objects>
             <point key="canvasLocation" x="-1349" y="4225"/>
         </scene>
-        <!--Navigation Controller - Coach-->
+        <!--Navigation Controller - Messages-->
         <scene sceneID="1sW-eR-eny">
             <objects>
                 <navigationController storyboardIdentifier="RBSecondHomeNavigationController" definesPresentationContext="YES" useStoryboardIdentifierAsRestorationIdentifier="YES" id="9Sj-IV-E33" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Coach" image="_messages" id="ROf-Qs-hhW"/>
+                    <tabBarItem key="tabBarItem" title="Messages" image="_messages" id="ROf-Qs-hhW"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="bXv-sK-PWG">
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -1169,7 +1169,7 @@
             </objects>
             <point key="canvasLocation" x="-845" y="3481"/>
         </scene>
-        <!--Second View Controller - COACH-->
+        <!--Second View Controller - MESSAGES-->
         <scene sceneID="yd5-om-srO">
             <objects>
                 <viewController storyboardIdentifier="RBSecondViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="qCe-Nj-BdS" customClass="RBSecondViewController" sceneMemberID="viewController">
@@ -1513,7 +1513,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="COACH" id="SbR-JU-0Hd"/>
+                    <navigationItem key="navigationItem" title="MESSAGES" id="SbR-JU-0Hd"/>
                     <connections>
                         <outlet property="buttonFifth" destination="u5c-ac-99I" id="Tna-cT-mLT"/>
                         <outlet property="buttonFirst" destination="0Af-KO-ZYW" id="WXC-Uu-6jA"/>
@@ -2270,11 +2270,11 @@
             </objects>
             <point key="canvasLocation" x="-845" y="5727"/>
         </scene>
-        <!--Navigation Controller - Chat-->
+        <!--Navigation Controller - Coach-->
         <scene sceneID="VG3-o2-3OC">
             <objects>
                 <navigationController definesPresentationContext="YES" id="ao2-VY-ZtA" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Chat" image="_coach" id="3P8-kd-T9B"/>
+                    <tabBarItem key="tabBarItem" title="Coach" image="_coach" id="3P8-kd-T9B"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="c4m-4o-GuE">
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -2286,16 +2286,144 @@
             </objects>
             <point key="canvasLocation" x="-845" y="4983"/>
         </scene>
-        <!--Fourth View Controller - CHAT-->
+        <!--Fourth View Controller - COACH-->
         <scene sceneID="odl-BB-DRi">
             <objects>
                 <viewController storyboardIdentifier="RBFourthViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="mNZ-Lq-2IO" customClass="RBFourthViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="68c-rQ-w9s">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="Atz-XI-bkq">
+                                <rect key="frame" x="16" y="88" width="60" height="60"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sleep coach" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="enO-De-MdP">
+                                <rect key="frame" x="92" y="90" width="167" height="24"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <color key="textColor" red="0.2627450980392157" green="0.29019607843137252" blue="0.32941176470588235" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ask your question about sleep" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="lyl-rL-H3e">
+                                <rect key="frame" x="92" y="119" width="221" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="0.61960784313725492" green="0.65490196078431373" blue="0.70196078431372544" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="6nJ-Wb-jbF">
+                                <rect key="frame" x="284" y="88" width="20" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="___________________________" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="scE-mc-x8E">
+                                <rect key="frame" x="92" y="148" width="234" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="xMI-Na-LLJ">
+                                <rect key="frame" x="16" y="180" width="60" height="60"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Activity coach" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="6PA-OS-7A8">
+                                <rect key="frame" x="92" y="182" width="167" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <color key="textColor" red="0.26274509800000001" green="0.2901960784" blue="0.3294117647" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ask your question about activity" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="GX8-ub-mat">
+                                <rect key="frame" x="92" y="211" width="207" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="0.61960784310000006" green="0.65490196079999996" blue="0.70196078429999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="U1V-OP-jiE">
+                                <rect key="frame" x="284" y="180" width="20" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="___________________________" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="dar-Xy-kQT">
+                                <rect key="frame" x="92" y="240" width="234" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="q9i-Z1-A1z">
+                                <rect key="frame" x="16" y="269" width="60" height="60"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mind coach" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="6mz-aB-oSX">
+                                <rect key="frame" x="92" y="272" width="167" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <color key="textColor" red="0.26274509800000001" green="0.2901960784" blue="0.3294117647" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ask your question about mental resilience" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="FO0-qz-NBq">
+                                <rect key="frame" x="92" y="295" width="167" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="0.61960784310000006" green="0.65490196079999996" blue="0.70196078429999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="vbV-Hs-MDY">
+                                <rect key="frame" x="284" y="272" width="20" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="___________________________" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="DgC-Ng-Euk">
+                                <rect key="frame" x="92" y="332" width="234" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="7Bj-96-lNW">
+                                <rect key="frame" x="16" y="361" width="60" height="60"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nutrition coach" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="e7y-NX-CWL">
+                                <rect key="frame" x="92" y="366" width="167" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <color key="textColor" red="0.26274509800000001" green="0.2901960784" blue="0.3294117647" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ask your question about nutrition" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="wSH-H4-0tz">
+                                <rect key="frame" x="92" y="395" width="214" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="0.61960784310000006" green="0.65490196079999996" blue="0.70196078429999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="ePV-34-FXB">
+                                <rect key="frame" x="284" y="366" width="20" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="___________________________" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="zH8-Vr-2ub">
+                                <rect key="frame" x="92" y="424" width="234" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="CHAT" id="R7m-wV-oKR"/>
+                    <navigationItem key="navigationItem" title="COACH" id="R7m-wV-oKR"/>
+                    <connections>
+                        <outlet property="imageViewActivity" destination="xMI-Na-LLJ" id="Bzr-RU-MGA"/>
+                        <outlet property="imageViewArrow1" destination="6nJ-Wb-jbF" id="SAJ-pW-ngW"/>
+                        <outlet property="imageViewArrow2" destination="U1V-OP-jiE" id="3EX-Pm-B14"/>
+                        <outlet property="imageViewArrow3" destination="vbV-Hs-MDY" id="Tbk-7Z-ffD"/>
+                        <outlet property="imageViewArrow4" destination="ePV-34-FXB" id="uoY-cb-1kI"/>
+                        <outlet property="imageViewMind" destination="q9i-Z1-A1z" id="egc-4U-99O"/>
+                        <outlet property="imageViewNutrition" destination="7Bj-96-lNW" id="Z0m-Os-Meg"/>
+                        <outlet property="imageViewSleep" destination="Atz-XI-bkq" id="CWL-sd-usI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TKI-oI-B08" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
