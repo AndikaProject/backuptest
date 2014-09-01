@@ -39,7 +39,7 @@
     
     // set image view
     [_imageViewEmail setImage:[UIImage imageNamed:@"textField.png"]];
-    [_imageViewIcon setImage:[UIImage imageNamed:@"username.png"]];
+    [_imageViewIcon setImage:[UIImage imageNamed:@"_username_.png"]];
     
     // set border image
     

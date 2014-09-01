@@ -27,6 +27,12 @@
 		3C19E3F6197C0F9C00B35857 /* RBMenuCustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C19E3F5197C0F9C00B35857 /* RBMenuCustomCell.m */; };
 		3C19E3FC197D06DC00B35857 /* RBFirstNavigatonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C19E3FB197D06DC00B35857 /* RBFirstNavigatonViewController.m */; };
 		3C19E402197EAF0A00B35857 /* RBWelcomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C19E401197EAF0A00B35857 /* RBWelcomeViewController.m */; };
+		3C36D66D19B3F5A500DEE0A4 /* RBTakeaBreakViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C36D66C19B3F5A500DEE0A4 /* RBTakeaBreakViewController.m */; };
+		3C36D67019B3F97900DEE0A4 /* RBStretchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C36D66F19B3F97900DEE0A4 /* RBStretchViewController.m */; };
+		3C36D67319B3FA9B00DEE0A4 /* RBWelcomePopUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C36D67219B3FA9B00DEE0A4 /* RBWelcomePopUpViewController.m */; };
+		3C36D67619B4380C00DEE0A4 /* RBPopUpActivityPlanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C36D67519B4380C00DEE0A4 /* RBPopUpActivityPlanViewController.m */; };
+		3C36D67919B439C800DEE0A4 /* RBPopUpMindPlanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C36D67819B439C700DEE0A4 /* RBPopUpMindPlanViewController.m */; };
+		3C36D67C19B43AF800DEE0A4 /* RBPopUpBioPlanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C36D67B19B43AF800DEE0A4 /* RBPopUpBioPlanViewController.m */; };
 		3C43087B19A328EC0085DD3A /* RBSecondIntroductionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C43087A19A328EC0085DD3A /* RBSecondIntroductionViewController.m */; };
 		3C43087E19A32F5E0085DD3A /* RBThirdIntroductionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C43087D19A32F5E0085DD3A /* RBThirdIntroductionViewController.m */; };
 		3C43088119A33CE40085DD3A /* RBFirstCalIntroViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C43088019A33CE40085DD3A /* RBFirstCalIntroViewController.m */; };
@@ -113,6 +119,18 @@
 		3C19E3FB197D06DC00B35857 /* RBFirstNavigatonViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RBFirstNavigatonViewController.m; sourceTree = "<group>"; };
 		3C19E400197EAF0A00B35857 /* RBWelcomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RBWelcomeViewController.h; sourceTree = "<group>"; };
 		3C19E401197EAF0A00B35857 /* RBWelcomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RBWelcomeViewController.m; sourceTree = "<group>"; };
+		3C36D66B19B3F5A500DEE0A4 /* RBTakeaBreakViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RBTakeaBreakViewController.h; sourceTree = "<group>"; };
+		3C36D66C19B3F5A500DEE0A4 /* RBTakeaBreakViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RBTakeaBreakViewController.m; sourceTree = "<group>"; };
+		3C36D66E19B3F97900DEE0A4 /* RBStretchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RBStretchViewController.h; sourceTree = "<group>"; };
+		3C36D66F19B3F97900DEE0A4 /* RBStretchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RBStretchViewController.m; sourceTree = "<group>"; };
+		3C36D67119B3FA9B00DEE0A4 /* RBWelcomePopUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RBWelcomePopUpViewController.h; sourceTree = "<group>"; };
+		3C36D67219B3FA9B00DEE0A4 /* RBWelcomePopUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RBWelcomePopUpViewController.m; sourceTree = "<group>"; };
+		3C36D67419B4380C00DEE0A4 /* RBPopUpActivityPlanViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RBPopUpActivityPlanViewController.h; sourceTree = "<group>"; };
+		3C36D67519B4380C00DEE0A4 /* RBPopUpActivityPlanViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RBPopUpActivityPlanViewController.m; sourceTree = "<group>"; };
+		3C36D67719B439C700DEE0A4 /* RBPopUpMindPlanViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RBPopUpMindPlanViewController.h; sourceTree = "<group>"; };
+		3C36D67819B439C700DEE0A4 /* RBPopUpMindPlanViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RBPopUpMindPlanViewController.m; sourceTree = "<group>"; };
+		3C36D67A19B43AF800DEE0A4 /* RBPopUpBioPlanViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RBPopUpBioPlanViewController.h; sourceTree = "<group>"; };
+		3C36D67B19B43AF800DEE0A4 /* RBPopUpBioPlanViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RBPopUpBioPlanViewController.m; sourceTree = "<group>"; };
 		3C43087919A328EC0085DD3A /* RBSecondIntroductionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RBSecondIntroductionViewController.h; sourceTree = "<group>"; };
 		3C43087A19A328EC0085DD3A /* RBSecondIntroductionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RBSecondIntroductionViewController.m; sourceTree = "<group>"; };
 		3C43087C19A32F5E0085DD3A /* RBThirdIntroductionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RBThirdIntroductionViewController.h; sourceTree = "<group>"; };
@@ -352,6 +370,18 @@
 				AEBD8CF219B08C3500F4C235 /* RBTermsAndConditionViewController.m */,
 				AEBD8CF419B08EEC00F4C235 /* RBPrivacyPolicyViewController.h */,
 				AEBD8CF519B08EEC00F4C235 /* RBPrivacyPolicyViewController.m */,
+				3C36D66B19B3F5A500DEE0A4 /* RBTakeaBreakViewController.h */,
+				3C36D66C19B3F5A500DEE0A4 /* RBTakeaBreakViewController.m */,
+				3C36D66E19B3F97900DEE0A4 /* RBStretchViewController.h */,
+				3C36D66F19B3F97900DEE0A4 /* RBStretchViewController.m */,
+				3C36D67119B3FA9B00DEE0A4 /* RBWelcomePopUpViewController.h */,
+				3C36D67219B3FA9B00DEE0A4 /* RBWelcomePopUpViewController.m */,
+				3C36D67419B4380C00DEE0A4 /* RBPopUpActivityPlanViewController.h */,
+				3C36D67519B4380C00DEE0A4 /* RBPopUpActivityPlanViewController.m */,
+				3C36D67719B439C700DEE0A4 /* RBPopUpMindPlanViewController.h */,
+				3C36D67819B439C700DEE0A4 /* RBPopUpMindPlanViewController.m */,
+				3C36D67A19B43AF800DEE0A4 /* RBPopUpBioPlanViewController.h */,
+				3C36D67B19B43AF800DEE0A4 /* RBPopUpBioPlanViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -676,11 +706,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				AEBD8CEA19B02C9B00F4C235 /* RBBlogCustomCell.xib in Resources */,
-				3C19E363197A629E00B35857 /* Images.xcassets in Resources */,
 				3C19E3F0197C0D8C00B35857 /* RBMenuCustomCell.xib in Resources */,
 				3C64180C197A336F0066A389 /* InfoPlist.strings in Resources */,
 				3C19E362197A629E00B35857 /* main.storyboard in Resources */,
 				AEBD8CE519AF3F6B00F4C235 /* RBSettingsCustomCell.xib in Resources */,
+				3C19E363197A629E00B35857 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -706,6 +736,9 @@
 				3CA870F819A7295600B29070 /* RBStopCalibrationViewController.m in Sources */,
 				3C19E3DB197BB70A00B35857 /* UIViewController+ECSlidingViewController.m in Sources */,
 				3C8F788B1982385E0008C547 /* RBSecondViewController.m in Sources */,
+				3C36D67919B439C800DEE0A4 /* RBPopUpMindPlanViewController.m in Sources */,
+				3C36D66D19B3F5A500DEE0A4 /* RBTakeaBreakViewController.m in Sources */,
+				3C36D67319B3FA9B00DEE0A4 /* RBWelcomePopUpViewController.m in Sources */,
 				3C19E3E1197BBAFF00B35857 /* RBHomeTabBarController.m in Sources */,
 				3C64180E197A336F0066A389 /* main.m in Sources */,
 				3C19E3E7197C067200B35857 /* RBCreateAccountViewController.m in Sources */,
@@ -718,9 +751,11 @@
 				3C19E361197A629E00B35857 /* RBAppDelegate.m in Sources */,
 				AEBD8C6219AED81B00F4C235 /* RBManualInputViewController.m in Sources */,
 				3CA870F519A7054B00B29070 /* RBWeeksSleepPlanViewController.m in Sources */,
+				3C36D67019B3F97900DEE0A4 /* RBStretchViewController.m in Sources */,
 				3C8F788819820A040008C547 /* RBSideMenuViewController.m in Sources */,
 				3C19E3DA197BB70A00B35857 /* ECSlidingViewController.m in Sources */,
 				AEBD8CE819B0264E00F4C235 /* RBTimeToBedViewController.m in Sources */,
+				3C36D67619B4380C00DEE0A4 /* RBPopUpActivityPlanViewController.m in Sources */,
 				3C19E3D7197BB70A00B35857 /* ECSlidingAnimationController.m in Sources */,
 				AEBD8CF319B08C3500F4C235 /* RBTermsAndConditionViewController.m in Sources */,
 				3C19E3D6197BB70A00B35857 /* ECPercentDrivenInteractiveTransition.m in Sources */,
@@ -729,6 +764,7 @@
 				3C19E3ED197C0C9600B35857 /* RBForgotPasswordSuccessViewController.m in Sources */,
 				3C19E3DE197BB83800B35857 /* RBFirstViewController.m in Sources */,
 				3C19E3FC197D06DC00B35857 /* RBFirstNavigatonViewController.m in Sources */,
+				3C36D67C19B43AF800DEE0A4 /* RBPopUpBioPlanViewController.m in Sources */,
 				3C43087B19A328EC0085DD3A /* RBSecondIntroductionViewController.m in Sources */,
 				3C19E402197EAF0A00B35857 /* RBWelcomeViewController.m in Sources */,
 				3C8F7E1A199486C60008C547 /* RBCalibrationViewController.m in Sources */,

@@ -55,8 +55,8 @@
     // set image view
     [_imageViewEmail setImage:[UIImage imageNamed:@"textField.png"]];
     [_imageViewPass setImage:[UIImage imageNamed:@"textField.png"]];
-    [_imageViewIconEmail setImage:[UIImage imageNamed:@"username.png"]];
-    [_imageViewIconPass setImage:[UIImage imageNamed:@"password.png"]];
+    [_imageViewIconEmail setImage:[UIImage imageNamed:@"_username_.png"]];
+    [_imageViewIconPass setImage:[UIImage imageNamed:@"_password.png"]];
     
     // set border image
     

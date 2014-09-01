@@ -43,7 +43,7 @@
     // set image view
     [_imageView setImage:[UIImage imageNamed:@"textField.png"]];
     [_imageViewLogo setImage:[UIImage imageNamed:@"ASML_logo.png"]];
-    [_imageViewIcon setImage:[UIImage imageNamed:@"password.png"]];
+    [_imageViewIcon setImage:[UIImage imageNamed:@"_password.png"]];
     
     // set border image
     #define kBorderWidth 1.0

@@ -56,9 +56,9 @@
     [_imageViewEmail setImage:[UIImage imageNamed:@"textField.png"]];
     [_imageViewPassword setImage:[UIImage imageNamed:@"textField.png"]];
     [_imageViewRepeatPass setImage:[UIImage imageNamed:@"textField.png"]];
-    [_imageViewEmailField setImage:[UIImage imageNamed:@"username.png"]];
-    [_imageViewPasswordField setImage:[UIImage imageNamed:@"password.png"]];
-    [_imageViewRpasswordField setImage:[UIImage imageNamed:@"password.png"]];
+    [_imageViewEmailField setImage:[UIImage imageNamed:@"_username_.png"]];
+    [_imageViewPasswordField setImage:[UIImage imageNamed:@"_password.png"]];
+    [_imageViewRpasswordField setImage:[UIImage imageNamed:@"_password.png"]];
     
     // set border image
     _imageViewEmail.layer.borderWidth = 1.0;

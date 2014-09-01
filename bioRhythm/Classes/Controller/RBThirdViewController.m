@@ -50,6 +50,8 @@
     
     self.navigationController.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName : [UIColor whiteColor]};
     
+    [_tableViewBlog setSeparatorInset:UIEdgeInsetsZero];
+    
     NSString *str  = @"http://54.255.145.51/vytle/api/get_recent_posts/?page=1";
     NSURL *url = [NSURL URLWithString:str];
     NSData *data =[NSData dataWithContentsOfURL:url];
@@ -71,7 +73,7 @@
 }
 
 - (void)viewDidAppear:(BOOL)animated{
-    [_scrollerBlog setContentSize:CGSizeMake(320, 528)];
+    [_scrollerBlog setContentSize:CGSizeMake(320, 720)];
 }
 
 - (void)didReceiveMemoryWarning

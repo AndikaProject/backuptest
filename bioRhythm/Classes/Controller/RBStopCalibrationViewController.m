@@ -82,12 +82,26 @@
 
 - (IBAction)buttonStopPressed:(id)sender
 {
+    CATransition* transition = [CATransition animation];
+    transition.duration = 0.3f;
+    transition.type = kCATransitionReveal;
+    transition.subtype = kCATransitionFromBottom;
+    [self.navigationController.view.layer addAnimation:transition
+                                                forKey:kCATransition];
+    
     RBFirstViewController *controller = [RBFirstViewController controllerWithStoryBoard:self.storyboard];
     [self.navigationController pushViewController:controller animated:YES];
 }
 
 - (IBAction)buttonCancelPressed:(id)sender
 {
+    CATransition* transition = [CATransition animation];
+    transition.duration = 0.3f;
+    transition.type = kCATransitionReveal;
+    transition.subtype = kCATransitionFromBottom;
+    [self.navigationController.view.layer addAnimation:transition
+                                                forKey:kCATransition];
+    
     RBCalibrationViewController *controller = [RBCalibrationViewController controllerWithStoryBoard:self.storyboard];
     [self.navigationController pushViewController:controller animated:YES];
 }

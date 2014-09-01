@@ -45,6 +45,15 @@
 @property (strong, nonatomic) IBOutlet UILabel *labelSixthNumber;
 @property (strong, nonatomic) IBOutlet UILabel *labelSeventhNumber;
 
+// button
+@property (strong, nonatomic) IBOutlet UIButton *buttonFirst;
+@property (strong, nonatomic) IBOutlet UIButton *buttonSecond;
+@property (strong, nonatomic) IBOutlet UIButton *buttonThird;
+@property (strong, nonatomic) IBOutlet UIButton *buttonFourth;
+@property (strong, nonatomic) IBOutlet UIButton *buttonFifth;
+@property (strong, nonatomic) IBOutlet UIButton *buttonSixth;
+@property (strong, nonatomic) IBOutlet UIButton *buttonSeventh;
+
 // bar chart
 @property (strong, nonatomic) IBOutlet UILabel *labelSleepBar1;
 @property (strong, nonatomic) IBOutlet UILabel *labelSleepBar2;
@@ -52,7 +61,6 @@
 @property (strong, nonatomic) IBOutlet UILabel *labelSleepBar4;
 @property (strong, nonatomic) IBOutlet UILabel *labelSleepBar5;
 @property (strong, nonatomic) IBOutlet UILabel *labelSleepBar6;
-@property (strong, nonatomic) IBOutlet UILabel *labelSleepBar7;
 
 @property (strong, nonatomic) IBOutlet UILabel *labelActivityBar1;
 @property (strong, nonatomic) IBOutlet UILabel *labelActivityBar2;
@@ -70,7 +78,73 @@
 @property (strong, nonatomic) IBOutlet UILabel *labelMentalBar6;
 @property (strong, nonatomic) IBOutlet UILabel *labelMentalBar7;
 
+// checkmark
+@property (strong, nonatomic) IBOutlet UIImageView *imageViewFirst;
+@property (strong, nonatomic) IBOutlet UIImageView *imageViewSecond;
+@property (strong, nonatomic) IBOutlet UIImageView *imageViewThird;
+@property (strong, nonatomic) IBOutlet UIImageView *imageViewFourth;
+@property (strong, nonatomic) IBOutlet UIImageView *imageViewFifth;
+@property (strong, nonatomic) IBOutlet UIImageView *imageViewSixth;
+@property (strong, nonatomic) IBOutlet UIImageView *imageViewSeventh;
+
+// tooltip
+@property (strong, nonatomic) IBOutlet UIImageView *imageViewSleep1;
+@property (strong, nonatomic) IBOutlet UIImageView *imageViewSleep2;
+@property (strong, nonatomic) IBOutlet UIImageView *imageViewSleep3;
+@property (strong, nonatomic) IBOutlet UIImageView *imageViewSleep4;
+@property (strong, nonatomic) IBOutlet UIImageView *imageViewSleep5;
+@property (strong, nonatomic) IBOutlet UIImageView *imageViewSleep6;
+
+@property (strong, nonatomic) IBOutlet UIImageView *imageViewActivity1;
+@property (strong, nonatomic) IBOutlet UIImageView *imageViewActivity2;
+@property (strong, nonatomic) IBOutlet UIImageView *imageViewActivity3;
+@property (strong, nonatomic) IBOutlet UIImageView *imageViewActivity4;
+@property (strong, nonatomic) IBOutlet UIImageView *imageViewActivity5;
+@property (strong, nonatomic) IBOutlet UIImageView *imageViewActivity6;
+@property (strong, nonatomic) IBOutlet UIImageView *imageViewActivity7;
+
+@property (strong, nonatomic) IBOutlet UIImageView *imageViewMental1;
+@property (strong, nonatomic) IBOutlet UIImageView *imageViewMental2;
+@property (strong, nonatomic) IBOutlet UIImageView *imageViewMental3;
+@property (strong, nonatomic) IBOutlet UIImageView *imageViewMental4;
+@property (strong, nonatomic) IBOutlet UIImageView *imageViewMental5;
+@property (strong, nonatomic) IBOutlet UIImageView *imageViewMental6;
+@property (strong, nonatomic) IBOutlet UIImageView *imageViewMental7;
+
+// tooltip label
+@property (strong, nonatomic) IBOutlet UILabel *labelTooltipSleep1;
+@property (strong, nonatomic) IBOutlet UILabel *labelTooltipSleep2;
+@property (strong, nonatomic) IBOutlet UILabel *labelTooltipSleep3;
+@property (strong, nonatomic) IBOutlet UILabel *labelTooltipSleep4;
+@property (strong, nonatomic) IBOutlet UILabel *labelTooltipSleep5;
+@property (strong, nonatomic) IBOutlet UILabel *labelTooltipSleep6;
+
+@property (strong, nonatomic) IBOutlet UILabel *labelTooltipActivity1;
+@property (strong, nonatomic) IBOutlet UILabel *labelTooltipActivity2;
+@property (strong, nonatomic) IBOutlet UILabel *labelTooltipActivity3;
+@property (strong, nonatomic) IBOutlet UILabel *labelTooltipActivity4;
+@property (strong, nonatomic) IBOutlet UILabel *labelTooltipActivity5;
+@property (strong, nonatomic) IBOutlet UILabel *labelTooltipActivity6;
+@property (strong, nonatomic) IBOutlet UILabel *labelTooltipActivity7;
+
+@property (strong, nonatomic) IBOutlet UILabel *labelTooltipMental1;
+@property (strong, nonatomic) IBOutlet UILabel *labelTooltipMental2;
+@property (strong, nonatomic) IBOutlet UILabel *labelTooltipMental3;
+@property (strong, nonatomic) IBOutlet UILabel *labelTooltipMental4;
+@property (strong, nonatomic) IBOutlet UILabel *labelTooltipMental5;
+@property (strong, nonatomic) IBOutlet UILabel *labelTooltipMental6;
+@property (strong, nonatomic) IBOutlet UILabel *labelTooltipMental7;
+
+
 - (IBAction)buttonStopPressed:(id)sender;
+
+- (IBAction)buttonFirstPressed:(id)sender;
+- (IBAction)buttonSecondPressed:(id)sender;
+- (IBAction)buttonThirdressed:(id)sender;
+- (IBAction)buttonFourthPressed:(id)sender;
+- (IBAction)buttonFifthressed:(id)sender;
+- (IBAction)buttonSixthPressed:(id)sender;
+- (IBAction)buttonSeventhPressed:(id)sender;
 
 @end
 
@@ -119,89 +193,126 @@
     // sleep bar
     self.labelSleepBar1.backgroundColor = [UIColor colorWithRed:(46/255.0) green:(122/255.0) blue:(191/255.0) alpha:1];
     self.labelSleepBar1.text = @"";
-    self.labelSleepBar1.frame = CGRectMake(164, 275, 13, -35);
+    self.labelSleepBar1.frame = CGRectMake(175, 262, 13, -35);
+    //[_imageViewSleep1 setImage:[UIImage imageNamed:@"_Bubble_blue.png"]];
+    _labelTooltipSleep1.text = @"";
     
     self.labelSleepBar2.backgroundColor = [UIColor colorWithRed:(46/255.0) green:(122/255.0) blue:(191/255.0) alpha:1];
     self.labelSleepBar2.text = @"";
-    self.labelSleepBar2.frame = CGRectMake(186, 275, 13, -50);
+    self.labelSleepBar2.frame = CGRectMake(197, 262, 13, -50);
+    //[_imageViewSleep2 setImage:[UIImage imageNamed:@"_Bubble_blue.png"]];
+    _labelTooltipSleep2.text = @"";
     
     self.labelSleepBar3.backgroundColor = [UIColor colorWithRed:(46/255.0) green:(122/255.0) blue:(191/255.0) alpha:1];
     self.labelSleepBar3.text = @"";
-    self.labelSleepBar3.frame = CGRectMake(208, 275, 13, -30);
+    self.labelSleepBar3.frame = CGRectMake(219, 262, 13, -30);
+    //[_imageViewSleep3 setImage:[UIImage imageNamed:@"_Bubble_blue.png"]];
+    _labelTooltipSleep3.text = @"";
     
     self.labelSleepBar4.backgroundColor = [UIColor colorWithRed:(46/255.0) green:(122/255.0) blue:(191/255.0) alpha:1];
     self.labelSleepBar4.text = @"";
-    self.labelSleepBar4.frame = CGRectMake(230, 275, 13, -20);
+    self.labelSleepBar4.frame = CGRectMake(241, 262, 13, -20);
+    //[_imageViewSleep4 setImage:[UIImage imageNamed:@"_Bubble_blue.png"]];
+    _labelTooltipSleep4.text = @"";
     
     self.labelSleepBar5.backgroundColor = [UIColor colorWithRed:(46/255.0) green:(122/255.0) blue:(191/255.0) alpha:1];
     self.labelSleepBar5.text = @"";
-    self.labelSleepBar5.frame = CGRectMake(252, 275, 13, -25);
+    self.labelSleepBar5.frame = CGRectMake(263, 262, 13, -25);
+    //[_imageViewSleep5 setImage:[UIImage imageNamed:@"_Bubble_blue.png"]];
+    _labelTooltipSleep5.text = @"";
     
     self.labelSleepBar6.backgroundColor = [UIColor colorWithRed:(46/255.0) green:(122/255.0) blue:(191/255.0) alpha:1];
     self.labelSleepBar6.text = @"";
-    self.labelSleepBar6.frame = CGRectMake(274, 275, 13, -10);
-    
-    self.labelSleepBar7.backgroundColor = [UIColor colorWithRed:(46/255.0) green:(122/255.0) blue:(191/255.0) alpha:1];
-    self.labelSleepBar7.text = @"";
-    self.labelSleepBar7.frame = CGRectMake(296, 275, 13, -15);
+    self.labelSleepBar6.frame = CGRectMake(285, 262, 13, -10);
+    [_imageViewSleep6 setImage:[UIImage imageNamed:@"_Bubble_blue.png"]];
+    _labelTooltipSleep6.text = @"2:13h";
     
     // activity bar
     self.labelActivityBar1.backgroundColor = [UIColor colorWithRed:(230/255.0) green:(142/255.0) blue:(8/255.0) alpha:1];
     self.labelActivityBar1.text = @"";
-    self.labelActivityBar1.frame = CGRectMake(163, 381, 13, -35);
+    self.labelActivityBar1.frame = CGRectMake(163, 368, 13, -35);
+    //[_imageViewActivity1 setImage:[UIImage imageNamed:@"_Bubble_orange.png"]];
+    _labelTooltipActivity1.text = @"";
     
     self.labelActivityBar2.backgroundColor = [UIColor colorWithRed:(230/255.0) green:(142/255.0) blue:(8/255.0) alpha:1];
     self.labelActivityBar2.text = @"";
-    self.labelActivityBar2.frame = CGRectMake(186, 381, 13, -50);
+    self.labelActivityBar2.frame = CGRectMake(186, 368, 13, -50);
+    //[_imageViewActivity2 setImage:[UIImage imageNamed:@"_Bubble_orange.png"]];
+    _labelTooltipActivity2.text = @"";
     
     self.labelActivityBar3.backgroundColor = [UIColor colorWithRed:(230/255.0) green:(142/255.0) blue:(8/255.0) alpha:1];
     self.labelActivityBar3.text = @"";
-    self.labelActivityBar3.frame = CGRectMake(208, 381, 13, -30);
+    self.labelActivityBar3.frame = CGRectMake(208, 368, 13, -30);
+    //[_imageViewActivity3 setImage:[UIImage imageNamed:@"_Bubble_orange.png"]];
+    _labelTooltipActivity3.text = @"";
     
     self.labelActivityBar4.backgroundColor = [UIColor colorWithRed:(230/255.0) green:(142/255.0) blue:(8/255.0) alpha:1];
     self.labelActivityBar4.text = @"";
-    self.labelActivityBar4.frame = CGRectMake(230, 381, 13, -20);
+    self.labelActivityBar4.frame = CGRectMake(230, 368, 13, -20);
+    //[_imageViewActivity4 setImage:[UIImage imageNamed:@"_Bubble_orange.png"]];
+    _labelTooltipActivity4.text = @"";
     
     self.labelActivityBar5.backgroundColor = [UIColor colorWithRed:(230/255.0) green:(142/255.0) blue:(8/255.0) alpha:1];
     self.labelActivityBar5.text = @"";
-    self.labelActivityBar5.frame = CGRectMake(252, 381, 13, -25);
+    self.labelActivityBar5.frame = CGRectMake(252, 368, 13, -25);
+    //[_imageViewActivity5 setImage:[UIImage imageNamed:@"_Bubble_orange.png"]];
+    _labelTooltipActivity5.text = @"";
     
     self.labelActivityBar6.backgroundColor = [UIColor colorWithRed:(230/255.0) green:(142/255.0) blue:(8/255.0) alpha:1];
     self.labelActivityBar6.text = @"";
-    self.labelActivityBar6.frame = CGRectMake(274, 381, 13, -10);
+    self.labelActivityBar6.frame = CGRectMake(274, 368, 13, -10);
+    //[_imageViewActivity6 setImage:[UIImage imageNamed:@"_Bubble_orange.png"]];
+    _labelTooltipActivity6.text = @"";
     
     self.labelActivityBar7.backgroundColor = [UIColor colorWithRed:(230/255.0) green:(142/255.0) blue:(8/255.0) alpha:1];
     self.labelActivityBar7.text = @"";
-    self.labelActivityBar7.frame = CGRectMake(296, 381, 13, -15);
+    self.labelActivityBar7.frame = CGRectMake(296, 368, 13, -15);
+    [_imageViewActivity7 setImage:[UIImage imageNamed:@"_Bubble_orange.png"]];
+    _labelTooltipActivity7.text = @"3:13h";
     
     // mental bar
     self.labelMentalBar1.backgroundColor = [UIColor colorWithRed:(37/255.0) green:(119/255.0) blue:(45/255.0) alpha:1];
     self.labelMentalBar1.text = @"";
-    self.labelMentalBar1.frame = CGRectMake(163, 487, 13, -35);
+    self.labelMentalBar1.frame = CGRectMake(163, 474, 13, -35);
+    //[_imageViewMental1 setImage:[UIImage imageNamed:@"_Bubble_green.png"]];
+    _labelTooltipMental1.text = @"";
+
     
     self.labelMentalBar2.backgroundColor = [UIColor colorWithRed:(37/255.0) green:(119/255.0) blue:(45/255.0) alpha:1];
     self.labelMentalBar2.text = @"";
-    self.labelMentalBar2.frame = CGRectMake(186, 487, 13, -50);
+    self.labelMentalBar2.frame = CGRectMake(186, 474, 13, -50);
+    //[_imageViewMental2 setImage:[UIImage imageNamed:@"_Bubble_green.png"]];
+    _labelTooltipMental2.text = @"";
     
     self.labelMentalBar3.backgroundColor = [UIColor colorWithRed:(37/255.0) green:(119/255.0) blue:(45/255.0) alpha:1];
     self.labelMentalBar3.text = @"";
-    self.labelMentalBar3.frame = CGRectMake(208, 487, 13, -30);
+    self.labelMentalBar3.frame = CGRectMake(208, 474, 13, -30);
+    //[_imageViewMental3 setImage:[UIImage imageNamed:@"_Bubble_green.png"]];
+    _labelTooltipMental3.text = @"";
     
     self.labelMentalBar4.backgroundColor = [UIColor colorWithRed:(37/255.0) green:(119/255.0) blue:(45/255.0) alpha:1];
     self.labelMentalBar4.text = @"";
-    self.labelMentalBar4.frame = CGRectMake(230, 487, 13, -20);
+    self.labelMentalBar4.frame = CGRectMake(230, 474, 13, -20);
+    //[_imageViewMental4 setImage:[UIImage imageNamed:@"_Bubble_green.png"]];
+    _labelTooltipMental4.text = @"";
     
     self.labelMentalBar5.backgroundColor = [UIColor colorWithRed:(37/255.0) green:(119/255.0) blue:(45/255.0) alpha:1];
     self.labelMentalBar5.text = @"";
-    self.labelMentalBar5.frame = CGRectMake(252, 487, 13, -25);
+    self.labelMentalBar5.frame = CGRectMake(252, 474, 13, -25);
+    //[_imageViewMental5 setImage:[UIImage imageNamed:@"_Bubble_green.png"]];
+    _labelTooltipMental5.text = @"";
     
     self.labelMentalBar6.backgroundColor = [UIColor colorWithRed:(37/255.0) green:(119/255.0) blue:(45/255.0) alpha:1];
     self.labelMentalBar6.text = @"";
-    self.labelMentalBar6.frame = CGRectMake(274, 487, 13, -10);
+    self.labelMentalBar6.frame = CGRectMake(274, 474, 13, -10);
+    //[_imageViewMental6 setImage:[UIImage imageNamed:@"_Bubble_green.png"]];
+    _labelTooltipMental6.text = @"";
     
     self.labelMentalBar7.backgroundColor = [UIColor colorWithRed:(37/255.0) green:(119/255.0) blue:(45/255.0) alpha:1];
     self.labelMentalBar7.text = @"";
-    self.labelMentalBar7.frame = CGRectMake(296, 487, 13, -15);
+    self.labelMentalBar7.frame = CGRectMake(296, 474, 13, -15);
+    [_imageViewMental7 setImage:[UIImage imageNamed:@"_Bubble_green.png"]];
+    _labelTooltipMental7.text = @"3:13h";
     
 }
 
@@ -221,8 +332,8 @@
 {
     [super viewDidAppear:animated];
     
-    [self.slidingViewController.topViewController.view addGestureRecognizer:self.slidingViewController.panGesture];
-    self.slidingViewController.topViewAnchoredGesture = ECSlidingViewControllerAnchoredGestureTapping | ECSlidingViewControllerAnchoredGesturePanning;
+//    [self.slidingViewController.topViewController.view addGestureRecognizer:self.slidingViewController.panGesture];
+//    self.slidingViewController.topViewAnchoredGesture = ECSlidingViewControllerAnchoredGestureTapping | ECSlidingViewControllerAnchoredGesturePanning;
     
 }
 
@@ -235,9 +346,599 @@
 #pragma mark - action
 - (IBAction)buttonStopPressed:(id)sender
 {
+    CATransition* transition = [CATransition animation];
+    transition.duration = 0.3f;
+    transition.type = kCATransitionMoveIn;
+    transition.subtype = kCATransitionFromTop;
+    [self.navigationController.view.layer addAnimation:transition
+                                                forKey:kCATransition];
+    
     RBStopCalibrationViewController *controller = [RBStopCalibrationViewController controllerWithStoryBoard:self.storyboard];
     [self.navigationController pushViewController:controller animated:YES];
 }
+
+- (IBAction)buttonFirstPressed:(id)sender {
+    
+    [_imageViewFirst setImage:[UIImage imageNamed:@""]];
+    
+    _labelFirstDay.text = @"Today";
+    
+    UIFont *boldFont = [UIFont boldSystemFontOfSize:[UIFont systemFontSize]];
+    [_labelFirstDay setFont:boldFont];
+    
+    UIFont *boldFontNumber = [UIFont boldSystemFontOfSize:22];
+    [_labelFirstNumber setFont:boldFontNumber];
+    
+    _buttonFirst.backgroundColor = [UIColor colorWithRed:(250/255.0) green:(250/255.0) blue:(250/255.0) alpha:1];
+    
+    self.progressViewCalibration.progress=0.14f;
+    
+    _labelSecondDay.text = @"Tu";
+    
+    UIFont *boldFont2 = [UIFont systemFontOfSize:[UIFont systemFontSize]];
+    [_labelSecondDay setFont:boldFont2];
+    
+    UIFont *boldFontNumber2 = [UIFont systemFontOfSize:22];
+    [_labelSecondNumber setFont:boldFontNumber2];
+    
+    _buttonSecond.backgroundColor = [UIColor colorWithRed:(240/255.0) green:(242/255.0) blue:(245/255.0) alpha:1];
+    
+    _labelThirdDay.text = @"We";
+    
+    UIFont *boldFont3 = [UIFont systemFontOfSize:[UIFont systemFontSize]];
+    [_labelThirdDay setFont:boldFont3];
+    
+    UIFont *boldFontNumber3 = [UIFont systemFontOfSize:22];
+    [_labelThirdNumber setFont:boldFontNumber3];
+    
+    _buttonThird.backgroundColor = [UIColor colorWithRed:(240/255.0) green:(242/255.0) blue:(245/255.0) alpha:1];
+    
+    _labelFourthDay.text = @"Th";
+    
+    UIFont *boldFont4 = [UIFont systemFontOfSize:[UIFont systemFontSize]];
+    [_labelFourthDay setFont:boldFont4];
+    
+    UIFont *boldFontNumber4 = [UIFont systemFontOfSize:22];
+    [_labelFourthNumber setFont:boldFontNumber4];
+    
+    _buttonFourth.backgroundColor = [UIColor colorWithRed:(240/255.0) green:(242/255.0) blue:(245/255.0) alpha:1];
+    
+    _labelFifthDay.text = @"Fr";
+    
+    UIFont *boldFont5 = [UIFont systemFontOfSize:[UIFont systemFontSize]];
+    [_labelFifthDay setFont:boldFont5];
+    
+    UIFont *boldFontNumber5 = [UIFont systemFontOfSize:22];
+    [_labelFifthNumber setFont:boldFontNumber5];
+    
+    _buttonFifth.backgroundColor = [UIColor colorWithRed:(240/255.0) green:(242/255.0) blue:(245/255.0) alpha:1];
+    
+    _labelSixthDay.text = @"Sa";
+    
+    UIFont *boldFont6 = [UIFont systemFontOfSize:[UIFont systemFontSize]];
+    [_labelSixthDay setFont:boldFont6];
+    
+    UIFont *boldFontNumber6 = [UIFont systemFontOfSize:22];
+    [_labelSixthNumber setFont:boldFontNumber6];
+    
+    _buttonSixth.backgroundColor = [UIColor colorWithRed:(240/255.0) green:(242/255.0) blue:(245/255.0) alpha:1];
+    
+    _labelSeventhDay.text = @"Su";
+    
+    UIFont *boldFont7 = [UIFont systemFontOfSize:[UIFont systemFontSize]];
+    [_labelSeventhDay setFont:boldFont7];
+    
+    UIFont *boldFontNumber7 = [UIFont systemFontOfSize:22];
+    [_labelSeventhNumber setFont:boldFontNumber7];
+    
+    _buttonSeventh.backgroundColor = [UIColor colorWithRed:(240/255.0) green:(242/255.0) blue:(245/255.0) alpha:1];
+    
+}
+
+- (IBAction)buttonSecondPressed:(id)sender {
+    
+    [_imageViewFirst setImage:[UIImage imageNamed:@"_checkmark.png"]];
+    [_imageViewSecond setImage:[UIImage imageNamed:@""]];
+    [_imageViewThird setImage:[UIImage imageNamed:@""]];
+    [_imageViewFourth setImage:[UIImage imageNamed:@""]];
+    [_imageViewFifth setImage:[UIImage imageNamed:@""]];
+    [_imageViewSixth setImage:[UIImage imageNamed:@""]];
+    [_imageViewSeventh setImage:[UIImage imageNamed:@""]];
+    
+    _labelFirstDay.text = @"Mo";
+    
+    UIFont *boldFont = [UIFont systemFontOfSize:[UIFont systemFontSize]];
+    [_labelFirstDay setFont:boldFont];
+    
+    UIFont *boldFontNumber = [UIFont systemFontOfSize:22];
+    [_labelFirstNumber setFont:boldFontNumber];
+    
+    _buttonFirst.backgroundColor = [UIColor colorWithRed:(240/255.0) green:(242/255.0) blue:(245/255.0) alpha:1];
+    
+    self.progressViewCalibration.progress=0.28f;
+    
+    _labelSecondDay.text = @"Today";
+    
+    UIFont *boldFont2 = [UIFont boldSystemFontOfSize:[UIFont systemFontSize]];
+    [_labelSecondDay setFont:boldFont2];
+    
+    UIFont *boldFontNumber2 = [UIFont boldSystemFontOfSize:22];
+    [_labelSecondNumber setFont:boldFontNumber2];
+    
+    _buttonSecond.backgroundColor = [UIColor colorWithRed:(250/255.0) green:(250/255.0) blue:(250/255.0) alpha:1];
+    
+    _labelThirdDay.text = @"We";
+    
+    UIFont *boldFont3 = [UIFont systemFontOfSize:[UIFont systemFontSize]];
+    [_labelThirdDay setFont:boldFont3];
+    
+    UIFont *boldFontNumber3 = [UIFont systemFontOfSize:22];
+    [_labelThirdNumber setFont:boldFontNumber3];
+    
+    _buttonThird.backgroundColor = [UIColor colorWithRed:(240/255.0) green:(242/255.0) blue:(245/255.0) alpha:1];
+    
+    _labelFourthDay.text = @"Th";
+    
+    UIFont *boldFont4 = [UIFont systemFontOfSize:[UIFont systemFontSize]];
+    [_labelFourthDay setFont:boldFont4];
+    
+    UIFont *boldFontNumber4 = [UIFont systemFontOfSize:22];
+    [_labelFourthNumber setFont:boldFontNumber4];
+    
+    _buttonFourth.backgroundColor = [UIColor colorWithRed:(240/255.0) green:(242/255.0) blue:(245/255.0) alpha:1];
+    
+    _labelFifthDay.text = @"Fr";
+    
+    UIFont *boldFont5 = [UIFont systemFontOfSize:[UIFont systemFontSize]];
+    [_labelFifthDay setFont:boldFont5];
+    
+    UIFont *boldFontNumber5 = [UIFont systemFontOfSize:22];
+    [_labelFifthNumber setFont:boldFontNumber5];
+    
+    _buttonFifth.backgroundColor = [UIColor colorWithRed:(240/255.0) green:(242/255.0) blue:(245/255.0) alpha:1];
+    
+    _labelSixthDay.text = @"Sa";
+    
+    UIFont *boldFont6 = [UIFont systemFontOfSize:[UIFont systemFontSize]];
+    [_labelSixthDay setFont:boldFont6];
+    
+    UIFont *boldFontNumber6 = [UIFont systemFontOfSize:22];
+    [_labelSixthNumber setFont:boldFontNumber6];
+    
+    _buttonSixth.backgroundColor = [UIColor colorWithRed:(240/255.0) green:(242/255.0) blue:(245/255.0) alpha:1];
+    
+    _labelSeventhDay.text = @"Su";
+    
+    UIFont *boldFont7 = [UIFont systemFontOfSize:[UIFont systemFontSize]];
+    [_labelSeventhDay setFont:boldFont7];
+    
+    UIFont *boldFontNumber7 = [UIFont systemFontOfSize:22];
+    [_labelSeventhNumber setFont:boldFontNumber7];
+    
+    _buttonSeventh.backgroundColor = [UIColor colorWithRed:(240/255.0) green:(242/255.0) blue:(245/255.0) alpha:1];
+    
+}
+
+- (IBAction)buttonThirdressed:(id)sender {
+    
+    [_imageViewFirst setImage:[UIImage imageNamed:@"_checkmark.png"]];
+    [_imageViewSecond setImage:[UIImage imageNamed:@"_checkmark.png"]];
+    [_imageViewThird setImage:[UIImage imageNamed:@""]];
+    [_imageViewFourth setImage:[UIImage imageNamed:@""]];
+    [_imageViewFifth setImage:[UIImage imageNamed:@""]];
+    [_imageViewSixth setImage:[UIImage imageNamed:@""]];
+    [_imageViewSeventh setImage:[UIImage imageNamed:@""]];
+    
+    _labelFirstDay.text = @"Mo";
+    
+    UIFont *boldFont = [UIFont systemFontOfSize:[UIFont systemFontSize]];
+    [_labelFirstDay setFont:boldFont];
+    
+    UIFont *boldFontNumber = [UIFont systemFontOfSize:22];
+    [_labelFirstNumber setFont:boldFontNumber];
+    
+    _buttonFirst.backgroundColor = [UIColor colorWithRed:(240/255.0) green:(242/255.0) blue:(245/255.0) alpha:1];
+    
+    self.progressViewCalibration.progress=0.43f;
+    
+    _labelSecondDay.text = @"Tu";
+    
+    UIFont *boldFont2 = [UIFont systemFontOfSize:[UIFont systemFontSize]];
+    [_labelSecondDay setFont:boldFont2];
+    
+    UIFont *boldFontNumber2 = [UIFont systemFontOfSize:22];
+    [_labelSecondNumber setFont:boldFontNumber2];
+    
+    _buttonSecond.backgroundColor = [UIColor colorWithRed:(240/255.0) green:(242/255.0) blue:(245/255.0) alpha:1];
+    
+    _labelThirdDay.text = @"Today";
+    
+    UIFont *boldFont3 = [UIFont boldSystemFontOfSize:[UIFont systemFontSize]];
+    [_labelThirdDay setFont:boldFont3];
+    
+    UIFont *boldFontNumber3 = [UIFont boldSystemFontOfSize:22];
+    [_labelThirdNumber setFont:boldFontNumber3];
+    
+    _buttonThird.backgroundColor = [UIColor colorWithRed:(250/255.0) green:(250/255.0) blue:(250/255.0) alpha:1];
+    
+    _labelFourthDay.text = @"Th";
+    
+    UIFont *boldFont4 = [UIFont systemFontOfSize:[UIFont systemFontSize]];
+    [_labelFourthDay setFont:boldFont4];
+    
+    UIFont *boldFontNumber4 = [UIFont systemFontOfSize:22];
+    [_labelFourthNumber setFont:boldFontNumber4];
+    
+    _buttonFourth.backgroundColor = [UIColor colorWithRed:(240/255.0) green:(242/255.0) blue:(245/255.0) alpha:1];
+    
+    _labelFifthDay.text = @"Fr";
+    
+    UIFont *boldFont5 = [UIFont systemFontOfSize:[UIFont systemFontSize]];
+    [_labelFifthDay setFont:boldFont5];
+    
+    UIFont *boldFontNumber5 = [UIFont systemFontOfSize:22];
+    [_labelFifthNumber setFont:boldFontNumber5];
+    
+    _buttonFifth.backgroundColor = [UIColor colorWithRed:(240/255.0) green:(242/255.0) blue:(245/255.0) alpha:1];
+    
+    _labelSixthDay.text = @"Sa";
+    
+    UIFont *boldFont6 = [UIFont systemFontOfSize:[UIFont systemFontSize]];
+    [_labelSixthDay setFont:boldFont6];
+    
+    UIFont *boldFontNumber6 = [UIFont systemFontOfSize:22];
+    [_labelSixthNumber setFont:boldFontNumber6];
+    
+    _buttonSixth.backgroundColor = [UIColor colorWithRed:(240/255.0) green:(242/255.0) blue:(245/255.0) alpha:1];
+    
+    _labelSeventhDay.text = @"Su";
+    
+    UIFont *boldFont7 = [UIFont systemFontOfSize:[UIFont systemFontSize]];
+    [_labelSeventhDay setFont:boldFont7];
+    
+    UIFont *boldFontNumber7 = [UIFont systemFontOfSize:22];
+    [_labelSeventhNumber setFont:boldFontNumber7];
+    
+    _buttonSeventh.backgroundColor = [UIColor colorWithRed:(240/255.0) green:(242/255.0) blue:(245/255.0) alpha:1];
+    
+}
+
+- (IBAction)buttonFourthPressed:(id)sender {
+    
+    [_imageViewFirst setImage:[UIImage imageNamed:@"_checkmark.png"]];
+    [_imageViewSecond setImage:[UIImage imageNamed:@"_checkmark.png"]];
+    [_imageViewThird setImage:[UIImage imageNamed:@"_checkmark.png"]];
+    [_imageViewFourth setImage:[UIImage imageNamed:@""]];
+    [_imageViewFifth setImage:[UIImage imageNamed:@""]];
+    [_imageViewSixth setImage:[UIImage imageNamed:@""]];
+    [_imageViewSeventh setImage:[UIImage imageNamed:@""]];
+    
+    _labelFirstDay.text = @"Mo";
+    
+    UIFont *boldFont = [UIFont systemFontOfSize:[UIFont systemFontSize]];
+    [_labelFirstDay setFont:boldFont];
+    
+    UIFont *boldFontNumber = [UIFont systemFontOfSize:22];
+    [_labelFirstNumber setFont:boldFontNumber];
+    
+    _buttonFirst.backgroundColor = [UIColor colorWithRed:(240/255.0) green:(242/255.0) blue:(245/255.0) alpha:1];
+    
+    self.progressViewCalibration.progress=0.57f;
+    
+    _labelSecondDay.text = @"Tu";
+    
+    UIFont *boldFont2 = [UIFont systemFontOfSize:[UIFont systemFontSize]];
+    [_labelSecondDay setFont:boldFont2];
+    
+    UIFont *boldFontNumber2 = [UIFont systemFontOfSize:22];
+    [_labelSecondNumber setFont:boldFontNumber2];
+    
+    _buttonSecond.backgroundColor = [UIColor colorWithRed:(240/255.0) green:(242/255.0) blue:(245/255.0) alpha:1];
+    
+    _labelThirdDay.text = @"We";
+    
+    UIFont *boldFont3 = [UIFont systemFontOfSize:[UIFont systemFontSize]];
+    [_labelThirdDay setFont:boldFont3];
+    
+    UIFont *boldFontNumber3 = [UIFont systemFontOfSize:22];
+    [_labelThirdNumber setFont:boldFontNumber3];
+    
+    _buttonThird.backgroundColor = [UIColor colorWithRed:(240/255.0) green:(242/255.0) blue:(245/255.0) alpha:1];
+    
+    _labelFourthDay.text = @"Today";
+    
+    UIFont *boldFont4 = [UIFont boldSystemFontOfSize:[UIFont systemFontSize]];
+    [_labelFourthDay setFont:boldFont4];
+    
+    UIFont *boldFontNumber4 = [UIFont boldSystemFontOfSize:22];
+    [_labelFourthNumber setFont:boldFontNumber4];
+    
+    _buttonFourth.backgroundColor = [UIColor colorWithRed:(250/255.0) green:(250/255.0) blue:(250/255.0) alpha:1];
+    
+    _labelFifthDay.text = @"Fr";
+    
+    UIFont *boldFont5 = [UIFont systemFontOfSize:[UIFont systemFontSize]];
+    [_labelFifthDay setFont:boldFont5];
+    
+    UIFont *boldFontNumber5 = [UIFont systemFontOfSize:22];
+    [_labelFifthNumber setFont:boldFontNumber5];
+    
+    _buttonFifth.backgroundColor = [UIColor colorWithRed:(240/255.0) green:(242/255.0) blue:(245/255.0) alpha:1];
+    
+    _labelSixthDay.text = @"Sa";
+    
+    UIFont *boldFont6 = [UIFont systemFontOfSize:[UIFont systemFontSize]];
+    [_labelSixthDay setFont:boldFont6];
+    
+    UIFont *boldFontNumber6 = [UIFont systemFontOfSize:22];
+    [_labelSixthNumber setFont:boldFontNumber6];
+    
+    _buttonSixth.backgroundColor = [UIColor colorWithRed:(240/255.0) green:(242/255.0) blue:(245/255.0) alpha:1];
+    
+    _labelSeventhDay.text = @"Su";
+    
+    UIFont *boldFont7 = [UIFont systemFontOfSize:[UIFont systemFontSize]];
+    [_labelSeventhDay setFont:boldFont7];
+    
+    UIFont *boldFontNumber7 = [UIFont systemFontOfSize:22];
+    [_labelSeventhNumber setFont:boldFontNumber7];
+    
+    _buttonSeventh.backgroundColor = [UIColor colorWithRed:(240/255.0) green:(242/255.0) blue:(245/255.0) alpha:1];
+    
+}
+
+- (IBAction)buttonFifthressed:(id)sender {
+    
+    [_imageViewFirst setImage:[UIImage imageNamed:@"_checkmark.png"]];
+    [_imageViewSecond setImage:[UIImage imageNamed:@"_checkmark.png"]];
+    [_imageViewThird setImage:[UIImage imageNamed:@"_checkmark.png"]];
+    [_imageViewFourth setImage:[UIImage imageNamed:@"_checkmark.png"]];
+    [_imageViewFifth setImage:[UIImage imageNamed:@""]];
+    [_imageViewSixth setImage:[UIImage imageNamed:@""]];
+    [_imageViewSeventh setImage:[UIImage imageNamed:@""]];
+    
+    _labelFirstDay.text = @"Mo";
+    
+    UIFont *boldFont = [UIFont systemFontOfSize:[UIFont systemFontSize]];
+    [_labelFirstDay setFont:boldFont];
+    
+    UIFont *boldFontNumber = [UIFont systemFontOfSize:22];
+    [_labelFirstNumber setFont:boldFontNumber];
+    
+    _buttonFirst.backgroundColor = [UIColor colorWithRed:(240/255.0) green:(242/255.0) blue:(245/255.0) alpha:1];
+    
+    self.progressViewCalibration.progress=0.71f;
+    
+    _labelSecondDay.text = @"Tu";
+    
+    UIFont *boldFont2 = [UIFont systemFontOfSize:[UIFont systemFontSize]];
+    [_labelSecondDay setFont:boldFont2];
+    
+    UIFont *boldFontNumber2 = [UIFont systemFontOfSize:22];
+    [_labelSecondNumber setFont:boldFontNumber2];
+    
+    _buttonSecond.backgroundColor = [UIColor colorWithRed:(240/255.0) green:(242/255.0) blue:(245/255.0) alpha:1];
+    
+    _labelThirdDay.text = @"We";
+    
+    UIFont *boldFont3 = [UIFont systemFontOfSize:[UIFont systemFontSize]];
+    [_labelThirdDay setFont:boldFont3];
+    
+    UIFont *boldFontNumber3 = [UIFont systemFontOfSize:22];
+    [_labelThirdNumber setFont:boldFontNumber3];
+    
+    _buttonThird.backgroundColor = [UIColor colorWithRed:(240/255.0) green:(242/255.0) blue:(245/255.0) alpha:1];
+    
+    _labelFourthDay.text = @"Th";
+    
+    UIFont *boldFont4 = [UIFont systemFontOfSize:[UIFont systemFontSize]];
+    [_labelFourthDay setFont:boldFont4];
+    
+    UIFont *boldFontNumber4 = [UIFont systemFontOfSize:22];
+    [_labelFourthNumber setFont:boldFontNumber4];
+    
+    _buttonFourth.backgroundColor = [UIColor colorWithRed:(240/255.0) green:(242/255.0) blue:(245/255.0) alpha:1];
+    
+    _labelFifthDay.text = @"Today";
+    
+    UIFont *boldFont5 = [UIFont boldSystemFontOfSize:[UIFont systemFontSize]];
+    [_labelFifthDay setFont:boldFont5];
+    
+    UIFont *boldFontNumber5 = [UIFont boldSystemFontOfSize:22];
+    [_labelFifthNumber setFont:boldFontNumber5];
+    
+    _buttonFifth.backgroundColor = [UIColor colorWithRed:(250/255.0) green:(250/255.0) blue:(250/255.0) alpha:1];
+    
+    _labelSixthDay.text = @"Sa";
+    
+    UIFont *boldFont6 = [UIFont systemFontOfSize:[UIFont systemFontSize]];
+    [_labelSixthDay setFont:boldFont6];
+    
+    UIFont *boldFontNumber6 = [UIFont systemFontOfSize:22];
+    [_labelSixthNumber setFont:boldFontNumber6];
+    
+    _buttonSixth.backgroundColor = [UIColor colorWithRed:(240/255.0) green:(242/255.0) blue:(245/255.0) alpha:1];
+    
+    _labelSeventhDay.text = @"Su";
+    
+    UIFont *boldFont7 = [UIFont systemFontOfSize:[UIFont systemFontSize]];
+    [_labelSeventhDay setFont:boldFont7];
+    
+    UIFont *boldFontNumber7 = [UIFont systemFontOfSize:22];
+    [_labelSeventhNumber setFont:boldFontNumber7];
+    
+    _buttonSeventh.backgroundColor = [UIColor colorWithRed:(240/255.0) green:(242/255.0) blue:(245/255.0) alpha:1];
+    
+}
+
+- (IBAction)buttonSixthPressed:(id)sender {
+    
+    [_imageViewFirst setImage:[UIImage imageNamed:@"_checkmark.png"]];
+    [_imageViewSecond setImage:[UIImage imageNamed:@"_checkmark.png"]];
+    [_imageViewThird setImage:[UIImage imageNamed:@"_checkmark.png"]];
+    [_imageViewFourth setImage:[UIImage imageNamed:@"_checkmark.png"]];
+    [_imageViewFifth setImage:[UIImage imageNamed:@"_checkmark.png"]];
+    [_imageViewSixth setImage:[UIImage imageNamed:@""]];
+    [_imageViewSeventh setImage:[UIImage imageNamed:@""]];
+    
+    _labelFirstDay.text = @"Mo";
+    
+    UIFont *boldFont = [UIFont systemFontOfSize:[UIFont systemFontSize]];
+    [_labelFirstDay setFont:boldFont];
+    
+    UIFont *boldFontNumber = [UIFont systemFontOfSize:22];
+    [_labelFirstNumber setFont:boldFontNumber];
+    
+    _buttonFirst.backgroundColor = [UIColor colorWithRed:(240/255.0) green:(242/255.0) blue:(245/255.0) alpha:1];
+    
+    self.progressViewCalibration.progress=0.86f;
+    
+    _labelSecondDay.text = @"Tu";
+    
+    UIFont *boldFont2 = [UIFont systemFontOfSize:[UIFont systemFontSize]];
+    [_labelSecondDay setFont:boldFont2];
+    
+    UIFont *boldFontNumber2 = [UIFont systemFontOfSize:22];
+    [_labelSecondNumber setFont:boldFontNumber2];
+    
+    _buttonSecond.backgroundColor = [UIColor colorWithRed:(240/255.0) green:(242/255.0) blue:(245/255.0) alpha:1];
+    
+    _labelThirdDay.text = @"We";
+    
+    UIFont *boldFont3 = [UIFont systemFontOfSize:[UIFont systemFontSize]];
+    [_labelThirdDay setFont:boldFont3];
+    
+    UIFont *boldFontNumber3 = [UIFont systemFontOfSize:22];
+    [_labelThirdNumber setFont:boldFontNumber3];
+    
+    _buttonThird.backgroundColor = [UIColor colorWithRed:(240/255.0) green:(242/255.0) blue:(245/255.0) alpha:1];
+    
+    _labelFourthDay.text = @"Th";
+    
+    UIFont *boldFont4 = [UIFont systemFontOfSize:[UIFont systemFontSize]];
+    [_labelFourthDay setFont:boldFont4];
+    
+    UIFont *boldFontNumber4 = [UIFont systemFontOfSize:22];
+    [_labelFourthNumber setFont:boldFontNumber4];
+    
+    _buttonFourth.backgroundColor = [UIColor colorWithRed:(240/255.0) green:(242/255.0) blue:(245/255.0) alpha:1];
+    
+    _labelFifthDay.text = @"Fr";
+    
+    UIFont *boldFont5 = [UIFont systemFontOfSize:[UIFont systemFontSize]];
+    [_labelFifthDay setFont:boldFont5];
+    
+    UIFont *boldFontNumber5 = [UIFont systemFontOfSize:22];
+    [_labelFifthNumber setFont:boldFontNumber5];
+    
+    _buttonFifth.backgroundColor = [UIColor colorWithRed:(240/255.0) green:(242/255.0) blue:(245/255.0) alpha:1];
+    
+    _labelSixthDay.text = @"Today";
+    
+    UIFont *boldFont6 = [UIFont boldSystemFontOfSize:[UIFont systemFontSize]];
+    [_labelSixthDay setFont:boldFont6];
+    
+    UIFont *boldFontNumber6 = [UIFont boldSystemFontOfSize:22];
+    [_labelSixthNumber setFont:boldFontNumber6];
+    
+    _buttonSixth.backgroundColor = [UIColor colorWithRed:(250/255.0) green:(250/255.0) blue:(250/255.0) alpha:1];
+    
+    _labelSeventhDay.text = @"Su";
+    
+    UIFont *boldFont7 = [UIFont systemFontOfSize:[UIFont systemFontSize]];
+    [_labelSeventhDay setFont:boldFont7];
+    
+    UIFont *boldFontNumber7 = [UIFont systemFontOfSize:22];
+    [_labelSeventhNumber setFont:boldFontNumber7];
+    
+    _buttonSeventh.backgroundColor = [UIColor colorWithRed:(240/255.0) green:(242/255.0) blue:(245/255.0) alpha:1];
+    
+}
+
+- (IBAction)buttonSeventhPressed:(id)sender {
+    
+    [_imageViewFirst setImage:[UIImage imageNamed:@"_checkmark.png"]];
+    [_imageViewSecond setImage:[UIImage imageNamed:@"_checkmark.png"]];
+    [_imageViewThird setImage:[UIImage imageNamed:@"_checkmark.png"]];
+    [_imageViewFourth setImage:[UIImage imageNamed:@"_checkmark.png"]];
+    [_imageViewFifth setImage:[UIImage imageNamed:@"_checkmark.png"]];
+    [_imageViewSixth setImage:[UIImage imageNamed:@"_checkmark.png"]];
+    [_imageViewSeventh setImage:[UIImage imageNamed:@""]];
+    
+    _labelFirstDay.text = @"Mo";
+    
+    UIFont *boldFont = [UIFont systemFontOfSize:[UIFont systemFontSize]];
+    [_labelFirstDay setFont:boldFont];
+    
+    UIFont *boldFontNumber = [UIFont systemFontOfSize:22];
+    [_labelFirstNumber setFont:boldFontNumber];
+    
+    _buttonFirst.backgroundColor = [UIColor colorWithRed:(240/255.0) green:(242/255.0) blue:(245/255.0) alpha:1];
+    
+    self.progressViewCalibration.progress=1.0f;
+    
+    _labelSecondDay.text = @"Tu";
+    
+    UIFont *boldFont2 = [UIFont systemFontOfSize:[UIFont systemFontSize]];
+    [_labelSecondDay setFont:boldFont2];
+    
+    UIFont *boldFontNumber2 = [UIFont systemFontOfSize:22];
+    [_labelSecondNumber setFont:boldFontNumber2];
+    
+    _buttonSecond.backgroundColor = [UIColor colorWithRed:(240/255.0) green:(242/255.0) blue:(245/255.0) alpha:1];
+    
+    _labelThirdDay.text = @"We";
+    
+    UIFont *boldFont3 = [UIFont systemFontOfSize:[UIFont systemFontSize]];
+    [_labelThirdDay setFont:boldFont3];
+    
+    UIFont *boldFontNumber3 = [UIFont systemFontOfSize:22];
+    [_labelThirdNumber setFont:boldFontNumber3];
+    
+    _buttonThird.backgroundColor = [UIColor colorWithRed:(240/255.0) green:(242/255.0) blue:(245/255.0) alpha:1];
+    
+    _labelFourthDay.text = @"Th";
+    
+    UIFont *boldFont4 = [UIFont systemFontOfSize:[UIFont systemFontSize]];
+    [_labelFourthDay setFont:boldFont4];
+    
+    UIFont *boldFontNumber4 = [UIFont systemFontOfSize:22];
+    [_labelFourthNumber setFont:boldFontNumber4];
+    
+    _buttonFourth.backgroundColor = [UIColor colorWithRed:(240/255.0) green:(242/255.0) blue:(245/255.0) alpha:1];
+    
+    _labelFifthDay.text = @"Fr";
+    
+    UIFont *boldFont5 = [UIFont systemFontOfSize:[UIFont systemFontSize]];
+    [_labelFifthDay setFont:boldFont5];
+    
+    UIFont *boldFontNumber5 = [UIFont systemFontOfSize:22];
+    [_labelFifthNumber setFont:boldFontNumber5];
+    
+    _buttonFifth.backgroundColor = [UIColor colorWithRed:(240/255.0) green:(242/255.0) blue:(245/255.0) alpha:1];
+    
+    _labelSixthDay.text = @"Sa";
+    
+    UIFont *boldFont6 = [UIFont systemFontOfSize:[UIFont systemFontSize]];
+    [_labelSixthDay setFont:boldFont6];
+    
+    UIFont *boldFontNumber6 = [UIFont systemFontOfSize:22];
+    [_labelSixthNumber setFont:boldFontNumber6];
+    
+    _buttonSixth.backgroundColor = [UIColor colorWithRed:(240/255.0) green:(242/255.0) blue:(245/255.0) alpha:1];
+    
+    _labelSeventhDay.text = @"Today";
+    
+    UIFont *boldFont7 = [UIFont boldSystemFontOfSize:[UIFont systemFontSize]];
+    [_labelSeventhDay setFont:boldFont7];
+    
+    UIFont *boldFontNumber7 = [UIFont boldSystemFontOfSize:22];
+    [_labelSeventhNumber setFont:boldFontNumber7];
+    
+    _buttonSeventh.backgroundColor = [UIColor colorWithRed:(250/255.0) green:(250/255.0) blue:(250/255.0) alpha:1];
+    
+}
+
 
 
 /*
