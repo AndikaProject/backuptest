@@ -34,6 +34,9 @@
 		3C36D67919B439C800DEE0A4 /* RBPopUpMindPlanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C36D67819B439C700DEE0A4 /* RBPopUpMindPlanViewController.m */; };
 		3C36D67C19B43AF800DEE0A4 /* RBPopUpBioPlanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C36D67B19B43AF800DEE0A4 /* RBPopUpBioPlanViewController.m */; };
 		3C36D67F19B4977F00DEE0A4 /* RBSleepCoachViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C36D67E19B4977F00DEE0A4 /* RBSleepCoachViewController.m */; };
+		3C36D68219B49DA600DEE0A4 /* RBActivityCoachViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C36D68119B49DA600DEE0A4 /* RBActivityCoachViewController.m */; };
+		3C36D68519B49F8700DEE0A4 /* RBMindCoachViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C36D68419B49F8700DEE0A4 /* RBMindCoachViewController.m */; };
+		3C36D68819B4A11C00DEE0A4 /* RBNutritionCoachViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C36D68719B4A11C00DEE0A4 /* RBNutritionCoachViewController.m */; };
 		3C43087B19A328EC0085DD3A /* RBSecondIntroductionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C43087A19A328EC0085DD3A /* RBSecondIntroductionViewController.m */; };
 		3C43087E19A32F5E0085DD3A /* RBThirdIntroductionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C43087D19A32F5E0085DD3A /* RBThirdIntroductionViewController.m */; };
 		3C43088119A33CE40085DD3A /* RBFirstCalIntroViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C43088019A33CE40085DD3A /* RBFirstCalIntroViewController.m */; };
@@ -134,6 +137,12 @@
 		3C36D67B19B43AF800DEE0A4 /* RBPopUpBioPlanViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RBPopUpBioPlanViewController.m; sourceTree = "<group>"; };
 		3C36D67D19B4977F00DEE0A4 /* RBSleepCoachViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RBSleepCoachViewController.h; sourceTree = "<group>"; };
 		3C36D67E19B4977F00DEE0A4 /* RBSleepCoachViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RBSleepCoachViewController.m; sourceTree = "<group>"; };
+		3C36D68019B49DA600DEE0A4 /* RBActivityCoachViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RBActivityCoachViewController.h; sourceTree = "<group>"; };
+		3C36D68119B49DA600DEE0A4 /* RBActivityCoachViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RBActivityCoachViewController.m; sourceTree = "<group>"; };
+		3C36D68319B49F8700DEE0A4 /* RBMindCoachViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RBMindCoachViewController.h; sourceTree = "<group>"; };
+		3C36D68419B49F8700DEE0A4 /* RBMindCoachViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RBMindCoachViewController.m; sourceTree = "<group>"; };
+		3C36D68619B4A11C00DEE0A4 /* RBNutritionCoachViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RBNutritionCoachViewController.h; sourceTree = "<group>"; };
+		3C36D68719B4A11C00DEE0A4 /* RBNutritionCoachViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RBNutritionCoachViewController.m; sourceTree = "<group>"; };
 		3C43087919A328EC0085DD3A /* RBSecondIntroductionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RBSecondIntroductionViewController.h; sourceTree = "<group>"; };
 		3C43087A19A328EC0085DD3A /* RBSecondIntroductionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RBSecondIntroductionViewController.m; sourceTree = "<group>"; };
 		3C43087C19A32F5E0085DD3A /* RBThirdIntroductionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RBThirdIntroductionViewController.h; sourceTree = "<group>"; };
@@ -387,6 +396,12 @@
 				3C36D67B19B43AF800DEE0A4 /* RBPopUpBioPlanViewController.m */,
 				3C36D67D19B4977F00DEE0A4 /* RBSleepCoachViewController.h */,
 				3C36D67E19B4977F00DEE0A4 /* RBSleepCoachViewController.m */,
+				3C36D68019B49DA600DEE0A4 /* RBActivityCoachViewController.h */,
+				3C36D68119B49DA600DEE0A4 /* RBActivityCoachViewController.m */,
+				3C36D68319B49F8700DEE0A4 /* RBMindCoachViewController.h */,
+				3C36D68419B49F8700DEE0A4 /* RBMindCoachViewController.m */,
+				3C36D68619B4A11C00DEE0A4 /* RBNutritionCoachViewController.h */,
+				3C36D68719B4A11C00DEE0A4 /* RBNutritionCoachViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -734,6 +749,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3C36D68519B49F8700DEE0A4 /* RBMindCoachViewController.m in Sources */,
 				3C19E3E4197BFBF800B35857 /* RBSubscriptionCodeViewController.m in Sources */,
 				3C19E3F6197C0F9C00B35857 /* RBMenuCustomCell.m in Sources */,
 				3C19E360197A629E00B35857 /* RBLoginViewController.m in Sources */,
@@ -742,6 +758,7 @@
 				3C19E3DB197BB70A00B35857 /* UIViewController+ECSlidingViewController.m in Sources */,
 				3C8F788B1982385E0008C547 /* RBSecondViewController.m in Sources */,
 				3C36D67919B439C800DEE0A4 /* RBPopUpMindPlanViewController.m in Sources */,
+				3C36D68219B49DA600DEE0A4 /* RBActivityCoachViewController.m in Sources */,
 				3C36D66D19B3F5A500DEE0A4 /* RBTakeaBreakViewController.m in Sources */,
 				3C36D67319B3FA9B00DEE0A4 /* RBWelcomePopUpViewController.m in Sources */,
 				3C19E3E1197BBAFF00B35857 /* RBHomeTabBarController.m in Sources */,
@@ -760,6 +777,7 @@
 				3C8F788819820A040008C547 /* RBSideMenuViewController.m in Sources */,
 				3C19E3DA197BB70A00B35857 /* ECSlidingViewController.m in Sources */,
 				AEBD8CE819B0264E00F4C235 /* RBTimeToBedViewController.m in Sources */,
+				3C36D68819B4A11C00DEE0A4 /* RBNutritionCoachViewController.m in Sources */,
 				3C36D67619B4380C00DEE0A4 /* RBPopUpActivityPlanViewController.m in Sources */,
 				3C19E3D7197BB70A00B35857 /* ECSlidingAnimationController.m in Sources */,
 				AEBD8CF319B08C3500F4C235 /* RBTermsAndConditionViewController.m in Sources */,

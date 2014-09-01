@@ -1,5 +1,5 @@
 //
-//  RBSleepCoachViewController.h
+//  RBActivityCoachViewController.h
 //  Brightr
 //
 //  Created by defindal irvan on 9/1/14.
@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <QuartzCore/QuartzCore.h>
 
-@interface RBSleepCoachViewController : UIViewController
+@interface RBActivityCoachViewController : UIViewController
 
 + (instancetype)controllerWithStoryBoard:(UIStoryboard *)storyboard;
 

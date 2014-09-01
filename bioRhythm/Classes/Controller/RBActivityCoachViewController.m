@@ -1,29 +1,29 @@
 //
-//  RBSleepCoachViewController.m
+//  RBActivityCoachViewController.m
 //  Brightr
 //
 //  Created by defindal irvan on 9/1/14.
 //  Copyright (c) 2014 defindal irvan. All rights reserved.
 //
 
-#import "RBSleepCoachViewController.h"
+#import "RBActivityCoachViewController.h"
 
-@interface RBSleepCoachViewController ()
+@interface RBActivityCoachViewController ()
 
 @property (strong, nonatomic) IBOutlet UINavigationBar *navBar;
 
-@property (strong, nonatomic) IBOutlet UIImageView *imageViewSleep;
-@property (strong, nonatomic) IBOutlet UITextField *textFieldSleep;
+@property (strong, nonatomic) IBOutlet UIImageView *imageViewActivity;
+@property (strong, nonatomic) IBOutlet UITextField *textFieldActivity;
 @property (strong, nonatomic) IBOutlet UIButton *buttonSend;
 
 - (IBAction)buttonSendPressed:(id)sender;
 
 @end
 
-@implementation RBSleepCoachViewController
+@implementation RBActivityCoachViewController
 
 + (instancetype)controllerWithStoryBoard:(UIStoryboard *)storyboard {
-    RBSleepCoachViewController *controller = [storyboard instantiateViewControllerWithIdentifier:@"RBSleepCoachViewController"];
+    RBActivityCoachViewController *controller = [storyboard instantiateViewControllerWithIdentifier:@"RBActivityCoachViewController"];
     
     return controller;
 }
@@ -47,16 +47,16 @@
     [_navBar setBarTintColor:[UIColor colorWithRed:(79/255.0) green:(193/255.0) blue:(233/255.0) alpha:1]];
     _navBar.titleTextAttributes = @{NSForegroundColorAttributeName : [UIColor whiteColor]};
     
-    [_imageViewSleep setImage:[UIImage imageNamed:@"_sleep_pic.png"]];
+    [_imageViewActivity setImage:[UIImage imageNamed:@"_activity_pic.png"]];
     
     // set round corner button
     _buttonSend.layer.cornerRadius = 5;
     
-    _textFieldSleep.layer.borderColor=[[UIColor colorWithRed:(227/255.0) green:(228/255.0) blue:(232/255.0) alpha:1]CGColor];
-    _textFieldSleep.layer.borderWidth=1.0;
+    _textFieldActivity.layer.borderColor=[[UIColor colorWithRed:(227/255.0) green:(228/255.0) blue:(232/255.0) alpha:1]CGColor];
+    _textFieldActivity.layer.borderWidth=1.0;
     
     UIFont* italicFont = [UIFont italicSystemFontOfSize:[UIFont systemFontSize]];
-    [_textFieldSleep setValue:italicFont forKeyPath:@"_placeholderLabel.font"];
+    [_textFieldActivity setValue:italicFont forKeyPath:@"_placeholderLabel.font"];
 }
 
 -(void)viewWillAppear:(BOOL)animated

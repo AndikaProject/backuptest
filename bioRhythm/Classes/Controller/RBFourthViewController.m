@@ -9,6 +9,9 @@
 #import "RBFourthViewController.h"
 
 #import "RBSleepCoachViewController.h"
+#import "RBActivityCoachViewController.h"
+#import "RBMindCoachViewController.h"
+#import "RBNutritionCoachViewController.h"
 
 @interface RBFourthViewController ()
 
@@ -92,12 +95,18 @@
 }
 
 - (IBAction)buttonActivityPressed:(id)sender {
+    RBActivityCoachViewController *controller = [RBActivityCoachViewController controllerWithStoryBoard:self.storyboard];
+    [self.navigationController pushViewController:controller animated:YES];
 }
 
 - (IBAction)buttonMindPressed:(id)sender {
+    RBMindCoachViewController *controller = [RBMindCoachViewController controllerWithStoryBoard:self.storyboard];
+    [self.navigationController pushViewController:controller animated:YES];
 }
 
 - (IBAction)buttonNutritionPressed:(id)sender {
+    RBNutritionCoachViewController *controller = [RBNutritionCoachViewController controllerWithStoryBoard:self.storyboard];
+    [self.navigationController pushViewController:controller animated:YES];
 }
 
 /*
