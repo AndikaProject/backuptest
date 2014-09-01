@@ -39,8 +39,16 @@
 @property (strong, nonatomic) IBOutlet UIImageView *imageViewFirst;
 @property (strong, nonatomic) IBOutlet UIImageView *imageViewSecond;
 @property (strong, nonatomic) IBOutlet UIImageView *imageViewThird;
+@property (strong, nonatomic) IBOutlet UIImageView *imageViewTooltipCal;
+@property (strong, nonatomic) IBOutlet UIImageView *imageViewTooltipFinal;
 
-- (IBAction)segmentedControlAction:(id)sender;
+@property (strong, nonatomic) IBOutlet UILabel *labelLastNight;
+@property (strong, nonatomic) IBOutlet UILabel *labelThisWeek;
+@property (strong, nonatomic) IBOutlet UIButton *buttonLastNight;
+@property (strong, nonatomic) IBOutlet UIButton *buttonThisWeek;
+
+- (IBAction)buttonLastNight:(id)sender;
+- (IBAction)buttonThisWeek:(id)sender;
 
 @end
 
@@ -75,6 +83,8 @@
     [_imageViewFirst setImage:[UIImage imageNamed:@"_clock.png"]];
     [_imageViewSecond setImage:[UIImage imageNamed:@"_goal.png"]];
     [_imageViewThird setImage:[UIImage imageNamed:@"_performance.png"]];
+    [_imageViewTooltipCal setImage:[UIImage imageNamed:@"_Bubble_lightblue.png"]];
+    [_imageViewTooltipFinal setImage:[UIImage imageNamed:@"_Bubble_blue.png"]];
     
     // weeks chart
     self.labelWeeksBar0.backgroundColor = [UIColor colorWithRed:(79/255.0) green:(193/255.0) blue:(233/255.0) alpha:1];
@@ -133,6 +143,12 @@
     UIFont *font = [UIFont boldSystemFontOfSize:12.0f];
     NSDictionary *attributes = [NSDictionary dictionaryWithObject:font forKey:NSFontAttributeName];
     [self.segmentedControlWeeks setTitleTextAttributes:attributes forState:UIControlStateNormal];
+    
+    [_buttonLastNight setTitleColor:[UIColor colorWithRed:(79/255.0) green:(193/255.0) blue:(233/255.0) alpha:1] forState:UIControlStateNormal];
+    _labelLastNight.backgroundColor = [UIColor colorWithRed:(79/255.0) green:(193/255.0) blue:(233/255.0) alpha:1];
+    
+    [_buttonThisWeek setTitleColor:[UIColor colorWithRed:(158/255.0) green:(167/255.0) blue:(179/255.0) alpha:1] forState:UIControlStateNormal];
+    _labelThisWeek.backgroundColor = [UIColor colorWithRed:(203/255.0) green:(204/255.0) blue:(208/255.0) alpha:1];
 }
 
 - (void)didReceiveMemoryWarning
@@ -142,37 +158,45 @@
 }
 
 #pragma mark - action
-- (IBAction)segmentedControlAction:(UISegmentedControl *)sender
-{
+- (IBAction)buttonLastNight:(id)sender {
     
-    NSInteger selectedSegment = _segmentedControlWeeks.selectedSegmentIndex;
+    [_buttonLastNight setTitleColor:[UIColor colorWithRed:(79/255.0) green:(193/255.0) blue:(233/255.0) alpha:1] forState:UIControlStateNormal];
+    _labelLastNight.backgroundColor = [UIColor colorWithRed:(79/255.0) green:(193/255.0) blue:(233/255.0) alpha:1];
     
-    if (selectedSegment == 0) {
-        [self.labelFirst setText:@"Slept last night"];
-        [self.labelSecond setText:@"Goal"];
-        
-        [self.labelSleepTime setText:@"4:57"];
-        [self.labelGoalTime setText:@"6:10"];
-        [self.labelPerfPercent setText:@"76%"];
-        
-        // set image view
-        [_imageViewFirst setImage:[UIImage imageNamed:@"_clock.png"]];
-        [_imageViewSecond setImage:[UIImage imageNamed:@"_goal.png"]];
-        [_imageViewThird setImage:[UIImage imageNamed:@"_performance.png"]];
-        
-    }
-    else{
-        [self.labelSleepTime setText:@"6:10"];
-        [self.labelGoalTime setText:@"4:57"];
-        [self.labelPerfPercent setText:@"76%"];
-        
-        [self.labelFirst setText:@"Week goal"];
-        [self.labelSecond setText:@"Average per night"];
-        
-        [_imageViewFirst setImage:[UIImage imageNamed:@"_goal.png"]];
-        [_imageViewSecond setImage:[UIImage imageNamed:@"_clock.png"]];
-        [_imageViewThird setImage:[UIImage imageNamed:@"_performance.png"]];
-    }
+    [_buttonThisWeek setTitleColor:[UIColor colorWithRed:(158/255.0) green:(167/255.0) blue:(179/255.0) alpha:1] forState:UIControlStateNormal];
+    _labelThisWeek.backgroundColor = [UIColor colorWithRed:(203/255.0) green:(204/255.0) blue:(208/255.0) alpha:1];
+    
+    [self.labelFirst setText:@"Slept last night"];
+    [self.labelSecond setText:@"Goal"];
+    
+    [self.labelSleepTime setText:@"4:57"];
+    [self.labelGoalTime setText:@"6:10"];
+    [self.labelPerfPercent setText:@"76%"];
+    
+    // set image view
+    [_imageViewFirst setImage:[UIImage imageNamed:@"_clock.png"]];
+    [_imageViewSecond setImage:[UIImage imageNamed:@"_goal.png"]];
+    [_imageViewThird setImage:[UIImage imageNamed:@"_performance.png"]];
+}
+
+- (IBAction)buttonThisWeek:(id)sender {
+    
+    [_buttonLastNight setTitleColor:[UIColor colorWithRed:(158/255.0) green:(167/255.0) blue:(179/255.0) alpha:1] forState:UIControlStateNormal];
+    _labelLastNight.backgroundColor = [UIColor colorWithRed:(203/255.0) green:(204/255.0) blue:(208/255.0) alpha:1];
+    
+    [_buttonThisWeek setTitleColor:[UIColor colorWithRed:(79/255.0) green:(193/255.0) blue:(233/255.0) alpha:1] forState:UIControlStateNormal];
+    _labelThisWeek.backgroundColor = [UIColor colorWithRed:(79/255.0) green:(193/255.0) blue:(233/255.0) alpha:1];
+    
+    [self.labelSleepTime setText:@"6:10"];
+    [self.labelGoalTime setText:@"4:57"];
+    [self.labelPerfPercent setText:@"76%"];
+    
+    [self.labelFirst setText:@"Week goal"];
+    [self.labelSecond setText:@"Average per night"];
+    
+    [_imageViewFirst setImage:[UIImage imageNamed:@"_goal.png"]];
+    [_imageViewSecond setImage:[UIImage imageNamed:@"_clock.png"]];
+    [_imageViewThird setImage:[UIImage imageNamed:@"_performance.png"]];
 }
 
 /*
@@ -185,5 +209,6 @@
     // Pass the selected object to the new view controller.
 }
 */
+
 
 @end

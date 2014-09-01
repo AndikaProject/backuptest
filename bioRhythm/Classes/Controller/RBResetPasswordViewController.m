@@ -19,6 +19,8 @@
 @property (strong, nonatomic) IBOutlet UIImageView *imageViewEmail;
 @property (strong, nonatomic) IBOutlet UIImageView *imageViewIcon;
 
+- (IBAction)textFieldEmail:(id)sender;
+
 @end
 
 @implementation RBResetPasswordViewController
@@ -95,10 +97,20 @@
     [_textFieldEmail resignFirstResponder];
 }
 
-- (IBAction)buttonBackToLoginPressed:(id)sender
-{
-    RBLoginViewController *controller = [RBLoginViewController controllerWithStoryBoard:self.storyboard];
-    [self.navigationController pushViewController:controller animated:YES];
+- (IBAction)textFieldEmail:(id)sender {
+//    [_imageViewIcon setImage:[UIImage imageNamed:@"_username_selected.png"]];
+//    
+//    // set border image
+//    #define kBorderWidth 1.0
+//    #define kCornerRadius 5.0
+//    CALayer *borderLayer = [CALayer layer];
+//    CGRect borderFrame = CGRectMake(0, 0, (_imageViewEmail.frame.size.width), (_imageViewEmail.frame.size.height));
+//    [borderLayer setBackgroundColor:[[UIColor clearColor] CGColor]];
+//    [borderLayer setFrame:borderFrame];
+//    [borderLayer setCornerRadius:kCornerRadius];
+//    [borderLayer setBorderWidth:kBorderWidth];
+//    [borderLayer setBorderColor:[[UIColor colorWithRed:(79/255.0) green:(193/255.0) blue:(233/255.0) alpha:1] CGColor]];
+//    [_imageViewEmail.layer addSublayer:borderLayer];
 }
 
 
@@ -112,5 +124,6 @@
     // Pass the selected object to the new view controller.
 }
 */
+
 
 @end
