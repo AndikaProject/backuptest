@@ -17,6 +17,8 @@
 @property (strong, nonatomic) IBOutlet UIButton *buttonSend;
 
 - (IBAction)buttonSendPressed:(id)sender;
+- (IBAction)dismissKeypad:(id)sender;
+- (IBAction)textFieldReturn:(id)sender;
 
 @end
 
@@ -80,6 +82,18 @@
 
 #pragma mark - action
 - (IBAction)buttonSendPressed:(id)sender {
+}
+
+- (IBAction)dismissKeypad:(id)sender {
+    
+    [_textFieldMind resignFirstResponder];
+    
+}
+
+- (IBAction)textFieldReturn:(id)sender {
+    
+    [sender resignFirstResponder];
+    
 }
 
 /*
