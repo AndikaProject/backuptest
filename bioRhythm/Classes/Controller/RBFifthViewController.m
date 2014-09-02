@@ -46,6 +46,8 @@
     [self.navigationController.navigationBar setBarTintColor:[UIColor colorWithRed:(79/255.0) green:(193/255.0) blue:(233/255.0) alpha:1]];
     
     self.navigationController.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName : [UIColor whiteColor]};
+    
+    [_tabelViewSetting setSeparatorInset:UIEdgeInsetsZero];
 }
 
 - (void)viewDidAppear:(BOOL)animated{
@@ -93,8 +95,9 @@
         }
         
         cell.textLabel.text = @"ACCOUNT";
-        cell.textLabel.textColor = [UIColor colorWithRed:(158/255.0) green:(167/255.0) blue:(179/255.0) alpha:1];
+        cell.textLabel.textColor = [UIColor darkGrayColor];
         [cell.textLabel setFont:[UIFont systemFontOfSize:16]];
+        cell.backgroundColor = [UIColor colorWithRed:(246/255.0) green:(248/255.0) blue:(244/255.0) alpha:1];
 
         return cell;
         
@@ -127,8 +130,10 @@
         }
         
         cell.textLabel.text = @"VITALITY APP";
-        cell.textLabel.textColor = [UIColor colorWithRed:(158/255.0) green:(167/255.0) blue:(179/255.0) alpha:1];
+        cell.textLabel.textColor = [UIColor darkGrayColor];
         [cell.textLabel setFont:[UIFont systemFontOfSize:16]];
+        cell.backgroundColor = [UIColor lightGrayColor];
+        cell.backgroundColor = [UIColor colorWithRed:(246/255.0) green:(248/255.0) blue:(244/255.0) alpha:1];
         
         return cell;
         
@@ -184,15 +189,19 @@
         }
     }else if (indexPath.section == 1) {
         switch (indexPath.row) {
-            case 0:
-                //                self.slidingViewController.topViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"RBSleepPlanViewController"];
+            {case 0:
+    
                 break;
-            case 1:
-
+            }
+            {case 1:
+                [tableView deselectRowAtIndexPath:indexPath animated:NO];
+                RBWelcomeViewController *controller = [RBWelcomeViewController controllerWithStoryBoard:self.storyboard];
+                [self.navigationController pushViewController:controller animated:YES];
                 break;
-                
-            default:
+            }
+            {default:
                 break;
+            }
         }
     }
 }

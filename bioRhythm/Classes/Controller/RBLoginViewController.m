@@ -26,6 +26,9 @@
 @property (strong, nonatomic) IBOutlet UIImageView *imageViewIconPass;
 
 - (IBAction)forgotPass:(id)sender;
+- (IBAction)textFieldEmailClicked:(id)sender;
+- (IBAction)textFieldPassClicked:(id)sender;
+
 
 @end
 
@@ -55,8 +58,8 @@
     // set image view
     [_imageViewEmail setImage:[UIImage imageNamed:@"textField.png"]];
     [_imageViewPass setImage:[UIImage imageNamed:@"textField.png"]];
-    [_imageViewIconEmail setImage:[UIImage imageNamed:@"username.png"]];
-    [_imageViewIconPass setImage:[UIImage imageNamed:@"password.png"]];
+    [_imageViewIconEmail setImage:[UIImage imageNamed:@"_username_.png"]];
+    [_imageViewIconPass setImage:[UIImage imageNamed:@"_password.png"]];
     
     // set border image
     
@@ -138,6 +141,67 @@
     [self.navigationController pushViewController:controller animated:YES];
     
 }
+
+- (IBAction)textFieldEmailClicked:(id)sender {
+//    [_imageViewIconEmail setImage:[UIImage imageNamed:@"_username_selected.png"]];
+//    
+//    // set border image
+//    #define kBorderWidth 1.5
+//    #define kCornerRadius 5.0
+//    CALayer *borderLayer = [CALayer layer];
+//    CGRect borderFrame = CGRectMake(0, 0, (_imageViewEmail.frame.size.width), (_imageViewEmail.frame.size.height));
+//    [borderLayer setBackgroundColor:[[UIColor clearColor] CGColor]];
+//    [borderLayer setFrame:borderFrame];
+//    [borderLayer setCornerRadius:kCornerRadius];
+//    [borderLayer setBorderWidth:kBorderWidth];
+//    [borderLayer setBorderColor:[[UIColor colorWithRed:(79/255.0) green:(193/255.0) blue:(233/255.0) alpha:1] CGColor]];
+//    [_imageViewEmail.layer addSublayer:borderLayer];
+//    
+//    [_imageViewIconPass setImage:[UIImage imageNamed:@"_password.png"]];
+//    
+//    // set border image
+//    #define kBorderWidth 1.5
+//    #define kCornerRadius 5.0
+//    CALayer *borderLayer2 = [CALayer layer];
+//    CGRect borderFrame2 = CGRectMake(0, 0, (_imageViewPass.frame.size.width), (_imageViewPass.frame.size.height));
+//    [borderLayer2 setBackgroundColor:[[UIColor clearColor] CGColor]];
+//    [borderLayer2 setFrame:borderFrame2];
+//    [borderLayer2 setCornerRadius:kCornerRadius];
+//    [borderLayer2 setBorderWidth:kBorderWidth];
+//    [borderLayer2 setBorderColor:[[UIColor lightGrayColor] CGColor]];
+//    [_imageViewPass.layer addSublayer:borderLayer2];
+}
+
+- (IBAction)textFieldPassClicked:(id)sender {
+//    [_imageViewIconEmail setImage:[UIImage imageNamed:@"_username.png"]];
+//    
+//    // set border image
+//    #define kBorderWidth 1.5
+//    #define kCornerRadius 5.0
+//    CALayer *borderLayer = [CALayer layer];
+//    CGRect borderFrame = CGRectMake(0, 0, (_imageViewEmail.frame.size.width), (_imageViewEmail.frame.size.height));
+//    [borderLayer setBackgroundColor:[[UIColor clearColor] CGColor]];
+//    [borderLayer setFrame:borderFrame];
+//    [borderLayer setCornerRadius:kCornerRadius];
+//    [borderLayer setBorderWidth:kBorderWidth];
+//    [borderLayer setBorderColor:[[UIColor lightGrayColor] CGColor]];
+//    [_imageViewEmail.layer addSublayer:borderLayer];
+//    
+//    [_imageViewIconPass setImage:[UIImage imageNamed:@"_password_selected.png"]];
+//    
+//    // set border image
+//    #define kBorderWidth 1.5
+//    #define kCornerRadius 5.0
+//    CALayer *borderLayer2 = [CALayer layer];
+//    CGRect borderFrame2 = CGRectMake(0, 0, (_imageViewPass.frame.size.width), (_imageViewPass.frame.size.height));
+//    [borderLayer2 setBackgroundColor:[[UIColor clearColor] CGColor]];
+//    [borderLayer2 setFrame:borderFrame2];
+//    [borderLayer2 setCornerRadius:kCornerRadius];
+//    [borderLayer2 setBorderWidth:kBorderWidth];
+//    [borderLayer2 setBorderColor:[[UIColor colorWithRed:(79/255.0) green:(193/255.0) blue:(233/255.0) alpha:1] CGColor]];
+//    [_imageViewPass.layer addSublayer:borderLayer2];
+}
+
 
 
 //- (IBAction)buttonCreateAccountPressed:(id)sender {

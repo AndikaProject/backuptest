@@ -58,14 +58,14 @@
     _buttonStart.layer.cornerRadius = 5;
     
     // array jam
-    NSArray *dataHour = [[NSArray alloc] initWithObjects:@"01", @"02", @"03", @"04", @"05", @"06", @"07", @"08", @"09", @"10", @"11", @"12", nil];
+    NSArray *dataHour = [[NSArray alloc] initWithObjects:@"4:00h", @"4:30h", @"5:00h", @"5:30h", @"6:00h", @"6:30h", @"7:00h", @"7:30h", @"8:00h", @"8:30h", @"9:00h", @"9:30h", @"10:00h", nil];
     
     self.arrayHour = dataHour;
     
     // array menit
-    NSArray *dataMinute = [[NSArray alloc] initWithObjects:@"00", @"01", @"02", @"03", @"04", @"05", @"06", @"07", @"08", @"09", @"10", @"11", @"12", @"13", @"14", @"15", @"16", @"17", @"18", @"19", @"20", @"21", @"22", @"23", @"24", @"25", @"26", @"27", @"28", @"29", @"30", @"31", @"32", @"33", @"34", @"35", @"36", @"37", @"38", @"39", @"40", @"41", @"42", @"43", @"44", @"45", @"46", @"47", @"48", @"49", @"50", @"51", @"52", @"53", @"54", @"55", @"56", @"57", @"58", @"59", nil];
-    
-    self.arrayMinute = dataMinute;
+//    NSArray *dataMinute = [[NSArray alloc] initWithObjects:@"00", @"01", @"02", @"03", @"04", @"05", @"06", @"07", @"08", @"09", @"10", @"11", @"12", @"13", @"14", @"15", @"16", @"17", @"18", @"19", @"20", @"21", @"22", @"23", @"24", @"25", @"26", @"27", @"28", @"29", @"30", @"31", @"32", @"33", @"34", @"35", @"36", @"37", @"38", @"39", @"40", @"41", @"42", @"43", @"44", @"45", @"46", @"47", @"48", @"49", @"50", @"51", @"52", @"53", @"54", @"55", @"56", @"57", @"58", @"59", nil];
+//    
+//    self.arrayMinute = dataMinute;
 }
 
 -(void)viewWillAppear:(BOOL)animated
@@ -90,7 +90,7 @@
 #pragma  mark - picker data source methods
 
 - (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView {
-    return 3;
+    return 1;
 }
 
 - (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component{
@@ -100,14 +100,14 @@
     {
         numberOfRows = [_arrayHour count];
     }
-    else if (component == 2)
-    {
-        numberOfRows = [_arrayMinute count];
-    }
-    else
-    {
-        numberOfRows = 1;
-    }
+//    else if (component == 2)
+//    {
+//        numberOfRows = [_arrayMinute count];
+//    }
+//    else
+//    {
+//        numberOfRows = 1;
+//    }
     return numberOfRows;
     
 }
@@ -121,12 +121,12 @@
         case 0:
             title = self.arrayHour[row];
             break;
-        case 2:
-            title = self.arrayMinute[row];
-            break;
-        case 1:
-            title = @":";
-            break;
+//        case 2:
+//            title = self.arrayMinute[row];
+//            break;
+//        case 1:
+//            title = @":";
+//            break;
         default:
             break;
     }

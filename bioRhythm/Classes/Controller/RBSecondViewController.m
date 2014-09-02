@@ -10,6 +10,9 @@
 
 #import "RBCalibrationViewController.h"
 #import "RBTimeToBedViewController.h"
+#import "RBTakeaBreakViewController.h"
+#import "RBWelcomePopUpViewController.h"
+#import "RBStretchViewController.h"
 
 #import "UIViewController+ECSlidingViewController.h"
 
@@ -23,8 +26,6 @@
 @property (strong, nonatomic) IBOutlet UILabel *labelThirdTime;
 @property (strong, nonatomic) IBOutlet UILabel *labelFourDescription;
 @property (strong, nonatomic) IBOutlet UILabel *labelFourTime;
-
-@property (strong, nonatomic) IBOutlet UIProgressView *progressViewCoach;
 
 // calendar
 @property (strong, nonatomic) IBOutlet UILabel *labelFirstDay;
@@ -43,8 +44,26 @@
 @property (strong, nonatomic) IBOutlet UILabel *labelSixthNumber;
 @property (strong, nonatomic) IBOutlet UILabel *labelSeventhNumber;
 
-- (IBAction)buttonTestCal:(id)sender;
+@property (strong, nonatomic) IBOutlet UIButton *buttonFirst;
+@property (strong, nonatomic) IBOutlet UIButton *buttonSecond;
+@property (strong, nonatomic) IBOutlet UIButton *buttonThird;
+@property (strong, nonatomic) IBOutlet UIButton *buttonFourth;
+@property (strong, nonatomic) IBOutlet UIButton *buttonFifth;
+@property (strong, nonatomic) IBOutlet UIButton *buttonSixth;
+@property (strong, nonatomic) IBOutlet UIButton *buttonSeventh;
+
 - (IBAction)buttonTimeToBedPopUpPressed:(id)sender;
+- (IBAction)buttonTakeaBreakPopUpPressed:(id)sender;
+- (IBAction)buttonStretchPopUpPressed:(id)sender;
+- (IBAction)buttonWelcomePopUpPressed:(id)sender;
+
+- (IBAction)buttonFirstPressed:(id)sender;
+- (IBAction)buttonSecondPressed:(id)sender;
+- (IBAction)buttonThirdressed:(id)sender;
+- (IBAction)buttonFourthPressed:(id)sender;
+- (IBAction)buttonFifthressed:(id)sender;
+- (IBAction)buttonSixthPressed:(id)sender;
+- (IBAction)buttonSeventhPressed:(id)sender;
 
 @end
 
@@ -65,8 +84,8 @@
     
     [self.tabBarController.tabBar setHidden:NO];
     
-    [self.slidingViewController.topViewController.view addGestureRecognizer:self.slidingViewController.panGesture];
-    self.slidingViewController.topViewAnchoredGesture = ECSlidingViewControllerAnchoredGestureTapping | ECSlidingViewControllerAnchoredGesturePanning;
+//    [self.slidingViewController.topViewController.view addGestureRecognizer:self.slidingViewController.panGesture];
+//    self.slidingViewController.topViewAnchoredGesture = ECSlidingViewControllerAnchoredGestureTapping | ECSlidingViewControllerAnchoredGesturePanning;
     
     self.navigationController.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName : [UIColor whiteColor]};
     
@@ -90,10 +109,22 @@
     self.labelThirdTime.text = @"08:00";
     self.labelFourTime.text = @"Yesterday";
     
-    // set progress view
-    self.progressViewCoach.progress=0.15f;
-    
 }
+
+//- (void)viewDidAppear:(BOOL)animated{
+//    // set progress view
+//    _labelFirstDay.text = @"Today";
+//    
+//    UIFont *boldFont = [UIFont boldSystemFontOfSize:[UIFont systemFontSize]];
+//    [_labelFirstDay setFont:boldFont];
+//    
+//    UIFont *boldFontNumber = [UIFont boldSystemFontOfSize:22];
+//    [_labelFirstNumber setFont:boldFontNumber];
+//    
+//    _buttonFirst.backgroundColor = [UIColor colorWithRed:(250/255.0) green:(250/255.0) blue:(250/255.0) alpha:1];
+//    
+//    self.progressViewCoach.progress=0.14f;
+//}
 
 //-(void)viewWillAppear:(BOOL)animated
 //{
@@ -119,18 +150,6 @@
 //    [self.slidingViewController anchorTopViewToRightAnimated:YES];
 //}
 
-- (IBAction)buttonFourPressed:(id)sender {
-    UIAlertView *alertView4 = [[UIAlertView alloc] initWithTitle:@"Welcome!" message:@"Mauris ipsum lectus, placerat id diam non, laoreet egestas tortor. Cras at ullamcorper turpis, sodales scelerisque libero. Quisque suscipit leo eu felis volutpat, sed aliquam nulla hendrerit." delegate:nil cancelButtonTitle:@"Close" otherButtonTitles:nil, nil];
-    [alertView4 show];
-}
-
-- (IBAction)buttonTestCal:(id)sender
-{
-    RBCalibrationViewController *controller = [RBCalibrationViewController controllerWithStoryBoard:self.storyboard];
-    [self.navigationController pushViewController:controller animated:YES];
-
-}
-
 - (IBAction)buttonTimeToBedPopUpPressed:(id)sender {
     CATransition* transition = [CATransition animation];
     transition.duration = 0.3f;
@@ -141,6 +160,556 @@
     
     RBTimeToBedViewController *controller = [RBTimeToBedViewController controllerWithStoryBoard:self.storyboard];
     [self.navigationController pushViewController:controller animated:NO];
+}
+
+- (IBAction)buttonTakeaBreakPopUpPressed:(id)sender {
+    CATransition* transition = [CATransition animation];
+    transition.duration = 0.3f;
+    transition.type = kCATransitionMoveIn;
+    transition.subtype = kCATransitionFromTop;
+    [self.navigationController.view.layer addAnimation:transition
+                                                forKey:kCATransition];
+    
+    RBTakeaBreakViewController *controller = [RBTakeaBreakViewController controllerWithStoryBoard:self.storyboard];
+    [self.navigationController pushViewController:controller animated:NO];
+}
+
+- (IBAction)buttonStretchPopUpPressed:(id)sender {
+    CATransition* transition = [CATransition animation];
+    transition.duration = 0.3f;
+    transition.type = kCATransitionMoveIn;
+    transition.subtype = kCATransitionFromTop;
+    [self.navigationController.view.layer addAnimation:transition
+                                                forKey:kCATransition];
+    
+    RBStretchViewController *controller = [RBStretchViewController controllerWithStoryBoard:self.storyboard];
+    [self.navigationController pushViewController:controller animated:NO];
+}
+
+- (IBAction)buttonWelcomePopUpPressed:(id)sender {
+    CATransition* transition = [CATransition animation];
+    transition.duration = 0.3f;
+    transition.type = kCATransitionMoveIn;
+    transition.subtype = kCATransitionFromTop;
+    [self.navigationController.view.layer addAnimation:transition
+                                                forKey:kCATransition];
+    
+    RBWelcomePopUpViewController *controller = [RBWelcomePopUpViewController controllerWithStoryBoard:self.storyboard];
+    [self.navigationController pushViewController:controller animated:NO];
+}
+
+- (IBAction)buttonFirstPressed:(id)sender {
+    _labelFirstDay.text = @"Today";
+    
+    UIFont *boldFont = [UIFont boldSystemFontOfSize:[UIFont systemFontSize]];
+    [_labelFirstDay setFont:boldFont];
+    
+    UIFont *boldFontNumber = [UIFont boldSystemFontOfSize:22];
+    [_labelFirstNumber setFont:boldFontNumber];
+    
+    _buttonFirst.backgroundColor = [UIColor colorWithRed:(250/255.0) green:(250/255.0) blue:(250/255.0) alpha:1];
+    
+
+    
+    _labelSecondDay.text = @"Tu";
+    
+    UIFont *boldFont2 = [UIFont systemFontOfSize:[UIFont systemFontSize]];
+    [_labelSecondDay setFont:boldFont2];
+    
+    UIFont *boldFontNumber2 = [UIFont systemFontOfSize:22];
+    [_labelSecondNumber setFont:boldFontNumber2];
+    
+    _buttonSecond.backgroundColor = [UIColor colorWithRed:(240/255.0) green:(242/255.0) blue:(245/255.0) alpha:1];
+    
+    _labelThirdDay.text = @"We";
+    
+    UIFont *boldFont3 = [UIFont systemFontOfSize:[UIFont systemFontSize]];
+    [_labelThirdDay setFont:boldFont3];
+    
+    UIFont *boldFontNumber3 = [UIFont systemFontOfSize:22];
+    [_labelThirdNumber setFont:boldFontNumber3];
+    
+    _buttonThird.backgroundColor = [UIColor colorWithRed:(240/255.0) green:(242/255.0) blue:(245/255.0) alpha:1];
+    
+    _labelFourthDay.text = @"Th";
+    
+    UIFont *boldFont4 = [UIFont systemFontOfSize:[UIFont systemFontSize]];
+    [_labelFourthDay setFont:boldFont4];
+    
+    UIFont *boldFontNumber4 = [UIFont systemFontOfSize:22];
+    [_labelFourthNumber setFont:boldFontNumber4];
+    
+    _buttonFourth.backgroundColor = [UIColor colorWithRed:(240/255.0) green:(242/255.0) blue:(245/255.0) alpha:1];
+    
+    _labelFifthDay.text = @"Fr";
+    
+    UIFont *boldFont5 = [UIFont systemFontOfSize:[UIFont systemFontSize]];
+    [_labelFifthDay setFont:boldFont5];
+    
+    UIFont *boldFontNumber5 = [UIFont systemFontOfSize:22];
+    [_labelFifthNumber setFont:boldFontNumber5];
+    
+    _buttonFifth.backgroundColor = [UIColor colorWithRed:(240/255.0) green:(242/255.0) blue:(245/255.0) alpha:1];
+    
+    _labelSixthDay.text = @"Sa";
+    
+    UIFont *boldFont6 = [UIFont systemFontOfSize:[UIFont systemFontSize]];
+    [_labelSixthDay setFont:boldFont6];
+    
+    UIFont *boldFontNumber6 = [UIFont systemFontOfSize:22];
+    [_labelSixthNumber setFont:boldFontNumber6];
+    
+    _buttonSixth.backgroundColor = [UIColor colorWithRed:(240/255.0) green:(242/255.0) blue:(245/255.0) alpha:1];
+    
+    _labelSeventhDay.text = @"Su";
+    
+    UIFont *boldFont7 = [UIFont systemFontOfSize:[UIFont systemFontSize]];
+    [_labelSeventhDay setFont:boldFont7];
+    
+    UIFont *boldFontNumber7 = [UIFont systemFontOfSize:22];
+    [_labelSeventhNumber setFont:boldFontNumber7];
+    
+    _buttonSeventh.backgroundColor = [UIColor colorWithRed:(240/255.0) green:(242/255.0) blue:(245/255.0) alpha:1];
+    
+}
+
+- (IBAction)buttonSecondPressed:(id)sender {
+    _labelFirstDay.text = @"Mo";
+    
+    UIFont *boldFont = [UIFont systemFontOfSize:[UIFont systemFontSize]];
+    [_labelFirstDay setFont:boldFont];
+    
+    UIFont *boldFontNumber = [UIFont systemFontOfSize:22];
+    [_labelFirstNumber setFont:boldFontNumber];
+    
+    _buttonFirst.backgroundColor = [UIColor colorWithRed:(240/255.0) green:(242/255.0) blue:(245/255.0) alpha:1];
+
+    
+    _labelSecondDay.text = @"Today";
+    
+    UIFont *boldFont2 = [UIFont boldSystemFontOfSize:[UIFont systemFontSize]];
+    [_labelSecondDay setFont:boldFont2];
+    
+    UIFont *boldFontNumber2 = [UIFont boldSystemFontOfSize:22];
+    [_labelSecondNumber setFont:boldFontNumber2];
+    
+    _buttonSecond.backgroundColor = [UIColor colorWithRed:(250/255.0) green:(250/255.0) blue:(250/255.0) alpha:1];
+    
+    _labelThirdDay.text = @"We";
+    
+    UIFont *boldFont3 = [UIFont systemFontOfSize:[UIFont systemFontSize]];
+    [_labelThirdDay setFont:boldFont3];
+    
+    UIFont *boldFontNumber3 = [UIFont systemFontOfSize:22];
+    [_labelThirdNumber setFont:boldFontNumber3];
+    
+    _buttonThird.backgroundColor = [UIColor colorWithRed:(240/255.0) green:(242/255.0) blue:(245/255.0) alpha:1];
+    
+    _labelFourthDay.text = @"Th";
+    
+    UIFont *boldFont4 = [UIFont systemFontOfSize:[UIFont systemFontSize]];
+    [_labelFourthDay setFont:boldFont4];
+    
+    UIFont *boldFontNumber4 = [UIFont systemFontOfSize:22];
+    [_labelFourthNumber setFont:boldFontNumber4];
+    
+    _buttonFourth.backgroundColor = [UIColor colorWithRed:(240/255.0) green:(242/255.0) blue:(245/255.0) alpha:1];
+    
+    _labelFifthDay.text = @"Fr";
+    
+    UIFont *boldFont5 = [UIFont systemFontOfSize:[UIFont systemFontSize]];
+    [_labelFifthDay setFont:boldFont5];
+    
+    UIFont *boldFontNumber5 = [UIFont systemFontOfSize:22];
+    [_labelFifthNumber setFont:boldFontNumber5];
+    
+    _buttonFifth.backgroundColor = [UIColor colorWithRed:(240/255.0) green:(242/255.0) blue:(245/255.0) alpha:1];
+    
+    _labelSixthDay.text = @"Sa";
+    
+    UIFont *boldFont6 = [UIFont systemFontOfSize:[UIFont systemFontSize]];
+    [_labelSixthDay setFont:boldFont6];
+    
+    UIFont *boldFontNumber6 = [UIFont systemFontOfSize:22];
+    [_labelSixthNumber setFont:boldFontNumber6];
+    
+    _buttonSixth.backgroundColor = [UIColor colorWithRed:(240/255.0) green:(242/255.0) blue:(245/255.0) alpha:1];
+    
+    _labelSeventhDay.text = @"Su";
+    
+    UIFont *boldFont7 = [UIFont systemFontOfSize:[UIFont systemFontSize]];
+    [_labelSeventhDay setFont:boldFont7];
+    
+    UIFont *boldFontNumber7 = [UIFont systemFontOfSize:22];
+    [_labelSeventhNumber setFont:boldFontNumber7];
+    
+    _buttonSeventh.backgroundColor = [UIColor colorWithRed:(240/255.0) green:(242/255.0) blue:(245/255.0) alpha:1];
+    
+}
+
+- (IBAction)buttonThirdressed:(id)sender {
+    _labelFirstDay.text = @"Mo";
+    
+    UIFont *boldFont = [UIFont systemFontOfSize:[UIFont systemFontSize]];
+    [_labelFirstDay setFont:boldFont];
+    
+    UIFont *boldFontNumber = [UIFont systemFontOfSize:22];
+    [_labelFirstNumber setFont:boldFontNumber];
+    
+    _buttonFirst.backgroundColor = [UIColor colorWithRed:(240/255.0) green:(242/255.0) blue:(245/255.0) alpha:1];
+    
+    _labelSecondDay.text = @"Tu";
+    
+    UIFont *boldFont2 = [UIFont systemFontOfSize:[UIFont systemFontSize]];
+    [_labelSecondDay setFont:boldFont2];
+    
+    UIFont *boldFontNumber2 = [UIFont systemFontOfSize:22];
+    [_labelSecondNumber setFont:boldFontNumber2];
+    
+    _buttonSecond.backgroundColor = [UIColor colorWithRed:(240/255.0) green:(242/255.0) blue:(245/255.0) alpha:1];
+    
+    _labelThirdDay.text = @"Today";
+    
+    UIFont *boldFont3 = [UIFont boldSystemFontOfSize:[UIFont systemFontSize]];
+    [_labelThirdDay setFont:boldFont3];
+    
+    UIFont *boldFontNumber3 = [UIFont boldSystemFontOfSize:22];
+    [_labelThirdNumber setFont:boldFontNumber3];
+    
+    _buttonThird.backgroundColor = [UIColor colorWithRed:(250/255.0) green:(250/255.0) blue:(250/255.0) alpha:1];
+    
+    _labelFourthDay.text = @"Th";
+    
+    UIFont *boldFont4 = [UIFont systemFontOfSize:[UIFont systemFontSize]];
+    [_labelFourthDay setFont:boldFont4];
+    
+    UIFont *boldFontNumber4 = [UIFont systemFontOfSize:22];
+    [_labelFourthNumber setFont:boldFontNumber4];
+    
+    _buttonFourth.backgroundColor = [UIColor colorWithRed:(240/255.0) green:(242/255.0) blue:(245/255.0) alpha:1];
+    
+    _labelFifthDay.text = @"Fr";
+    
+    UIFont *boldFont5 = [UIFont systemFontOfSize:[UIFont systemFontSize]];
+    [_labelFifthDay setFont:boldFont5];
+    
+    UIFont *boldFontNumber5 = [UIFont systemFontOfSize:22];
+    [_labelFifthNumber setFont:boldFontNumber5];
+    
+    _buttonFifth.backgroundColor = [UIColor colorWithRed:(240/255.0) green:(242/255.0) blue:(245/255.0) alpha:1];
+    
+    _labelSixthDay.text = @"Sa";
+    
+    UIFont *boldFont6 = [UIFont systemFontOfSize:[UIFont systemFontSize]];
+    [_labelSixthDay setFont:boldFont6];
+    
+    UIFont *boldFontNumber6 = [UIFont systemFontOfSize:22];
+    [_labelSixthNumber setFont:boldFontNumber6];
+    
+    _buttonSixth.backgroundColor = [UIColor colorWithRed:(240/255.0) green:(242/255.0) blue:(245/255.0) alpha:1];
+    
+    _labelSeventhDay.text = @"Su";
+    
+    UIFont *boldFont7 = [UIFont systemFontOfSize:[UIFont systemFontSize]];
+    [_labelSeventhDay setFont:boldFont7];
+    
+    UIFont *boldFontNumber7 = [UIFont systemFontOfSize:22];
+    [_labelSeventhNumber setFont:boldFontNumber7];
+    
+    _buttonSeventh.backgroundColor = [UIColor colorWithRed:(240/255.0) green:(242/255.0) blue:(245/255.0) alpha:1];
+    
+}
+
+- (IBAction)buttonFourthPressed:(id)sender {
+    _labelFirstDay.text = @"Mo";
+    
+    UIFont *boldFont = [UIFont systemFontOfSize:[UIFont systemFontSize]];
+    [_labelFirstDay setFont:boldFont];
+    
+    UIFont *boldFontNumber = [UIFont systemFontOfSize:22];
+    [_labelFirstNumber setFont:boldFontNumber];
+    
+    _buttonFirst.backgroundColor = [UIColor colorWithRed:(240/255.0) green:(242/255.0) blue:(245/255.0) alpha:1];
+    
+    _labelSecondDay.text = @"Tu";
+    
+    UIFont *boldFont2 = [UIFont systemFontOfSize:[UIFont systemFontSize]];
+    [_labelSecondDay setFont:boldFont2];
+    
+    UIFont *boldFontNumber2 = [UIFont systemFontOfSize:22];
+    [_labelSecondNumber setFont:boldFontNumber2];
+    
+    _buttonSecond.backgroundColor = [UIColor colorWithRed:(240/255.0) green:(242/255.0) blue:(245/255.0) alpha:1];
+    
+    _labelThirdDay.text = @"We";
+    
+    UIFont *boldFont3 = [UIFont systemFontOfSize:[UIFont systemFontSize]];
+    [_labelThirdDay setFont:boldFont3];
+    
+    UIFont *boldFontNumber3 = [UIFont systemFontOfSize:22];
+    [_labelThirdNumber setFont:boldFontNumber3];
+    
+    _buttonThird.backgroundColor = [UIColor colorWithRed:(240/255.0) green:(242/255.0) blue:(245/255.0) alpha:1];
+    
+    _labelFourthDay.text = @"Today";
+    
+    UIFont *boldFont4 = [UIFont boldSystemFontOfSize:[UIFont systemFontSize]];
+    [_labelFourthDay setFont:boldFont4];
+    
+    UIFont *boldFontNumber4 = [UIFont boldSystemFontOfSize:22];
+    [_labelFourthNumber setFont:boldFontNumber4];
+    
+    _buttonFourth.backgroundColor = [UIColor colorWithRed:(250/255.0) green:(250/255.0) blue:(250/255.0) alpha:1];
+    
+    _labelFifthDay.text = @"Fr";
+    
+    UIFont *boldFont5 = [UIFont systemFontOfSize:[UIFont systemFontSize]];
+    [_labelFifthDay setFont:boldFont5];
+    
+    UIFont *boldFontNumber5 = [UIFont systemFontOfSize:22];
+    [_labelFifthNumber setFont:boldFontNumber5];
+    
+    _buttonFifth.backgroundColor = [UIColor colorWithRed:(240/255.0) green:(242/255.0) blue:(245/255.0) alpha:1];
+    
+    _labelSixthDay.text = @"Sa";
+    
+    UIFont *boldFont6 = [UIFont systemFontOfSize:[UIFont systemFontSize]];
+    [_labelSixthDay setFont:boldFont6];
+    
+    UIFont *boldFontNumber6 = [UIFont systemFontOfSize:22];
+    [_labelSixthNumber setFont:boldFontNumber6];
+    
+    _buttonSixth.backgroundColor = [UIColor colorWithRed:(240/255.0) green:(242/255.0) blue:(245/255.0) alpha:1];
+    
+    _labelSeventhDay.text = @"Su";
+    
+    UIFont *boldFont7 = [UIFont systemFontOfSize:[UIFont systemFontSize]];
+    [_labelSeventhDay setFont:boldFont7];
+    
+    UIFont *boldFontNumber7 = [UIFont systemFontOfSize:22];
+    [_labelSeventhNumber setFont:boldFontNumber7];
+    
+    _buttonSeventh.backgroundColor = [UIColor colorWithRed:(240/255.0) green:(242/255.0) blue:(245/255.0) alpha:1];
+    
+}
+
+- (IBAction)buttonFifthressed:(id)sender {
+    _labelFirstDay.text = @"Mo";
+    
+    UIFont *boldFont = [UIFont systemFontOfSize:[UIFont systemFontSize]];
+    [_labelFirstDay setFont:boldFont];
+    
+    UIFont *boldFontNumber = [UIFont systemFontOfSize:22];
+    [_labelFirstNumber setFont:boldFontNumber];
+    
+    _buttonFirst.backgroundColor = [UIColor colorWithRed:(240/255.0) green:(242/255.0) blue:(245/255.0) alpha:1];
+    
+    _labelSecondDay.text = @"Tu";
+    
+    UIFont *boldFont2 = [UIFont systemFontOfSize:[UIFont systemFontSize]];
+    [_labelSecondDay setFont:boldFont2];
+    
+    UIFont *boldFontNumber2 = [UIFont systemFontOfSize:22];
+    [_labelSecondNumber setFont:boldFontNumber2];
+    
+    _buttonSecond.backgroundColor = [UIColor colorWithRed:(240/255.0) green:(242/255.0) blue:(245/255.0) alpha:1];
+    
+    _labelThirdDay.text = @"We";
+    
+    UIFont *boldFont3 = [UIFont systemFontOfSize:[UIFont systemFontSize]];
+    [_labelThirdDay setFont:boldFont3];
+    
+    UIFont *boldFontNumber3 = [UIFont systemFontOfSize:22];
+    [_labelThirdNumber setFont:boldFontNumber3];
+    
+    _buttonThird.backgroundColor = [UIColor colorWithRed:(240/255.0) green:(242/255.0) blue:(245/255.0) alpha:1];
+    
+    _labelFourthDay.text = @"Th";
+    
+    UIFont *boldFont4 = [UIFont systemFontOfSize:[UIFont systemFontSize]];
+    [_labelFourthDay setFont:boldFont4];
+    
+    UIFont *boldFontNumber4 = [UIFont systemFontOfSize:22];
+    [_labelFourthNumber setFont:boldFontNumber4];
+    
+    _buttonFourth.backgroundColor = [UIColor colorWithRed:(240/255.0) green:(242/255.0) blue:(245/255.0) alpha:1];
+    
+    _labelFifthDay.text = @"Today";
+    
+    UIFont *boldFont5 = [UIFont boldSystemFontOfSize:[UIFont systemFontSize]];
+    [_labelFifthDay setFont:boldFont5];
+    
+    UIFont *boldFontNumber5 = [UIFont boldSystemFontOfSize:22];
+    [_labelFifthNumber setFont:boldFontNumber5];
+    
+    _buttonFifth.backgroundColor = [UIColor colorWithRed:(250/255.0) green:(250/255.0) blue:(250/255.0) alpha:1];
+    
+    _labelSixthDay.text = @"Sa";
+    
+    UIFont *boldFont6 = [UIFont systemFontOfSize:[UIFont systemFontSize]];
+    [_labelSixthDay setFont:boldFont6];
+    
+    UIFont *boldFontNumber6 = [UIFont systemFontOfSize:22];
+    [_labelSixthNumber setFont:boldFontNumber6];
+    
+    _buttonSixth.backgroundColor = [UIColor colorWithRed:(240/255.0) green:(242/255.0) blue:(245/255.0) alpha:1];
+    
+    _labelSeventhDay.text = @"Su";
+    
+    UIFont *boldFont7 = [UIFont systemFontOfSize:[UIFont systemFontSize]];
+    [_labelSeventhDay setFont:boldFont7];
+    
+    UIFont *boldFontNumber7 = [UIFont systemFontOfSize:22];
+    [_labelSeventhNumber setFont:boldFontNumber7];
+    
+    _buttonSeventh.backgroundColor = [UIColor colorWithRed:(240/255.0) green:(242/255.0) blue:(245/255.0) alpha:1];
+    
+}
+
+- (IBAction)buttonSixthPressed:(id)sender {
+    _labelFirstDay.text = @"Mo";
+    
+    UIFont *boldFont = [UIFont systemFontOfSize:[UIFont systemFontSize]];
+    [_labelFirstDay setFont:boldFont];
+    
+    UIFont *boldFontNumber = [UIFont systemFontOfSize:22];
+    [_labelFirstNumber setFont:boldFontNumber];
+    
+    _buttonFirst.backgroundColor = [UIColor colorWithRed:(240/255.0) green:(242/255.0) blue:(245/255.0) alpha:1];
+    
+    _labelSecondDay.text = @"Tu";
+    
+    UIFont *boldFont2 = [UIFont systemFontOfSize:[UIFont systemFontSize]];
+    [_labelSecondDay setFont:boldFont2];
+    
+    UIFont *boldFontNumber2 = [UIFont systemFontOfSize:22];
+    [_labelSecondNumber setFont:boldFontNumber2];
+    
+    _buttonSecond.backgroundColor = [UIColor colorWithRed:(240/255.0) green:(242/255.0) blue:(245/255.0) alpha:1];
+    
+    _labelThirdDay.text = @"We";
+    
+    UIFont *boldFont3 = [UIFont systemFontOfSize:[UIFont systemFontSize]];
+    [_labelThirdDay setFont:boldFont3];
+    
+    UIFont *boldFontNumber3 = [UIFont systemFontOfSize:22];
+    [_labelThirdNumber setFont:boldFontNumber3];
+    
+    _buttonThird.backgroundColor = [UIColor colorWithRed:(240/255.0) green:(242/255.0) blue:(245/255.0) alpha:1];
+    
+    _labelFourthDay.text = @"Th";
+    
+    UIFont *boldFont4 = [UIFont systemFontOfSize:[UIFont systemFontSize]];
+    [_labelFourthDay setFont:boldFont4];
+    
+    UIFont *boldFontNumber4 = [UIFont systemFontOfSize:22];
+    [_labelFourthNumber setFont:boldFontNumber4];
+    
+    _buttonFourth.backgroundColor = [UIColor colorWithRed:(240/255.0) green:(242/255.0) blue:(245/255.0) alpha:1];
+    
+    _labelFifthDay.text = @"Fr";
+    
+    UIFont *boldFont5 = [UIFont systemFontOfSize:[UIFont systemFontSize]];
+    [_labelFifthDay setFont:boldFont5];
+    
+    UIFont *boldFontNumber5 = [UIFont systemFontOfSize:22];
+    [_labelFifthNumber setFont:boldFontNumber5];
+    
+    _buttonFifth.backgroundColor = [UIColor colorWithRed:(240/255.0) green:(242/255.0) blue:(245/255.0) alpha:1];
+    
+    _labelSixthDay.text = @"Today";
+    
+    UIFont *boldFont6 = [UIFont boldSystemFontOfSize:[UIFont systemFontSize]];
+    [_labelSixthDay setFont:boldFont6];
+    
+    UIFont *boldFontNumber6 = [UIFont boldSystemFontOfSize:22];
+    [_labelSixthNumber setFont:boldFontNumber6];
+    
+    _buttonSixth.backgroundColor = [UIColor colorWithRed:(250/255.0) green:(250/255.0) blue:(250/255.0) alpha:1];
+    
+    _labelSeventhDay.text = @"Su";
+    
+    UIFont *boldFont7 = [UIFont systemFontOfSize:[UIFont systemFontSize]];
+    [_labelSeventhDay setFont:boldFont7];
+    
+    UIFont *boldFontNumber7 = [UIFont systemFontOfSize:22];
+    [_labelSeventhNumber setFont:boldFontNumber7];
+    
+    _buttonSeventh.backgroundColor = [UIColor colorWithRed:(240/255.0) green:(242/255.0) blue:(245/255.0) alpha:1];
+    
+}
+
+- (IBAction)buttonSeventhPressed:(id)sender {
+    _labelFirstDay.text = @"Mo";
+    
+    UIFont *boldFont = [UIFont systemFontOfSize:[UIFont systemFontSize]];
+    [_labelFirstDay setFont:boldFont];
+    
+    UIFont *boldFontNumber = [UIFont systemFontOfSize:22];
+    [_labelFirstNumber setFont:boldFontNumber];
+    
+    _buttonFirst.backgroundColor = [UIColor colorWithRed:(240/255.0) green:(242/255.0) blue:(245/255.0) alpha:1];
+    
+    _labelSecondDay.text = @"Tu";
+    
+    UIFont *boldFont2 = [UIFont systemFontOfSize:[UIFont systemFontSize]];
+    [_labelSecondDay setFont:boldFont2];
+    
+    UIFont *boldFontNumber2 = [UIFont systemFontOfSize:22];
+    [_labelSecondNumber setFont:boldFontNumber2];
+    
+    _buttonSecond.backgroundColor = [UIColor colorWithRed:(240/255.0) green:(242/255.0) blue:(245/255.0) alpha:1];
+    
+    _labelThirdDay.text = @"We";
+    
+    UIFont *boldFont3 = [UIFont systemFontOfSize:[UIFont systemFontSize]];
+    [_labelThirdDay setFont:boldFont3];
+    
+    UIFont *boldFontNumber3 = [UIFont systemFontOfSize:22];
+    [_labelThirdNumber setFont:boldFontNumber3];
+    
+    _buttonThird.backgroundColor = [UIColor colorWithRed:(240/255.0) green:(242/255.0) blue:(245/255.0) alpha:1];
+    
+    _labelFourthDay.text = @"Th";
+    
+    UIFont *boldFont4 = [UIFont systemFontOfSize:[UIFont systemFontSize]];
+    [_labelFourthDay setFont:boldFont4];
+    
+    UIFont *boldFontNumber4 = [UIFont systemFontOfSize:22];
+    [_labelFourthNumber setFont:boldFontNumber4];
+    
+    _buttonFourth.backgroundColor = [UIColor colorWithRed:(240/255.0) green:(242/255.0) blue:(245/255.0) alpha:1];
+    
+    _labelFifthDay.text = @"Fr";
+    
+    UIFont *boldFont5 = [UIFont systemFontOfSize:[UIFont systemFontSize]];
+    [_labelFifthDay setFont:boldFont5];
+    
+    UIFont *boldFontNumber5 = [UIFont systemFontOfSize:22];
+    [_labelFifthNumber setFont:boldFontNumber5];
+    
+    _buttonFifth.backgroundColor = [UIColor colorWithRed:(240/255.0) green:(242/255.0) blue:(245/255.0) alpha:1];
+    
+    _labelSixthDay.text = @"Sa";
+    
+    UIFont *boldFont6 = [UIFont systemFontOfSize:[UIFont systemFontSize]];
+    [_labelSixthDay setFont:boldFont6];
+    
+    UIFont *boldFontNumber6 = [UIFont systemFontOfSize:22];
+    [_labelSixthNumber setFont:boldFontNumber6];
+    
+    _buttonSixth.backgroundColor = [UIColor colorWithRed:(240/255.0) green:(242/255.0) blue:(245/255.0) alpha:1];
+    
+    _labelSeventhDay.text = @"Today";
+    
+    UIFont *boldFont7 = [UIFont boldSystemFontOfSize:[UIFont systemFontSize]];
+    [_labelSeventhDay setFont:boldFont7];
+    
+    UIFont *boldFontNumber7 = [UIFont boldSystemFontOfSize:22];
+    [_labelSeventhNumber setFont:boldFontNumber7];
+    
+    _buttonSeventh.backgroundColor = [UIColor colorWithRed:(250/255.0) green:(250/255.0) blue:(250/255.0) alpha:1];
+    
 }
 
 /*

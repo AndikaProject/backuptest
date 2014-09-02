@@ -8,11 +8,36 @@
 
 #import "RBFourthViewController.h"
 
+#import "RBSleepCoachViewController.h"
+#import "RBActivityCoachViewController.h"
+#import "RBMindCoachViewController.h"
+#import "RBNutritionCoachViewController.h"
+
 @interface RBFourthViewController ()
+
+@property (strong, nonatomic) IBOutlet UIImageView *imageViewSleep;
+@property (strong, nonatomic) IBOutlet UIImageView *imageViewActivity;
+@property (strong, nonatomic) IBOutlet UIImageView *imageViewMind;
+@property (strong, nonatomic) IBOutlet UIImageView *imageViewNutrition;
+@property (strong, nonatomic) IBOutlet UIImageView *imageViewArrow1;
+@property (strong, nonatomic) IBOutlet UIImageView *imageViewArrow2;
+@property (strong, nonatomic) IBOutlet UIImageView *imageViewArrow3;
+@property (strong, nonatomic) IBOutlet UIImageView *imageViewArrow4;
+
+- (IBAction)buttonSleepPressed:(id)sender;
+- (IBAction)buttonActivityPressed:(id)sender;
+- (IBAction)buttonMindPressed:(id)sender;
+- (IBAction)buttonNutritionPressed:(id)sender;
 
 @end
 
 @implementation RBFourthViewController
+
++ (instancetype)controllerWithStoryBoard:(UIStoryboard *)storyboard {
+    RBFourthViewController *controller = [storyboard instantiateViewControllerWithIdentifier:@"RBFourthViewController"];
+    
+    return controller;
+}
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -33,12 +58,55 @@
     [self.navigationController.navigationBar setBarTintColor:[UIColor colorWithRed:(79/255.0) green:(193/255.0) blue:(233/255.0) alpha:1]];
     
     self.navigationController.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName : [UIColor whiteColor]};
+    
+    [_imageViewSleep setImage:[UIImage imageNamed:@"_sleep_blue.png"]];
+    [_imageViewActivity setImage:[UIImage imageNamed:@"_activity_orange.png"]];
+    [_imageViewMind setImage:[UIImage imageNamed:@"_mind_green.png"]];
+    [_imageViewNutrition setImage:[UIImage imageNamed:@"_nutrition_yellow.png"]];
+    
+    [_imageViewArrow1 setImage:[UIImage imageNamed:@"_arrow_right"]];
+    [_imageViewArrow2 setImage:[UIImage imageNamed:@"_arrow_right"]];
+    [_imageViewArrow3 setImage:[UIImage imageNamed:@"_arrow_right"]];
+    [_imageViewArrow4 setImage:[UIImage imageNamed:@"_arrow_right"]];
 }
+
+//-(void)viewWillAppear:(BOOL)animated
+//{
+//    [super viewWillAppear:animated];
+//    [self.navigationController setNavigationBarHidden:YES];   //it hides
+//}
+
+//-(void)viewWillDisappear:(BOOL)animated
+//{
+//    [super viewWillDisappear:animated];
+//    [self.navigationController setNavigationBarHidden:NO]; // it shows
+//}
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+#pragma mark - action
+- (IBAction)buttonSleepPressed:(id)sender {
+    RBSleepCoachViewController *controller = [RBSleepCoachViewController controllerWithStoryBoard:self.storyboard];
+    [self.navigationController pushViewController:controller animated:YES];
+}
+
+- (IBAction)buttonActivityPressed:(id)sender {
+    RBActivityCoachViewController *controller = [RBActivityCoachViewController controllerWithStoryBoard:self.storyboard];
+    [self.navigationController pushViewController:controller animated:YES];
+}
+
+- (IBAction)buttonMindPressed:(id)sender {
+    RBMindCoachViewController *controller = [RBMindCoachViewController controllerWithStoryBoard:self.storyboard];
+    [self.navigationController pushViewController:controller animated:YES];
+}
+
+- (IBAction)buttonNutritionPressed:(id)sender {
+    RBNutritionCoachViewController *controller = [RBNutritionCoachViewController controllerWithStoryBoard:self.storyboard];
+    [self.navigationController pushViewController:controller animated:YES];
 }
 
 /*
@@ -51,5 +119,6 @@
     // Pass the selected object to the new view controller.
 }
 */
+
 
 @end

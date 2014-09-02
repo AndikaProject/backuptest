@@ -10,8 +10,9 @@
 
 #import "RBCalibrationViewController.h"
 #import "RBPopUpSleepPlanViewController.h"
-
-#import "UIViewController+ECSlidingViewController.h"
+#import "RBPopUpActivityPlanViewController.h"
+#import "RBPopUpMindPlanViewController.h"
+#import "RBPopUpBioPlanViewController.h"
 
 @interface RBFirstViewController ()
 
@@ -30,6 +31,9 @@
 @property (strong, nonatomic) IBOutlet UIImageView *imageViewBiorhythm;
 
 - (IBAction)buttonSleepPressed:(id)sender;
+- (IBAction)buttonActivityPressed:(id)sender;
+- (IBAction)buttonMentalPressed:(id)sender;
+- (IBAction)buttonBioPressed:(id)sender;
 
 @end
 
@@ -86,8 +90,8 @@
 {
     [super viewDidAppear:animated];
     
-    [self.slidingViewController.topViewController.view addGestureRecognizer:self.slidingViewController.panGesture];
-    self.slidingViewController.topViewAnchoredGesture = ECSlidingViewControllerAnchoredGestureTapping | ECSlidingViewControllerAnchoredGesturePanning;
+//    [self.slidingViewController.topViewController.view addGestureRecognizer:self.slidingViewController.panGesture];
+//    self.slidingViewController.topViewAnchoredGesture = ECSlidingViewControllerAnchoredGestureTapping | ECSlidingViewControllerAnchoredGesturePanning;
     
 }
 
@@ -126,6 +130,42 @@
                                                 forKey:kCATransition];
     
     RBPopUpSleepPlanViewController *controller = [RBPopUpSleepPlanViewController controllerWithStoryBoard:self.storyboard];
+    [self.navigationController pushViewController:controller animated:NO];
+}
+
+- (IBAction)buttonActivityPressed:(id)sender {
+    CATransition* transition = [CATransition animation];
+    transition.duration = 0.3f;
+    transition.type = kCATransitionMoveIn;
+    transition.subtype = kCATransitionFromTop;
+    [self.navigationController.view.layer addAnimation:transition
+                                                forKey:kCATransition];
+    
+    RBPopUpActivityPlanViewController *controller = [RBPopUpActivityPlanViewController controllerWithStoryBoard:self.storyboard];
+    [self.navigationController pushViewController:controller animated:NO];
+}
+
+- (IBAction)buttonMentalPressed:(id)sender {
+    CATransition* transition = [CATransition animation];
+    transition.duration = 0.3f;
+    transition.type = kCATransitionMoveIn;
+    transition.subtype = kCATransitionFromTop;
+    [self.navigationController.view.layer addAnimation:transition
+                                                forKey:kCATransition];
+    
+    RBPopUpMindPlanViewController *controller = [RBPopUpMindPlanViewController controllerWithStoryBoard:self.storyboard];
+    [self.navigationController pushViewController:controller animated:NO];
+}
+
+- (IBAction)buttonBioPressed:(id)sender {
+    CATransition* transition = [CATransition animation];
+    transition.duration = 0.3f;
+    transition.type = kCATransitionMoveIn;
+    transition.subtype = kCATransitionFromTop;
+    [self.navigationController.view.layer addAnimation:transition
+                                                forKey:kCATransition];
+    
+    RBPopUpBioPlanViewController *controller = [RBPopUpBioPlanViewController controllerWithStoryBoard:self.storyboard];
     [self.navigationController pushViewController:controller animated:NO];
 }
 
