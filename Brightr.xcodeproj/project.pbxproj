@@ -10,7 +10,6 @@
 		3C19E360197A629E00B35857 /* RBLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C19E356197A629E00B35857 /* RBLoginViewController.m */; };
 		3C19E361197A629E00B35857 /* RBAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C19E35A197A629E00B35857 /* RBAppDelegate.m */; };
 		3C19E362197A629E00B35857 /* main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C19E35E197A629E00B35857 /* main.storyboard */; };
-		3C19E363197A629E00B35857 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3C19E35F197A629E00B35857 /* Images.xcassets */; };
 		3C19E3D6197BB70A00B35857 /* ECPercentDrivenInteractiveTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C19E3CA197BB70A00B35857 /* ECPercentDrivenInteractiveTransition.m */; };
 		3C19E3D7197BB70A00B35857 /* ECSlidingAnimationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C19E3CC197BB70A00B35857 /* ECSlidingAnimationController.m */; };
 		3C19E3D8197BB70A00B35857 /* ECSlidingInteractiveTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C19E3CF197BB70A00B35857 /* ECSlidingInteractiveTransition.m */; };
@@ -106,7 +105,6 @@
 		AE36101C19B57380008EA1C3 /* _goal.png in Resources */ = {isa = PBXBuildFile; fileRef = AE360FC219B57380008EA1C3 /* _goal.png */; };
 		AE36101D19B57380008EA1C3 /* _goal@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AE360FC319B57380008EA1C3 /* _goal@2x.png */; };
 		AE36101E19B57380008EA1C3 /* _graph.png in Resources */ = {isa = PBXBuildFile; fileRef = AE360FC419B57380008EA1C3 /* _graph.png */; };
-		AE36101F19B57380008EA1C3 /* _graph@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AE360FC519B57380008EA1C3 /* _graph@2x.png */; };
 		AE36102019B57380008EA1C3 /* _lock.png in Resources */ = {isa = PBXBuildFile; fileRef = AE360FC619B57380008EA1C3 /* _lock.png */; };
 		AE36102119B57380008EA1C3 /* _lock@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AE360FC719B57380008EA1C3 /* _lock@2x.png */; };
 		AE36102219B57380008EA1C3 /* _messages.png in Resources */ = {isa = PBXBuildFile; fileRef = AE360FC819B57380008EA1C3 /* _messages.png */; };
@@ -151,6 +149,7 @@
 		AE36104919B57380008EA1C3 /* _username_selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AE360FEF19B57380008EA1C3 /* _username_selected@2x.png */; };
 		AE36104A19B57380008EA1C3 /* _vitality_tree.png in Resources */ = {isa = PBXBuildFile; fileRef = AE360FF019B57380008EA1C3 /* _vitality_tree.png */; };
 		AE36104B19B57380008EA1C3 /* _vitality_tree@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AE360FF119B57380008EA1C3 /* _vitality_tree@2x.png */; };
+		AE36104C19B57827008EA1C3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3C19E35F197A629E00B35857 /* Images.xcassets */; };
 		AEBD8C5F19AED4AD00F4C235 /* RBPopUpSleepPlanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AEBD8C5E19AED4AD00F4C235 /* RBPopUpSleepPlanViewController.m */; };
 		AEBD8C6219AED81B00F4C235 /* RBManualInputViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AEBD8C6119AED81B00F4C235 /* RBManualInputViewController.m */; };
 		AEBD8C6B19AF2C1300F4C235 /* RBFifthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AEBD8C6A19AF2C1300F4C235 /* RBFifthViewController.m */; };
@@ -1003,13 +1002,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AE36104C19B57827008EA1C3 /* Images.xcassets in Resources */,
 				AE36101219B57380008EA1C3 /* _clock.png in Resources */,
 				AE36101919B57380008EA1C3 /* _dashboard@2x.png in Resources */,
 				AE36102D19B57380008EA1C3 /* _nutrition_pic@2x.png in Resources */,
 				AE36100019B57380008EA1C3 /* _back.png in Resources */,
 				AE360FF319B57380008EA1C3 /* _account@2x.png in Resources */,
 				AEBD8CEA19B02C9B00F4C235 /* RBBlogCustomCell.xib in Resources */,
-
 				AE36104A19B57380008EA1C3 /* _vitality_tree.png in Resources */,
 				AE36103019B57380008EA1C3 /* _password.png in Resources */,
 				AE36100819B57380008EA1C3 /* _Bubble_lightblue.png in Resources */,
@@ -1026,7 +1025,6 @@
 				AE36101719B57380008EA1C3 /* _coach@2x.png in Resources */,
 				AE36103919B57380008EA1C3 /* _sensors@2x.png in Resources */,
 				AE360FFB19B57380008EA1C3 /* _all_plans@2x.png in Resources */,
-
 				3C19E3F0197C0D8C00B35857 /* RBMenuCustomCell.xib in Resources */,
 				AE36101D19B57380008EA1C3 /* _goal@2x.png in Resources */,
 				AE36100119B57380008EA1C3 /* _back@2x.png in Resources */,
@@ -1056,7 +1054,6 @@
 				AE36104519B57380008EA1C3 /* _stop@2x.png in Resources */,
 				AE36101419B57380008EA1C3 /* _close_bttn.png in Resources */,
 				AEBD8CE519AF3F6B00F4C235 /* RBSettingsCustomCell.xib in Resources */,
-
 				AE36103419B57380008EA1C3 /* _performance.png in Resources */,
 				AE36100E19B57380008EA1C3 /* _calibrate.png in Resources */,
 				AE36102019B57380008EA1C3 /* _lock.png in Resources */,
@@ -1071,8 +1068,6 @@
 				AE36104319B57380008EA1C3 /* _sleep_pic@2x.png in Resources */,
 				AE36103619B57380008EA1C3 /* _person.png in Resources */,
 				AE36101B19B57380008EA1C3 /* _forward@2x.png in Resources */,
-				3C19E363197A629E00B35857 /* Images.xcassets in Resources */,
-				AE36101F19B57380008EA1C3 /* _graph@2x.png in Resources */,
 				AE36102519B57380008EA1C3 /* _mind_green@2x.png in Resources */,
 				AE36100F19B57380008EA1C3 /* _calibrate@2x.png in Resources */,
 				AE360FF819B57380008EA1C3 /* _activity_pic.png in Resources */,
@@ -1102,9 +1097,6 @@
 				AE36102E19B57380008EA1C3 /* _nutrition_yellow.png in Resources */,
 				AE360FF219B57380008EA1C3 /* _account.png in Resources */,
 				AE360FF719B57380008EA1C3 /* _activity_orange@2x.png in Resources */,
-                
-				3C19E363197A629E00B35857 /* Images.xcassets in Resources */,
-
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
