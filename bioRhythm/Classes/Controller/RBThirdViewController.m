@@ -73,7 +73,7 @@
 }
 
 - (void)viewDidAppear:(BOOL)animated{
-    [_scrollerBlog setContentSize:CGSizeMake(320, 720)];
+    [_scrollerBlog setContentSize:CGSizeMake(320, 1000)];
 }
 
 - (void)didReceiveMemoryWarning
