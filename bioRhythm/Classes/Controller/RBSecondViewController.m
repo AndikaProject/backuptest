@@ -52,6 +52,15 @@
 @property (strong, nonatomic) IBOutlet UIButton *buttonSixth;
 @property (strong, nonatomic) IBOutlet UIButton *buttonSeventh;
 
+// border below the calendar
+@property (strong, nonatomic) IBOutlet UILabel *labelFirstBorder;
+@property (strong, nonatomic) IBOutlet UILabel *labelSecondBorder;
+@property (strong, nonatomic) IBOutlet UILabel *labelThirdBorder;
+@property (strong, nonatomic) IBOutlet UILabel *labelFourthBorder;
+@property (strong, nonatomic) IBOutlet UILabel *labelFifthBorder;
+@property (strong, nonatomic) IBOutlet UILabel *labelSixthBorder;
+@property (strong, nonatomic) IBOutlet UILabel *labelSeventhBorder;
+
 - (IBAction)buttonTimeToBedPopUpPressed:(id)sender;
 - (IBAction)buttonTakeaBreakPopUpPressed:(id)sender;
 - (IBAction)buttonStretchPopUpPressed:(id)sender;
@@ -109,6 +118,7 @@
     self.labelThirdTime.text = @"08:00";
     self.labelFourTime.text = @"Yesterday";
     
+    [self loadToday];
 }
 
 //- (void)viewDidAppear:(BOOL)animated{
@@ -142,6 +152,30 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)loadToday
+{
+    // set border
+    _labelFirstBorder.backgroundColor = [UIColor colorWithRed:(79/255.0) green:(193/255.0) blue:(233/255.0) alpha:1];
+    _labelSecondBorder.backgroundColor = [UIColor colorWithRed:(211/255.0) green:(211/255.0) blue:(211/255.0) alpha:1];
+    _labelThirdBorder.backgroundColor = [UIColor colorWithRed:(211/255.0) green:(211/255.0) blue:(211/255.0) alpha:1];
+    _labelFourthBorder.backgroundColor = [UIColor colorWithRed:(211/255.0) green:(211/255.0) blue:(211/255.0) alpha:1];
+    _labelFifthBorder.backgroundColor = [UIColor colorWithRed:(211/255.0) green:(211/255.0) blue:(211/255.0) alpha:1];
+    _labelSixthBorder.backgroundColor = [UIColor colorWithRed:(211/255.0) green:(211/255.0) blue:(211/255.0) alpha:1];
+    _labelSeventhBorder.backgroundColor = [UIColor colorWithRed:(211/255.0) green:(211/255.0) blue:(211/255.0) alpha:1];
+    
+    //
+    _labelFirstDay.text = @"Today";
+    
+    UIFont *boldFont = [UIFont boldSystemFontOfSize:[UIFont systemFontSize]];
+    [_labelFirstDay setFont:boldFont];
+    
+    UIFont *boldFontNumber = [UIFont boldSystemFontOfSize:22];
+    [_labelFirstNumber setFont:boldFontNumber];
+    
+    _buttonFirst.backgroundColor = [UIColor colorWithRed:(250/255.0) green:(250/255.0) blue:(250/255.0) alpha:1];
+
 }
 
 #pragma mark - action
@@ -199,6 +233,17 @@
 }
 
 - (IBAction)buttonFirstPressed:(id)sender {
+    
+    // set border
+    _labelFirstBorder.backgroundColor = [UIColor colorWithRed:(79/255.0) green:(193/255.0) blue:(233/255.0) alpha:1];
+    _labelSecondBorder.backgroundColor = [UIColor colorWithRed:(211/255.0) green:(211/255.0) blue:(211/255.0) alpha:1];
+    _labelThirdBorder.backgroundColor = [UIColor colorWithRed:(211/255.0) green:(211/255.0) blue:(211/255.0) alpha:1];
+    _labelFourthBorder.backgroundColor = [UIColor colorWithRed:(211/255.0) green:(211/255.0) blue:(211/255.0) alpha:1];
+    _labelFifthBorder.backgroundColor = [UIColor colorWithRed:(211/255.0) green:(211/255.0) blue:(211/255.0) alpha:1];
+    _labelSixthBorder.backgroundColor = [UIColor colorWithRed:(211/255.0) green:(211/255.0) blue:(211/255.0) alpha:1];
+    _labelSeventhBorder.backgroundColor = [UIColor colorWithRed:(211/255.0) green:(211/255.0) blue:(211/255.0) alpha:1];
+    
+    //
     _labelFirstDay.text = @"Today";
     
     UIFont *boldFont = [UIFont boldSystemFontOfSize:[UIFont systemFontSize]];
@@ -272,6 +317,17 @@
 }
 
 - (IBAction)buttonSecondPressed:(id)sender {
+    
+    // set border
+    _labelFirstBorder.backgroundColor = [UIColor colorWithRed:(128/255.0) green:(128/255.0) blue:(128/255.0) alpha:1];
+    _labelSecondBorder.backgroundColor = [UIColor colorWithRed:(79/255.0) green:(193/255.0) blue:(233/255.0) alpha:1];
+    _labelThirdBorder.backgroundColor = [UIColor colorWithRed:(211/255.0) green:(211/255.0) blue:(211/255.0) alpha:1];
+    _labelFourthBorder.backgroundColor = [UIColor colorWithRed:(211/255.0) green:(211/255.0) blue:(211/255.0) alpha:1];
+    _labelFifthBorder.backgroundColor = [UIColor colorWithRed:(211/255.0) green:(211/255.0) blue:(211/255.0) alpha:1];
+    _labelSixthBorder.backgroundColor = [UIColor colorWithRed:(211/255.0) green:(211/255.0) blue:(211/255.0) alpha:1];
+    _labelSeventhBorder.backgroundColor = [UIColor colorWithRed:(211/255.0) green:(211/255.0) blue:(211/255.0) alpha:1];
+    
+    //
     _labelFirstDay.text = @"Mo";
     
     UIFont *boldFont = [UIFont systemFontOfSize:[UIFont systemFontSize]];
@@ -346,6 +402,17 @@
 }
 
 - (IBAction)buttonThirdressed:(id)sender {
+    
+    // set border
+    _labelFirstBorder.backgroundColor = [UIColor colorWithRed:(128/255.0) green:(128/255.0) blue:(128/255.0) alpha:1];
+    _labelSecondBorder.backgroundColor = [UIColor colorWithRed:(128/255.0) green:(128/255.0) blue:(128/255.0) alpha:1];
+    _labelThirdBorder.backgroundColor = [UIColor colorWithRed:(79/255.0) green:(193/255.0) blue:(233/255.0) alpha:1];
+    _labelFourthBorder.backgroundColor = [UIColor colorWithRed:(211/255.0) green:(211/255.0) blue:(211/255.0) alpha:1];
+    _labelFifthBorder.backgroundColor = [UIColor colorWithRed:(211/255.0) green:(211/255.0) blue:(211/255.0) alpha:1];
+    _labelSixthBorder.backgroundColor = [UIColor colorWithRed:(211/255.0) green:(211/255.0) blue:(211/255.0) alpha:1];
+    _labelSeventhBorder.backgroundColor = [UIColor colorWithRed:(211/255.0) green:(211/255.0) blue:(211/255.0) alpha:1];
+    
+    //
     _labelFirstDay.text = @"Mo";
     
     UIFont *boldFont = [UIFont systemFontOfSize:[UIFont systemFontSize]];
@@ -420,6 +487,17 @@
 }
 
 - (IBAction)buttonFourthPressed:(id)sender {
+    
+    // set border
+    _labelFirstBorder.backgroundColor = [UIColor colorWithRed:(128/255.0) green:(128/255.0) blue:(128/255.0) alpha:1];
+    _labelSecondBorder.backgroundColor = [UIColor colorWithRed:(128/255.0) green:(128/255.0) blue:(128/255.0) alpha:1];
+    _labelThirdBorder.backgroundColor = [UIColor colorWithRed:(128/255.0) green:(128/255.0) blue:(128/255.0) alpha:1];
+    _labelFourthBorder.backgroundColor = [UIColor colorWithRed:(79/255.0) green:(193/255.0) blue:(233/255.0) alpha:1];
+    _labelFifthBorder.backgroundColor = [UIColor colorWithRed:(211/255.0) green:(211/255.0) blue:(211/255.0) alpha:1];
+    _labelSixthBorder.backgroundColor = [UIColor colorWithRed:(211/255.0) green:(211/255.0) blue:(211/255.0) alpha:1];
+    _labelSeventhBorder.backgroundColor = [UIColor colorWithRed:(211/255.0) green:(211/255.0) blue:(211/255.0) alpha:1];
+    
+    //
     _labelFirstDay.text = @"Mo";
     
     UIFont *boldFont = [UIFont systemFontOfSize:[UIFont systemFontSize]];
@@ -494,6 +572,17 @@
 }
 
 - (IBAction)buttonFifthressed:(id)sender {
+    
+    // set border
+    _labelFirstBorder.backgroundColor = [UIColor colorWithRed:(128/255.0) green:(128/255.0) blue:(128/255.0) alpha:1];
+    _labelSecondBorder.backgroundColor = [UIColor colorWithRed:(128/255.0) green:(128/255.0) blue:(128/255.0) alpha:1];
+    _labelThirdBorder.backgroundColor = [UIColor colorWithRed:(128/255.0) green:(128/255.0) blue:(128/255.0) alpha:1];
+    _labelFourthBorder.backgroundColor = [UIColor colorWithRed:(128/255.0) green:(128/255.0) blue:(128/255.0) alpha:1];
+    _labelFifthBorder.backgroundColor = [UIColor colorWithRed:(79/255.0) green:(193/255.0) blue:(233/255.0) alpha:1];
+    _labelSixthBorder.backgroundColor = [UIColor colorWithRed:(211/255.0) green:(211/255.0) blue:(211/255.0) alpha:1];
+    _labelSeventhBorder.backgroundColor = [UIColor colorWithRed:(211/255.0) green:(211/255.0) blue:(211/255.0) alpha:1];
+    
+    //
     _labelFirstDay.text = @"Mo";
     
     UIFont *boldFont = [UIFont systemFontOfSize:[UIFont systemFontSize]];
@@ -568,6 +657,17 @@
 }
 
 - (IBAction)buttonSixthPressed:(id)sender {
+    
+    // set border
+    _labelFirstBorder.backgroundColor = [UIColor colorWithRed:(128/255.0) green:(128/255.0) blue:(128/255.0) alpha:1];
+    _labelSecondBorder.backgroundColor = [UIColor colorWithRed:(128/255.0) green:(128/255.0) blue:(128/255.0) alpha:1];
+    _labelThirdBorder.backgroundColor = [UIColor colorWithRed:(128/255.0) green:(128/255.0) blue:(128/255.0) alpha:1];
+    _labelFourthBorder.backgroundColor = [UIColor colorWithRed:(128/255.0) green:(128/255.0) blue:(128/255.0) alpha:1];
+    _labelFifthBorder.backgroundColor = [UIColor colorWithRed:(128/255.0) green:(128/255.0) blue:(128/255.0) alpha:1];
+    _labelSixthBorder.backgroundColor = [UIColor colorWithRed:(79/255.0) green:(193/255.0) blue:(233/255.0) alpha:1];
+    _labelSeventhBorder.backgroundColor = [UIColor colorWithRed:(211/255.0) green:(211/255.0) blue:(211/255.0) alpha:1];
+    
+    //
     _labelFirstDay.text = @"Mo";
     
     UIFont *boldFont = [UIFont systemFontOfSize:[UIFont systemFontSize]];
@@ -642,6 +742,17 @@
 }
 
 - (IBAction)buttonSeventhPressed:(id)sender {
+    
+    // set border
+    _labelFirstBorder.backgroundColor = [UIColor colorWithRed:(128/255.0) green:(128/255.0) blue:(128/255.0) alpha:1];
+    _labelSecondBorder.backgroundColor = [UIColor colorWithRed:(128/255.0) green:(128/255.0) blue:(128/255.0) alpha:1];
+    _labelThirdBorder.backgroundColor = [UIColor colorWithRed:(128/255.0) green:(128/255.0) blue:(128/255.0) alpha:1];
+    _labelFourthBorder.backgroundColor = [UIColor colorWithRed:(128/255.0) green:(128/255.0) blue:(128/255.0) alpha:1];
+    _labelFifthBorder.backgroundColor = [UIColor colorWithRed:(128/255.0) green:(128/255.0) blue:(128/255.0) alpha:1];
+    _labelSixthBorder.backgroundColor = [UIColor colorWithRed:(128/255.0) green:(128/255.0) blue:(128/255.0) alpha:1];
+    _labelSeventhBorder.backgroundColor = [UIColor colorWithRed:(79/255.0) green:(193/255.0) blue:(233/255.0) alpha:1];
+    
+    //
     _labelFirstDay.text = @"Mo";
     
     UIFont *boldFont = [UIFont systemFontOfSize:[UIFont systemFontSize]];
