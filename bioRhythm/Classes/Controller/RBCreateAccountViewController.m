@@ -126,14 +126,35 @@
     if ((email.length == 0 && password.length == 0 && rpassword.length == 0) || (email.length != 0 && password.length == 0 && rpassword.length == 0) || (email.length != 0 && password.length != 0 && rpassword.length == 0))
     {
         _labelPasswordDoNotMatch.text = @"Please fill all the text field";
+        _imageViewEmail.layer.borderWidth = 1.0;
+        _imageViewEmail.layer.borderColor = [UIColor redColor].CGColor;
+        _imageViewEmail.layer.cornerRadius = 5.0;
+        
+        _imageViewPassword.layer.borderWidth = 1.0;
+        _imageViewPassword.layer.borderColor = [UIColor redColor].CGColor;
+        _imageViewPassword.layer.cornerRadius = 5.0;
+        
+        _imageViewRepeatPass.layer.borderWidth = 1.0;
+        _imageViewRepeatPass.layer.borderColor = [UIColor redColor].CGColor;
+        _imageViewRepeatPass.layer.cornerRadius = 5.0;
     }
     else if(![self isValidEmail:_textFieldEmail.text])
     {
         _labelPasswordDoNotMatch.text = @"Email is invalid";
+        _imageViewEmail.layer.borderWidth = 1.0;
+        _imageViewEmail.layer.borderColor = [UIColor redColor].CGColor;
+        _imageViewEmail.layer.cornerRadius = 5.0;
     }
     else if (![password isEqualToString:rpassword])
     {
         _labelPasswordDoNotMatch.text = @"Password do not match";
+        _imageViewPassword.layer.borderWidth = 1.0;
+        _imageViewPassword.layer.borderColor = [UIColor redColor].CGColor;
+        _imageViewPassword.layer.cornerRadius = 5.0;
+        
+        _imageViewRepeatPass.layer.borderWidth = 1.0;
+        _imageViewRepeatPass.layer.borderColor = [UIColor redColor].CGColor;
+        _imageViewRepeatPass.layer.cornerRadius = 5.0;
     }
     else if (([password isEqualToString:rpassword]) && (email.length != 0 && password.length != 0 && rpassword.length != 0))
     {

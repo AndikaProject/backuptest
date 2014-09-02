@@ -110,14 +110,19 @@
 - (IBAction)buttonLoginPressed:(id)sender {
     NSString *name = _textFieldEmail.text;
     NSString *password = _textFieldPassword.text;
-//    UIAlertView *alertView;
+    
     if (name.length == 0 || password.length == 0) {
-        //        alertView  = [[UIAlertView alloc] initWithTitle:@"Error" message:@"Please fill username and password" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
-        //        [alertView show];
+        
+        _imageViewEmail.layer.borderWidth = 1.0;
+        _imageViewEmail.layer.borderColor = [UIColor redColor].CGColor;
+        _imageViewEmail.layer.cornerRadius = 5.0;
+        
+        _imageViewPass.layer.borderWidth = 1.0;
+        _imageViewPass.layer.borderColor = [UIColor redColor].CGColor;
+        _imageViewPass.layer.cornerRadius = 5.0;
+        
         _labelLoginFailed.text = @"Invalid username or password";
     } else {
-//        alertView = [[UIAlertView alloc] initWithTitle:@"Success" message:@"Username and password correct" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
-//        [alertView show];
         [self dismissViewControllerAnimated:YES completion:nil];
     }
     

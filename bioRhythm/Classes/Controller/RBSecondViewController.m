@@ -173,16 +173,12 @@
 
 #pragma mark - action
 
-//- (IBAction)buttonMenuPressed:(id)sender {
-//    [self.slidingViewController anchorTopViewToRightAnimated:YES];
-//}
-
 - (IBAction)buttonTimeToBedPopUpPressed:(id)sender {
-    CATransition* transition = [CATransition animation];
-    transition.duration = 0.3f;
-    transition.type = kCATransitionMoveIn;
-    transition.subtype = kCATransitionFromTop;
-    [self.navigationController.view.layer addAnimation:transition
+    CATransition* transition1 = [CATransition animation];
+    transition1.duration = 0.3f;
+    transition1.type = kCATransitionMoveIn;
+    transition1.subtype = kCATransitionFromTop;
+    [self.navigationController.view.layer addAnimation:transition1
                                                 forKey:kCATransition];
     
     RBTimeToBedViewController *controller = [RBTimeToBedViewController controllerWithStoryBoard:self.storyboard];
@@ -190,11 +186,11 @@
 }
 
 - (IBAction)buttonTakeaBreakPopUpPressed:(id)sender {
-    CATransition* transition = [CATransition animation];
-    transition.duration = 0.3f;
-    transition.type = kCATransitionMoveIn;
-    transition.subtype = kCATransitionFromTop;
-    [self.navigationController.view.layer addAnimation:transition
+    CATransition* transition2 = [CATransition animation];
+    transition2.duration = 0.3f;
+    transition2.type = kCATransitionMoveIn;
+    transition2.subtype = kCATransitionFromTop;
+    [self.navigationController.view.layer addAnimation:transition2
                                                 forKey:kCATransition];
     
     RBTakeaBreakViewController *controller = [RBTakeaBreakViewController controllerWithStoryBoard:self.storyboard];
@@ -202,11 +198,11 @@
 }
 
 - (IBAction)buttonStretchPopUpPressed:(id)sender {
-    CATransition* transition = [CATransition animation];
-    transition.duration = 0.3f;
-    transition.type = kCATransitionMoveIn;
-    transition.subtype = kCATransitionFromTop;
-    [self.navigationController.view.layer addAnimation:transition
+    CATransition* transition3 = [CATransition animation];
+    transition3.duration = 0.3f;
+    transition3.type = kCATransitionMoveIn;
+    transition3.subtype = kCATransitionFromTop;
+    [self.navigationController.view.layer addAnimation:transition3
                                                 forKey:kCATransition];
     
     RBStretchViewController *controller = [RBStretchViewController controllerWithStoryBoard:self.storyboard];
@@ -214,11 +210,11 @@
 }
 
 - (IBAction)buttonWelcomePopUpPressed:(id)sender {
-    CATransition* transition = [CATransition animation];
-    transition.duration = 0.3f;
-    transition.type = kCATransitionMoveIn;
-    transition.subtype = kCATransitionFromTop;
-    [self.navigationController.view.layer addAnimation:transition
+    CATransition* transition4 = [CATransition animation];
+    transition4.duration = 0.3f;
+    transition4.type = kCATransitionMoveIn;
+    transition4.subtype = kCATransitionFromTop;
+    [self.navigationController.view.layer addAnimation:transition4
                                                 forKey:kCATransition];
     
     RBWelcomePopUpViewController *controller = [RBWelcomePopUpViewController controllerWithStoryBoard:self.storyboard];

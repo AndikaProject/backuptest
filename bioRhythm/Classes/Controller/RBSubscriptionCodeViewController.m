@@ -48,16 +48,9 @@
     [_imageViewIcon setImage:[UIImage imageNamed:@"_password.png"]];
     
     // set border image
-    #define kBorderWidth 1.0
-    #define kCornerRadius 5.0
-    CALayer *borderLayer = [CALayer layer];
-    CGRect borderFrame = CGRectMake(0, 0, (_imageView.frame.size.width), (_imageView.frame.size.height));
-    [borderLayer setBackgroundColor:[[UIColor clearColor] CGColor]];
-    [borderLayer setFrame:borderFrame];
-    [borderLayer setCornerRadius:kCornerRadius];
-    [borderLayer setBorderWidth:kBorderWidth];
-    [borderLayer setBorderColor:[[UIColor lightGrayColor] CGColor]];
-    [_imageView.layer addSublayer:borderLayer];
+    _imageView.layer.borderWidth = 1.0;
+    _imageView.layer.borderColor = [UIColor lightGrayColor].CGColor;
+    _imageView.layer.cornerRadius = 5.0;
 
 }
 
@@ -87,6 +80,9 @@
     if (![subscription  isEqual: @"ASML1234"])
     {
         _labelInvalidCode.text = @"Invalid code";
+        _imageView.layer.borderWidth = 1.0;
+        _imageView.layer.borderColor = [UIColor redColor].CGColor;
+        _imageView.layer.cornerRadius = 5.0;
     }
     else if ([subscription isEqual:@"ASML1234"])
     {
@@ -101,18 +97,10 @@
 
 - (IBAction)textFieldClicked:(id)sender {
     [_imageViewIcon setImage:[UIImage imageNamed:@"_password_selected.png"]];
+    _imageView.layer.borderWidth = 1.0;
+    _imageView.layer.borderColor = [UIColor colorWithRed:(79/255.0) green:(193/255.0) blue:(233/255.0) alpha:1].CGColor;
+    _imageView.layer.cornerRadius = 5.0;
     
-    // set border image
-    #define kBorderWidth 1.0
-    #define kCornerRadius 5.0
-    CALayer *borderLayer = [CALayer layer];
-    CGRect borderFrame = CGRectMake(0, 0, (_imageView.frame.size.width), (_imageView.frame.size.height));
-    [borderLayer setBackgroundColor:[[UIColor clearColor] CGColor]];
-    [borderLayer setFrame:borderFrame];
-    [borderLayer setCornerRadius:kCornerRadius];
-    [borderLayer setBorderWidth:kBorderWidth];
-    [borderLayer setBorderColor:[[UIColor colorWithRed:(79/255.0) green:(193/255.0) blue:(233/255.0) alpha:1] CGColor]];
-    [_imageView.layer addSublayer:borderLayer];
 }
 
 - (IBAction)textFieldReturn:(id)sender

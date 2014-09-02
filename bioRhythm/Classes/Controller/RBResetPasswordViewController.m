@@ -79,6 +79,9 @@
     
     if (email.length == 0) {
         _labelUnknownEmail.text = @"Unknown email address";
+        _imageViewEmail.layer.borderWidth = 1.0;
+        _imageViewEmail.layer.borderColor = [UIColor redColor].CGColor;
+        _imageViewEmail.layer.cornerRadius = 5.0;
     }
     else{
         RBForgotPasswordSuccessViewController *controller = [RBForgotPasswordSuccessViewController controllerWithStoryBoard:self.storyboard];
