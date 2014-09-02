@@ -10,6 +10,7 @@
 
 #import "RBCreateAccountViewController.h"
 #import "RBResetPasswordViewController.h"
+#import "RBForgotPasswordSuccessViewController.h"
 
 
 @interface RBLoginViewController ()
@@ -136,9 +137,17 @@
 
 - (IBAction)forgotPass:(id)sender
 {
- 
-    RBResetPasswordViewController *controller = [RBResetPasswordViewController controllerWithStoryBoard:self.storyboard];
-    [self.navigationController pushViewController:controller animated:YES];
+    NSString *email = _textFieldEmail.text;
+    
+    if (email.length != 0)
+    {
+        RBForgotPasswordSuccessViewController *controller = [RBForgotPasswordSuccessViewController controllerWithStoryBoard:self.storyboard];
+        [self.navigationController pushViewController:controller animated:YES];
+    }else
+    {
+        RBResetPasswordViewController *controller = [RBResetPasswordViewController controllerWithStoryBoard:self.storyboard];
+        [self.navigationController pushViewController:controller animated:YES];
+    }
     
 }
 
