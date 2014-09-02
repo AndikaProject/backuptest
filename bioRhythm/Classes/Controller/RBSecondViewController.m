@@ -209,8 +209,6 @@
     
     _buttonFirst.backgroundColor = [UIColor colorWithRed:(250/255.0) green:(250/255.0) blue:(250/255.0) alpha:1];
     
-
-    
     _labelSecondDay.text = @"Tu";
     
     UIFont *boldFont2 = [UIFont systemFontOfSize:[UIFont systemFontSize]];
@@ -358,6 +356,7 @@
     
     _buttonFirst.backgroundColor = [UIColor colorWithRed:(240/255.0) green:(242/255.0) blue:(245/255.0) alpha:1];
     
+
     _labelSecondDay.text = @"Tu";
     
     UIFont *boldFont2 = [UIFont systemFontOfSize:[UIFont systemFontSize]];
@@ -431,6 +430,7 @@
     
     _buttonFirst.backgroundColor = [UIColor colorWithRed:(240/255.0) green:(242/255.0) blue:(245/255.0) alpha:1];
     
+
     _labelSecondDay.text = @"Tu";
     
     UIFont *boldFont2 = [UIFont systemFontOfSize:[UIFont systemFontSize]];
@@ -504,6 +504,7 @@
     
     _buttonFirst.backgroundColor = [UIColor colorWithRed:(240/255.0) green:(242/255.0) blue:(245/255.0) alpha:1];
     
+
     _labelSecondDay.text = @"Tu";
     
     UIFont *boldFont2 = [UIFont systemFontOfSize:[UIFont systemFontSize]];
@@ -577,6 +578,7 @@
     
     _buttonFirst.backgroundColor = [UIColor colorWithRed:(240/255.0) green:(242/255.0) blue:(245/255.0) alpha:1];
     
+
     _labelSecondDay.text = @"Tu";
     
     UIFont *boldFont2 = [UIFont systemFontOfSize:[UIFont systemFontSize]];
@@ -650,6 +652,7 @@
     
     _buttonFirst.backgroundColor = [UIColor colorWithRed:(240/255.0) green:(242/255.0) blue:(245/255.0) alpha:1];
     
+
     _labelSecondDay.text = @"Tu";
     
     UIFont *boldFont2 = [UIFont systemFontOfSize:[UIFont systemFontSize]];

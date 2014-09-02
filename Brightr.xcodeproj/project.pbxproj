@@ -1009,6 +1009,7 @@
 				AE36100019B57380008EA1C3 /* _back.png in Resources */,
 				AE360FF319B57380008EA1C3 /* _account@2x.png in Resources */,
 				AEBD8CEA19B02C9B00F4C235 /* RBBlogCustomCell.xib in Resources */,
+
 				AE36104A19B57380008EA1C3 /* _vitality_tree.png in Resources */,
 				AE36103019B57380008EA1C3 /* _password.png in Resources */,
 				AE36100819B57380008EA1C3 /* _Bubble_lightblue.png in Resources */,
@@ -1025,6 +1026,7 @@
 				AE36101719B57380008EA1C3 /* _coach@2x.png in Resources */,
 				AE36103919B57380008EA1C3 /* _sensors@2x.png in Resources */,
 				AE360FFB19B57380008EA1C3 /* _all_plans@2x.png in Resources */,
+
 				3C19E3F0197C0D8C00B35857 /* RBMenuCustomCell.xib in Resources */,
 				AE36101D19B57380008EA1C3 /* _goal@2x.png in Resources */,
 				AE36100119B57380008EA1C3 /* _back@2x.png in Resources */,
@@ -1054,6 +1056,7 @@
 				AE36104519B57380008EA1C3 /* _stop@2x.png in Resources */,
 				AE36101419B57380008EA1C3 /* _close_bttn.png in Resources */,
 				AEBD8CE519AF3F6B00F4C235 /* RBSettingsCustomCell.xib in Resources */,
+
 				AE36103419B57380008EA1C3 /* _performance.png in Resources */,
 				AE36100E19B57380008EA1C3 /* _calibrate.png in Resources */,
 				AE36102019B57380008EA1C3 /* _lock.png in Resources */,
@@ -1099,6 +1102,9 @@
 				AE36102E19B57380008EA1C3 /* _nutrition_yellow.png in Resources */,
 				AE360FF219B57380008EA1C3 /* _account.png in Resources */,
 				AE360FF719B57380008EA1C3 /* _activity_orange@2x.png in Resources */,
+                
+				3C19E363197A629E00B35857 /* Images.xcassets in Resources */,
+
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
