@@ -23,8 +23,6 @@
 @property (strong, nonatomic) IBOutlet UILabel *labelMental;
 @property (strong, nonatomic) IBOutlet UILabel *labelMentalTime;
 
-@property (strong, nonatomic) IBOutlet UIProgressView *progressViewCalibration;
-
 @property (strong, nonatomic) IBOutlet UINavigationBar *navigationBar;
 @property (strong, nonatomic) IBOutlet UIBarButtonItem *barButtonStop;
 
@@ -135,6 +133,15 @@
 @property (strong, nonatomic) IBOutlet UILabel *labelTooltipMental6;
 @property (strong, nonatomic) IBOutlet UILabel *labelTooltipMental7;
 
+// border below the calendar
+@property (strong, nonatomic) IBOutlet UILabel *labelFirstBorder;
+@property (strong, nonatomic) IBOutlet UILabel *labelSecondBorder;
+@property (strong, nonatomic) IBOutlet UILabel *labelThirdBorder;
+@property (strong, nonatomic) IBOutlet UILabel *labelFourthBorder;
+@property (strong, nonatomic) IBOutlet UILabel *labelFifthBorder;
+@property (strong, nonatomic) IBOutlet UILabel *labelSixthBorder;
+@property (strong, nonatomic) IBOutlet UILabel *labelSeventhBorder;
+
 
 - (IBAction)buttonStopPressed:(id)sender;
 
@@ -161,6 +168,8 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
+    [self loadToday];
+    
     [_navigationBar setBarTintColor:[UIColor colorWithRed:(79/255.0) green:(193/255.0) blue:(233/255.0) alpha:1]];
     _navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName : [UIColor whiteColor]};
     
@@ -184,9 +193,6 @@
     self.labelSleepTime.text = @"6:39 h";
     self.labelActivityTime.text = @"1:20 h";
     self.labelMentalTime.text = @"75 %";
-    
-    // set progress view
-    self.progressViewCalibration.progress=0.42f;
     
     // set bar chart
     
@@ -343,6 +349,31 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void)loadToday
+{
+    // set border
+    _labelFirstBorder.backgroundColor = [UIColor colorWithRed:(79/255.0) green:(193/255.0) blue:(233/255.0) alpha:1];
+    _labelSecondBorder.backgroundColor = [UIColor colorWithRed:(211/255.0) green:(211/255.0) blue:(211/255.0) alpha:1];
+    _labelThirdBorder.backgroundColor = [UIColor colorWithRed:(211/255.0) green:(211/255.0) blue:(211/255.0) alpha:1];
+    _labelFourthBorder.backgroundColor = [UIColor colorWithRed:(211/255.0) green:(211/255.0) blue:(211/255.0) alpha:1];
+    _labelFifthBorder.backgroundColor = [UIColor colorWithRed:(211/255.0) green:(211/255.0) blue:(211/255.0) alpha:1];
+    _labelSixthBorder.backgroundColor = [UIColor colorWithRed:(211/255.0) green:(211/255.0) blue:(211/255.0) alpha:1];
+    _labelSeventhBorder.backgroundColor = [UIColor colorWithRed:(211/255.0) green:(211/255.0) blue:(211/255.0) alpha:1];
+    
+    [_imageViewFirst setImage:[UIImage imageNamed:@""]];
+    
+    _labelFirstDay.text = @"Today";
+    
+    UIFont *boldFont = [UIFont boldSystemFontOfSize:[UIFont systemFontSize]];
+    [_labelFirstDay setFont:boldFont];
+    
+    UIFont *boldFontNumber = [UIFont boldSystemFontOfSize:22];
+    [_labelFirstNumber setFont:boldFontNumber];
+    
+    _buttonFirst.backgroundColor = [UIColor colorWithRed:(250/255.0) green:(250/255.0) blue:(250/255.0) alpha:1];
+
+}
+
 #pragma mark - action
 - (IBAction)buttonStopPressed:(id)sender
 {
@@ -359,7 +390,22 @@
 
 - (IBAction)buttonFirstPressed:(id)sender {
     
+    // set border
+    _labelFirstBorder.backgroundColor = [UIColor colorWithRed:(79/255.0) green:(193/255.0) blue:(233/255.0) alpha:1];
+    _labelSecondBorder.backgroundColor = [UIColor colorWithRed:(211/255.0) green:(211/255.0) blue:(211/255.0) alpha:1];
+    _labelThirdBorder.backgroundColor = [UIColor colorWithRed:(211/255.0) green:(211/255.0) blue:(211/255.0) alpha:1];
+    _labelFourthBorder.backgroundColor = [UIColor colorWithRed:(211/255.0) green:(211/255.0) blue:(211/255.0) alpha:1];
+    _labelFifthBorder.backgroundColor = [UIColor colorWithRed:(211/255.0) green:(211/255.0) blue:(211/255.0) alpha:1];
+    _labelSixthBorder.backgroundColor = [UIColor colorWithRed:(211/255.0) green:(211/255.0) blue:(211/255.0) alpha:1];
+    _labelSeventhBorder.backgroundColor = [UIColor colorWithRed:(211/255.0) green:(211/255.0) blue:(211/255.0) alpha:1];
+    
     [_imageViewFirst setImage:[UIImage imageNamed:@""]];
+    [_imageViewSecond setImage:[UIImage imageNamed:@""]];
+    [_imageViewThird setImage:[UIImage imageNamed:@""]];
+    [_imageViewFourth setImage:[UIImage imageNamed:@""]];
+    [_imageViewFifth setImage:[UIImage imageNamed:@""]];
+    [_imageViewSixth setImage:[UIImage imageNamed:@""]];
+    [_imageViewSeventh setImage:[UIImage imageNamed:@""]];
     
     _labelFirstDay.text = @"Today";
     
@@ -370,8 +416,6 @@
     [_labelFirstNumber setFont:boldFontNumber];
     
     _buttonFirst.backgroundColor = [UIColor colorWithRed:(250/255.0) green:(250/255.0) blue:(250/255.0) alpha:1];
-    
-    self.progressViewCalibration.progress=0.14f;
     
     _labelSecondDay.text = @"Tu";
     
@@ -437,6 +481,15 @@
 
 - (IBAction)buttonSecondPressed:(id)sender {
     
+    // set border
+    _labelFirstBorder.backgroundColor = [UIColor colorWithRed:(79/255.0) green:(193/255.0) blue:(233/255.0) alpha:1];
+    _labelSecondBorder.backgroundColor = [UIColor colorWithRed:(79/255.0) green:(193/255.0) blue:(233/255.0) alpha:1];
+    _labelThirdBorder.backgroundColor = [UIColor colorWithRed:(211/255.0) green:(211/255.0) blue:(211/255.0) alpha:1];
+    _labelFourthBorder.backgroundColor = [UIColor colorWithRed:(211/255.0) green:(211/255.0) blue:(211/255.0) alpha:1];
+    _labelFifthBorder.backgroundColor = [UIColor colorWithRed:(211/255.0) green:(211/255.0) blue:(211/255.0) alpha:1];
+    _labelSixthBorder.backgroundColor = [UIColor colorWithRed:(211/255.0) green:(211/255.0) blue:(211/255.0) alpha:1];
+    _labelSeventhBorder.backgroundColor = [UIColor colorWithRed:(211/255.0) green:(211/255.0) blue:(211/255.0) alpha:1];
+    
     [_imageViewFirst setImage:[UIImage imageNamed:@"_checkmark.png"]];
     [_imageViewSecond setImage:[UIImage imageNamed:@""]];
     [_imageViewThird setImage:[UIImage imageNamed:@""]];
@@ -454,8 +507,6 @@
     [_labelFirstNumber setFont:boldFontNumber];
     
     _buttonFirst.backgroundColor = [UIColor colorWithRed:(240/255.0) green:(242/255.0) blue:(245/255.0) alpha:1];
-    
-    self.progressViewCalibration.progress=0.28f;
     
     _labelSecondDay.text = @"Today";
     
@@ -521,6 +572,15 @@
 
 - (IBAction)buttonThirdressed:(id)sender {
     
+    // set border
+    _labelFirstBorder.backgroundColor = [UIColor colorWithRed:(79/255.0) green:(193/255.0) blue:(233/255.0) alpha:1];
+    _labelSecondBorder.backgroundColor = [UIColor colorWithRed:(79/255.0) green:(193/255.0) blue:(233/255.0) alpha:1];
+    _labelThirdBorder.backgroundColor = [UIColor colorWithRed:(79/255.0) green:(193/255.0) blue:(233/255.0) alpha:1];
+    _labelFourthBorder.backgroundColor = [UIColor colorWithRed:(211/255.0) green:(211/255.0) blue:(211/255.0) alpha:1];
+    _labelFifthBorder.backgroundColor = [UIColor colorWithRed:(211/255.0) green:(211/255.0) blue:(211/255.0) alpha:1];
+    _labelSixthBorder.backgroundColor = [UIColor colorWithRed:(211/255.0) green:(211/255.0) blue:(211/255.0) alpha:1];
+    _labelSeventhBorder.backgroundColor = [UIColor colorWithRed:(211/255.0) green:(211/255.0) blue:(211/255.0) alpha:1];
+    
     [_imageViewFirst setImage:[UIImage imageNamed:@"_checkmark.png"]];
     [_imageViewSecond setImage:[UIImage imageNamed:@"_checkmark.png"]];
     [_imageViewThird setImage:[UIImage imageNamed:@""]];
@@ -538,8 +598,6 @@
     [_labelFirstNumber setFont:boldFontNumber];
     
     _buttonFirst.backgroundColor = [UIColor colorWithRed:(240/255.0) green:(242/255.0) blue:(245/255.0) alpha:1];
-    
-    self.progressViewCalibration.progress=0.43f;
     
     _labelSecondDay.text = @"Tu";
     
@@ -605,6 +663,15 @@
 
 - (IBAction)buttonFourthPressed:(id)sender {
     
+    // set border
+    _labelFirstBorder.backgroundColor = [UIColor colorWithRed:(79/255.0) green:(193/255.0) blue:(233/255.0) alpha:1];
+    _labelSecondBorder.backgroundColor = [UIColor colorWithRed:(79/255.0) green:(193/255.0) blue:(233/255.0) alpha:1];
+    _labelThirdBorder.backgroundColor = [UIColor colorWithRed:(79/255.0) green:(193/255.0) blue:(233/255.0) alpha:1];
+    _labelFourthBorder.backgroundColor = [UIColor colorWithRed:(79/255.0) green:(193/255.0) blue:(233/255.0) alpha:1];
+    _labelFifthBorder.backgroundColor = [UIColor colorWithRed:(211/255.0) green:(211/255.0) blue:(211/255.0) alpha:1];
+    _labelSixthBorder.backgroundColor = [UIColor colorWithRed:(211/255.0) green:(211/255.0) blue:(211/255.0) alpha:1];
+    _labelSeventhBorder.backgroundColor = [UIColor colorWithRed:(211/255.0) green:(211/255.0) blue:(211/255.0) alpha:1];
+    
     [_imageViewFirst setImage:[UIImage imageNamed:@"_checkmark.png"]];
     [_imageViewSecond setImage:[UIImage imageNamed:@"_checkmark.png"]];
     [_imageViewThird setImage:[UIImage imageNamed:@"_checkmark.png"]];
@@ -622,8 +689,6 @@
     [_labelFirstNumber setFont:boldFontNumber];
     
     _buttonFirst.backgroundColor = [UIColor colorWithRed:(240/255.0) green:(242/255.0) blue:(245/255.0) alpha:1];
-    
-    self.progressViewCalibration.progress=0.57f;
     
     _labelSecondDay.text = @"Tu";
     
@@ -689,6 +754,15 @@
 
 - (IBAction)buttonFifthressed:(id)sender {
     
+    // set border
+    _labelFirstBorder.backgroundColor = [UIColor colorWithRed:(79/255.0) green:(193/255.0) blue:(233/255.0) alpha:1];
+    _labelSecondBorder.backgroundColor = [UIColor colorWithRed:(79/255.0) green:(193/255.0) blue:(233/255.0) alpha:1];
+    _labelThirdBorder.backgroundColor = [UIColor colorWithRed:(79/255.0) green:(193/255.0) blue:(233/255.0) alpha:1];
+    _labelFourthBorder.backgroundColor = [UIColor colorWithRed:(79/255.0) green:(193/255.0) blue:(233/255.0) alpha:1];
+    _labelFifthBorder.backgroundColor = [UIColor colorWithRed:(79/255.0) green:(193/255.0) blue:(233/255.0) alpha:1];
+    _labelSixthBorder.backgroundColor = [UIColor colorWithRed:(211/255.0) green:(211/255.0) blue:(211/255.0) alpha:1];
+    _labelSeventhBorder.backgroundColor = [UIColor colorWithRed:(211/255.0) green:(211/255.0) blue:(211/255.0) alpha:1];
+    
     [_imageViewFirst setImage:[UIImage imageNamed:@"_checkmark.png"]];
     [_imageViewSecond setImage:[UIImage imageNamed:@"_checkmark.png"]];
     [_imageViewThird setImage:[UIImage imageNamed:@"_checkmark.png"]];
@@ -706,8 +780,6 @@
     [_labelFirstNumber setFont:boldFontNumber];
     
     _buttonFirst.backgroundColor = [UIColor colorWithRed:(240/255.0) green:(242/255.0) blue:(245/255.0) alpha:1];
-    
-    self.progressViewCalibration.progress=0.71f;
     
     _labelSecondDay.text = @"Tu";
     
@@ -773,6 +845,15 @@
 
 - (IBAction)buttonSixthPressed:(id)sender {
     
+    // set border
+    _labelFirstBorder.backgroundColor = [UIColor colorWithRed:(79/255.0) green:(193/255.0) blue:(233/255.0) alpha:1];
+    _labelSecondBorder.backgroundColor = [UIColor colorWithRed:(79/255.0) green:(193/255.0) blue:(233/255.0) alpha:1];
+    _labelThirdBorder.backgroundColor = [UIColor colorWithRed:(79/255.0) green:(193/255.0) blue:(233/255.0) alpha:1];
+    _labelFourthBorder.backgroundColor = [UIColor colorWithRed:(79/255.0) green:(193/255.0) blue:(233/255.0) alpha:1];
+    _labelFifthBorder.backgroundColor = [UIColor colorWithRed:(79/255.0) green:(193/255.0) blue:(233/255.0) alpha:1];
+    _labelSixthBorder.backgroundColor = [UIColor colorWithRed:(79/255.0) green:(193/255.0) blue:(233/255.0) alpha:1];
+    _labelSeventhBorder.backgroundColor = [UIColor colorWithRed:(211/255.0) green:(211/255.0) blue:(211/255.0) alpha:1];
+    
     [_imageViewFirst setImage:[UIImage imageNamed:@"_checkmark.png"]];
     [_imageViewSecond setImage:[UIImage imageNamed:@"_checkmark.png"]];
     [_imageViewThird setImage:[UIImage imageNamed:@"_checkmark.png"]];
@@ -790,8 +871,6 @@
     [_labelFirstNumber setFont:boldFontNumber];
     
     _buttonFirst.backgroundColor = [UIColor colorWithRed:(240/255.0) green:(242/255.0) blue:(245/255.0) alpha:1];
-    
-    self.progressViewCalibration.progress=0.86f;
     
     _labelSecondDay.text = @"Tu";
     
@@ -857,6 +936,15 @@
 
 - (IBAction)buttonSeventhPressed:(id)sender {
     
+    // set border
+    _labelFirstBorder.backgroundColor = [UIColor colorWithRed:(79/255.0) green:(193/255.0) blue:(233/255.0) alpha:1];
+    _labelSecondBorder.backgroundColor = [UIColor colorWithRed:(79/255.0) green:(193/255.0) blue:(233/255.0) alpha:1];
+    _labelThirdBorder.backgroundColor = [UIColor colorWithRed:(79/255.0) green:(193/255.0) blue:(233/255.0) alpha:1];
+    _labelFourthBorder.backgroundColor = [UIColor colorWithRed:(79/255.0) green:(193/255.0) blue:(233/255.0) alpha:1];
+    _labelFifthBorder.backgroundColor = [UIColor colorWithRed:(79/255.0) green:(193/255.0) blue:(233/255.0) alpha:1];
+    _labelSixthBorder.backgroundColor = [UIColor colorWithRed:(79/255.0) green:(193/255.0) blue:(233/255.0) alpha:1];
+    _labelSeventhBorder.backgroundColor = [UIColor colorWithRed:(79/255.0) green:(193/255.0) blue:(233/255.0) alpha:1];
+    
     [_imageViewFirst setImage:[UIImage imageNamed:@"_checkmark.png"]];
     [_imageViewSecond setImage:[UIImage imageNamed:@"_checkmark.png"]];
     [_imageViewThird setImage:[UIImage imageNamed:@"_checkmark.png"]];
@@ -874,8 +962,6 @@
     [_labelFirstNumber setFont:boldFontNumber];
     
     _buttonFirst.backgroundColor = [UIColor colorWithRed:(240/255.0) green:(242/255.0) blue:(245/255.0) alpha:1];
-    
-    self.progressViewCalibration.progress=1.0f;
     
     _labelSecondDay.text = @"Tu";
     
