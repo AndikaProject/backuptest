@@ -73,7 +73,7 @@
 }
 
 - (void)viewDidAppear:(BOOL)animated{
-    [_scrollerBlog setContentSize:CGSizeMake(320, 1000)];
+    [_scrollerBlog setContentSize:CGSizeMake(320, 640)];
 }
 
 - (void)didReceiveMemoryWarning
@@ -109,7 +109,13 @@
         RBBlogCustomCell *cell = [tableView dequeueReusableCellWithIdentifier:@"RBBlogCustomCell"];
         
         NSDictionary *item = [_postArray objectAtIndex:indexPath.row];
-        cell.labelHeader.text = [item objectForKey:@"title"];
+        
+        NSRange rg;
+        
+        NSString *header = [item objectForKey:@"title"];
+        while ((rg=[header rangeOfString:@"&#038;" options:NSRegularExpressionSearch]).location != NSNotFound)
+            header = [header stringByReplacingCharactersInRange:rg withString:@""];
+        cell.labelHeader.text = header;
         
         NSString *path = [item objectForKey:@"thumbnail"];
         NSURL *url = [NSURL URLWithString:path];
@@ -140,6 +146,8 @@
     while ((r=[s rangeOfString:@"<[^>]+>\\s*" options:NSRegularExpressionSearch]).location != NSNotFound)
         s = [s stringByReplacingCharactersInRange:r withString:@""];
     
+    while ((r=[u rangeOfString:@"&#038;" options:NSRegularExpressionSearch]).location != NSNotFound)
+    u = [u stringByReplacingCharactersInRange:r withString:@""];
     NSLog(@"this %@",s  );
     
     

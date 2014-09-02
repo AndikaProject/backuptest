@@ -167,135 +167,135 @@
 }
 
 - (IBAction)textFieldEmailClicked:(id)sender {
-    [_imageViewEmailField setImage:[UIImage imageNamed:@"_username_selected.png"]];
-    
-    // set border image
-    #define kBorderWidth 1.0
-    #define kCornerRadius 5.0
-    CALayer *borderLayer = [CALayer layer];
-    CGRect borderFrame = CGRectMake(0, 0, (_imageViewEmail.frame.size.width), (_imageViewEmail.frame.size.height));
-    [borderLayer setBackgroundColor:[[UIColor clearColor] CGColor]];
-    [borderLayer setFrame:borderFrame];
-    [borderLayer setCornerRadius:kCornerRadius];
-    [borderLayer setBorderWidth:kBorderWidth];
-    [borderLayer setBorderColor:[[UIColor colorWithRed:(79/255.0) green:(193/255.0) blue:(233/255.0) alpha:1] CGColor]];
-    [_imageViewEmail.layer addSublayer:borderLayer];
-    
-    [_imageViewPasswordField setImage:[UIImage imageNamed:@"_password.png"]];
-    
-    // set border image
-    #define kBorderWidth 1.0
-    #define kCornerRadius 5.0
-    CALayer *borderLayer2 = [CALayer layer];
-    CGRect borderFrame2 = CGRectMake(0, 0, (_imageViewPassword.frame.size.width), (_imageViewPassword.frame.size.height));
-    [borderLayer2 setBackgroundColor:[[UIColor clearColor] CGColor]];
-    [borderLayer2 setFrame:borderFrame2];
-    [borderLayer2 setCornerRadius:kCornerRadius];
-    [borderLayer2 setBorderWidth:kBorderWidth];
-    [borderLayer2 setBorderColor:[[UIColor lightGrayColor] CGColor]];
-    [_imageViewPassword.layer addSublayer:borderLayer2];
-    
-    [_imageViewRpasswordField setImage:[UIImage imageNamed:@"_password.png"]];
-    
-    // set border image
-    #define kBorderWidth 1.0
-    #define kCornerRadius 5.0
-    CALayer *borderLayer3 = [CALayer layer];
-    CGRect borderFrame3 = CGRectMake(0, 0, (_imageViewRepeatPass.frame.size.width), (_imageViewRepeatPass.frame.size.height));
-    [borderLayer3 setBackgroundColor:[[UIColor clearColor] CGColor]];
-    [borderLayer3 setFrame:borderFrame3];
-    [borderLayer3 setCornerRadius:kCornerRadius];
-    [borderLayer3 setBorderWidth:kBorderWidth];
-    [borderLayer3 setBorderColor:[[UIColor lightGrayColor] CGColor]];
-    [_imageViewRepeatPass.layer addSublayer:borderLayer3];
+//    [_imageViewEmailField setImage:[UIImage imageNamed:@"_username_selected.png"]];
+//    
+//    // set border image
+//    #define kBorderWidth 1.0
+//    #define kCornerRadius 5.0
+//    CALayer *borderLayer = [CALayer layer];
+//    CGRect borderFrame = CGRectMake(0, 0, (_imageViewEmail.frame.size.width), (_imageViewEmail.frame.size.height));
+//    [borderLayer setBackgroundColor:[[UIColor clearColor] CGColor]];
+//    [borderLayer setFrame:borderFrame];
+//    [borderLayer setCornerRadius:kCornerRadius];
+//    [borderLayer setBorderWidth:kBorderWidth];
+//    [borderLayer setBorderColor:[[UIColor colorWithRed:(79/255.0) green:(193/255.0) blue:(233/255.0) alpha:1] CGColor]];
+//    [_imageViewEmail.layer addSublayer:borderLayer];
+//    
+//    [_imageViewPasswordField setImage:[UIImage imageNamed:@"_password.png"]];
+//    
+//    // set border image
+//    #define kBorderWidth 1.0
+//    #define kCornerRadius 5.0
+//    CALayer *borderLayer2 = [CALayer layer];
+//    CGRect borderFrame2 = CGRectMake(0, 0, (_imageViewPassword.frame.size.width), (_imageViewPassword.frame.size.height));
+//    [borderLayer2 setBackgroundColor:[[UIColor clearColor] CGColor]];
+//    [borderLayer2 setFrame:borderFrame2];
+//    [borderLayer2 setCornerRadius:kCornerRadius];
+//    [borderLayer2 setBorderWidth:kBorderWidth];
+//    [borderLayer2 setBorderColor:[[UIColor lightGrayColor] CGColor]];
+//    [_imageViewPassword.layer addSublayer:borderLayer2];
+//    
+//    [_imageViewRpasswordField setImage:[UIImage imageNamed:@"_password.png"]];
+//    
+//    // set border image
+//    #define kBorderWidth 1.0
+//    #define kCornerRadius 5.0
+//    CALayer *borderLayer3 = [CALayer layer];
+//    CGRect borderFrame3 = CGRectMake(0, 0, (_imageViewRepeatPass.frame.size.width), (_imageViewRepeatPass.frame.size.height));
+//    [borderLayer3 setBackgroundColor:[[UIColor clearColor] CGColor]];
+//    [borderLayer3 setFrame:borderFrame3];
+//    [borderLayer3 setCornerRadius:kCornerRadius];
+//    [borderLayer3 setBorderWidth:kBorderWidth];
+//    [borderLayer3 setBorderColor:[[UIColor lightGrayColor] CGColor]];
+//    [_imageViewRepeatPass.layer addSublayer:borderLayer3];
 }
 
 - (IBAction)textFieldPasswordClicked:(id)sender {
-    [_imageViewEmailField setImage:[UIImage imageNamed:@"_username.png"]];
-    
-    // set border image
-    #define kBorderWidth 1.0
-    #define kCornerRadius 5.0
-    CALayer *borderLayer = [CALayer layer];
-    CGRect borderFrame = CGRectMake(0, 0, (_imageViewEmail.frame.size.width), (_imageViewEmail.frame.size.height));
-    [borderLayer setBackgroundColor:[[UIColor clearColor] CGColor]];
-    [borderLayer setFrame:borderFrame];
-    [borderLayer setCornerRadius:kCornerRadius];
-    [borderLayer setBorderWidth:kBorderWidth];
-    [borderLayer setBorderColor:[[UIColor lightGrayColor] CGColor]];
-    [_imageViewEmail.layer addSublayer:borderLayer];
-    
-    [_imageViewPasswordField setImage:[UIImage imageNamed:@"_password_selected.png"]];
-    
-    // set border image
-    #define kBorderWidth 1.0
-    #define kCornerRadius 5.0
-    CALayer *borderLayer2 = [CALayer layer];
-    CGRect borderFrame2 = CGRectMake(0, 0, (_imageViewPassword.frame.size.width), (_imageViewPassword.frame.size.height));
-    [borderLayer2 setBackgroundColor:[[UIColor clearColor] CGColor]];
-    [borderLayer2 setFrame:borderFrame2];
-    [borderLayer2 setCornerRadius:kCornerRadius];
-    [borderLayer2 setBorderWidth:kBorderWidth];
-    [borderLayer2 setBorderColor:[[UIColor colorWithRed:(79/255.0) green:(193/255.0) blue:(233/255.0) alpha:1] CGColor]];
-    [_imageViewPassword.layer addSublayer:borderLayer2];
-    
-    [_imageViewRpasswordField setImage:[UIImage imageNamed:@"_password.png"]];
-    
-    // set border image
-    #define kBorderWidth 1.0
-    #define kCornerRadius 5.0
-    CALayer *borderLayer3 = [CALayer layer];
-    CGRect borderFrame3 = CGRectMake(0, 0, (_imageViewRepeatPass.frame.size.width), (_imageViewRepeatPass.frame.size.height));
-    [borderLayer3 setBackgroundColor:[[UIColor clearColor] CGColor]];
-    [borderLayer3 setFrame:borderFrame3];
-    [borderLayer3 setCornerRadius:kCornerRadius];
-    [borderLayer3 setBorderWidth:kBorderWidth];
-    [borderLayer3 setBorderColor:[[UIColor lightGrayColor] CGColor]];
-    [_imageViewRepeatPass.layer addSublayer:borderLayer3];
+//    [_imageViewEmailField setImage:[UIImage imageNamed:@"_username.png"]];
+//    
+//    // set border image
+//    #define kBorderWidth 1.0
+//    #define kCornerRadius 5.0
+//    CALayer *borderLayer = [CALayer layer];
+//    CGRect borderFrame = CGRectMake(0, 0, (_imageViewEmail.frame.size.width), (_imageViewEmail.frame.size.height));
+//    [borderLayer setBackgroundColor:[[UIColor clearColor] CGColor]];
+//    [borderLayer setFrame:borderFrame];
+//    [borderLayer setCornerRadius:kCornerRadius];
+//    [borderLayer setBorderWidth:kBorderWidth];
+//    [borderLayer setBorderColor:[[UIColor lightGrayColor] CGColor]];
+//    [_imageViewEmail.layer addSublayer:borderLayer];
+//    
+//    [_imageViewPasswordField setImage:[UIImage imageNamed:@"_password_selected.png"]];
+//    
+//    // set border image
+//    #define kBorderWidth 1.0
+//    #define kCornerRadius 5.0
+//    CALayer *borderLayer2 = [CALayer layer];
+//    CGRect borderFrame2 = CGRectMake(0, 0, (_imageViewPassword.frame.size.width), (_imageViewPassword.frame.size.height));
+//    [borderLayer2 setBackgroundColor:[[UIColor clearColor] CGColor]];
+//    [borderLayer2 setFrame:borderFrame2];
+//    [borderLayer2 setCornerRadius:kCornerRadius];
+//    [borderLayer2 setBorderWidth:kBorderWidth];
+//    [borderLayer2 setBorderColor:[[UIColor colorWithRed:(79/255.0) green:(193/255.0) blue:(233/255.0) alpha:1] CGColor]];
+//    [_imageViewPassword.layer addSublayer:borderLayer2];
+//    
+//    [_imageViewRpasswordField setImage:[UIImage imageNamed:@"_password.png"]];
+//    
+//    // set border image
+//    #define kBorderWidth 1.0
+//    #define kCornerRadius 5.0
+//    CALayer *borderLayer3 = [CALayer layer];
+//    CGRect borderFrame3 = CGRectMake(0, 0, (_imageViewRepeatPass.frame.size.width), (_imageViewRepeatPass.frame.size.height));
+//    [borderLayer3 setBackgroundColor:[[UIColor clearColor] CGColor]];
+//    [borderLayer3 setFrame:borderFrame3];
+//    [borderLayer3 setCornerRadius:kCornerRadius];
+//    [borderLayer3 setBorderWidth:kBorderWidth];
+//    [borderLayer3 setBorderColor:[[UIColor lightGrayColor] CGColor]];
+//    [_imageViewRepeatPass.layer addSublayer:borderLayer3];
 }
 
 - (IBAction)textFieldRpassClicked:(id)sender {
-    [_imageViewEmailField setImage:[UIImage imageNamed:@"_username.png"]];
-    
-    // set border image
-    #define kBorderWidth 1.0
-    #define kCornerRadius 5.0
-    CALayer *borderLayer = [CALayer layer];
-    CGRect borderFrame = CGRectMake(0, 0, (_imageViewEmail.frame.size.width), (_imageViewEmail.frame.size.height));
-    [borderLayer setBackgroundColor:[[UIColor clearColor] CGColor]];
-    [borderLayer setFrame:borderFrame];
-    [borderLayer setCornerRadius:kCornerRadius];
-    [borderLayer setBorderWidth:kBorderWidth];
-    [borderLayer setBorderColor:[[UIColor lightGrayColor] CGColor]];
-    [_imageViewEmail.layer addSublayer:borderLayer];
-    
-    [_imageViewPasswordField setImage:[UIImage imageNamed:@"_password.png"]];
-    
-    // set border image
-    #define kBorderWidth 1.0
-    #define kCornerRadius 5.0
-    CALayer *borderLayer2 = [CALayer layer];
-    CGRect borderFrame2 = CGRectMake(0, 0, (_imageViewPassword.frame.size.width), (_imageViewPassword.frame.size.height));
-    [borderLayer2 setBackgroundColor:[[UIColor clearColor] CGColor]];
-    [borderLayer2 setFrame:borderFrame2];
-    [borderLayer2 setCornerRadius:kCornerRadius];
-    [borderLayer2 setBorderWidth:kBorderWidth];
-    [borderLayer2 setBorderColor:[[UIColor lightGrayColor] CGColor]];
-    [_imageViewPassword.layer addSublayer:borderLayer2];
-    
-    [_imageViewRpasswordField setImage:[UIImage imageNamed:@"_password_selected.png"]];
-    
-    // set border image
-    #define kBorderWidth 1.0
-    #define kCornerRadius 5.0
-    CALayer *borderLayer3 = [CALayer layer];
-    CGRect borderFrame3 = CGRectMake(0, 0, (_imageViewRepeatPass.frame.size.width), (_imageViewRepeatPass.frame.size.height));
-    [borderLayer3 setBackgroundColor:[[UIColor clearColor] CGColor]];
-    [borderLayer3 setFrame:borderFrame3];
-    [borderLayer3 setCornerRadius:kCornerRadius];
-    [borderLayer3 setBorderWidth:kBorderWidth];
-    [borderLayer3 setBorderColor:[[UIColor colorWithRed:(79/255.0) green:(193/255.0) blue:(233/255.0) alpha:1] CGColor]];
-    [_imageViewRepeatPass.layer addSublayer:borderLayer3];
+//    [_imageViewEmailField setImage:[UIImage imageNamed:@"_username.png"]];
+//    
+//    // set border image
+//    #define kBorderWidth 1.0
+//    #define kCornerRadius 5.0
+//    CALayer *borderLayer = [CALayer layer];
+//    CGRect borderFrame = CGRectMake(0, 0, (_imageViewEmail.frame.size.width), (_imageViewEmail.frame.size.height));
+//    [borderLayer setBackgroundColor:[[UIColor clearColor] CGColor]];
+//    [borderLayer setFrame:borderFrame];
+//    [borderLayer setCornerRadius:kCornerRadius];
+//    [borderLayer setBorderWidth:kBorderWidth];
+//    [borderLayer setBorderColor:[[UIColor lightGrayColor] CGColor]];
+//    [_imageViewEmail.layer addSublayer:borderLayer];
+//    
+//    [_imageViewPasswordField setImage:[UIImage imageNamed:@"_password.png"]];
+//    
+//    // set border image
+//    #define kBorderWidth 1.0
+//    #define kCornerRadius 5.0
+//    CALayer *borderLayer2 = [CALayer layer];
+//    CGRect borderFrame2 = CGRectMake(0, 0, (_imageViewPassword.frame.size.width), (_imageViewPassword.frame.size.height));
+//    [borderLayer2 setBackgroundColor:[[UIColor clearColor] CGColor]];
+//    [borderLayer2 setFrame:borderFrame2];
+//    [borderLayer2 setCornerRadius:kCornerRadius];
+//    [borderLayer2 setBorderWidth:kBorderWidth];
+//    [borderLayer2 setBorderColor:[[UIColor lightGrayColor] CGColor]];
+//    [_imageViewPassword.layer addSublayer:borderLayer2];
+//    
+//    [_imageViewRpasswordField setImage:[UIImage imageNamed:@"_password_selected.png"]];
+//    
+//    // set border image
+//    #define kBorderWidth 1.0
+//    #define kCornerRadius 5.0
+//    CALayer *borderLayer3 = [CALayer layer];
+//    CGRect borderFrame3 = CGRectMake(0, 0, (_imageViewRepeatPass.frame.size.width), (_imageViewRepeatPass.frame.size.height));
+//    [borderLayer3 setBackgroundColor:[[UIColor clearColor] CGColor]];
+//    [borderLayer3 setFrame:borderFrame3];
+//    [borderLayer3 setCornerRadius:kCornerRadius];
+//    [borderLayer3 setBorderWidth:kBorderWidth];
+//    [borderLayer3 setBorderColor:[[UIColor colorWithRed:(79/255.0) green:(193/255.0) blue:(233/255.0) alpha:1] CGColor]];
+//    [_imageViewRepeatPass.layer addSublayer:borderLayer3];
 }
 
 - (IBAction)textFieldReturn:(id)sender
