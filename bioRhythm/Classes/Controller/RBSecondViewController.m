@@ -93,16 +93,9 @@
     
     [self.tabBarController.tabBar setHidden:NO];
     
-//    [self.slidingViewController.topViewController.view addGestureRecognizer:self.slidingViewController.panGesture];
-//    self.slidingViewController.topViewAnchoredGesture = ECSlidingViewControllerAnchoredGestureTapping | ECSlidingViewControllerAnchoredGesturePanning;
-    
     self.navigationController.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName : [UIColor whiteColor]};
     
     [self.navigationController setNavigationBarHidden:NO]; // it shows nav bar
-    
-//    self.tabBarController.tabBar.barTintColor =  [UIColor colorWithRed:(79/255.0) green:(193/255.0) blue:(233/255.0) alpha:1];
-//    
-//    [[UITabBar appearance] setTintColor:[UIColor whiteColor]];
     
     [self.navigationController.navigationBar setBarTintColor:[UIColor colorWithRed:(79/255.0) green:(193/255.0) blue:(233/255.0) alpha:1]];
     
