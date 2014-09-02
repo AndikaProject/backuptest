@@ -97,7 +97,7 @@
         cell.textLabel.text = @"ACCOUNT";
         cell.textLabel.textColor = [UIColor darkGrayColor];
         [cell.textLabel setFont:[UIFont systemFontOfSize:16]];
-        cell.backgroundColor = [UIColor colorWithRed:(246/255.0) green:(248/255.0) blue:(244/255.0) alpha:1];
+        cell.backgroundColor = [UIColor colorWithRed:(240/255.0) green:(242/255.0) blue:(245/255.0) alpha:1];
 
         return cell;
         
@@ -133,7 +133,7 @@
         cell.textLabel.textColor = [UIColor darkGrayColor];
         [cell.textLabel setFont:[UIFont systemFontOfSize:16]];
         cell.backgroundColor = [UIColor lightGrayColor];
-        cell.backgroundColor = [UIColor colorWithRed:(246/255.0) green:(248/255.0) blue:(244/255.0) alpha:1];
+        cell.backgroundColor = [UIColor colorWithRed:(240/255.0) green:(242/255.0) blue:(245/255.0) alpha:1];
         
         return cell;
         
