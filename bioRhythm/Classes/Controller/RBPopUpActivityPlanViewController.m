@@ -9,6 +9,7 @@
 #import "RBPopUpActivityPlanViewController.h"
 
 #import "RBFirstViewController.h"
+#import "RBActivityPlanInputViewController.h"
 
 @interface RBPopUpActivityPlanViewController ()
 
@@ -93,7 +94,7 @@
     [self.navigationController.view.layer addAnimation:transition
                                                 forKey:kCATransition];
     
-    RBFirstViewController *controller = [RBFirstViewController controllerWithStoryBoard:self.storyboard];
+    RBActivityPlanInputViewController *controller = [RBActivityPlanInputViewController controllerWithStoryBoard:self.storyboard];
     [self.navigationController pushViewController:controller animated:NO];
 }
 

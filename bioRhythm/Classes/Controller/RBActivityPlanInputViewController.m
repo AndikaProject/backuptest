@@ -1,17 +1,16 @@
 //
-//  RBManualInputViewController.m
+//  RBActivityPlanInputViewController.m
 //  Brightr
 //
-//  Created by Tjaraka Asset on 8/28/14.
+//  Created by Tjaraka Asset on 9/2/14.
 //  Copyright (c) 2014 Tjaraka Asset. All rights reserved.
 //
 
-#import "RBManualInputViewController.h"
+#import "RBActivityPlanInputViewController.h"
 
 #import "RBFirstViewController.h"
-#import "RBWeeksSleepPlanViewController.h"
 
-@interface RBManualInputViewController ()
+@interface RBActivityPlanInputViewController ()
 
 @property (strong, nonatomic) NSArray *arrayHour;
 
@@ -27,10 +26,10 @@
 
 @end
 
-@implementation RBManualInputViewController
+@implementation RBActivityPlanInputViewController
 
 + (instancetype)controllerWithStoryBoard:(UIStoryboard *)storyboard {
-    RBManualInputViewController *controller = [storyboard instantiateViewControllerWithIdentifier:@"RBManualInputViewController"];
+    RBActivityPlanInputViewController *controller = [storyboard instantiateViewControllerWithIdentifier:@"RBActivityPlanInputViewController"];
     
     return controller;
 }
@@ -61,9 +60,9 @@
     self.arrayHour = dataHour;
     
     // array menit
-//    NSArray *dataMinute = [[NSArray alloc] initWithObjects:@"00", @"01", @"02", @"03", @"04", @"05", @"06", @"07", @"08", @"09", @"10", @"11", @"12", @"13", @"14", @"15", @"16", @"17", @"18", @"19", @"20", @"21", @"22", @"23", @"24", @"25", @"26", @"27", @"28", @"29", @"30", @"31", @"32", @"33", @"34", @"35", @"36", @"37", @"38", @"39", @"40", @"41", @"42", @"43", @"44", @"45", @"46", @"47", @"48", @"49", @"50", @"51", @"52", @"53", @"54", @"55", @"56", @"57", @"58", @"59", nil];
-//    
-//    self.arrayMinute = dataMinute;
+    //    NSArray *dataMinute = [[NSArray alloc] initWithObjects:@"00", @"01", @"02", @"03", @"04", @"05", @"06", @"07", @"08", @"09", @"10", @"11", @"12", @"13", @"14", @"15", @"16", @"17", @"18", @"19", @"20", @"21", @"22", @"23", @"24", @"25", @"26", @"27", @"28", @"29", @"30", @"31", @"32", @"33", @"34", @"35", @"36", @"37", @"38", @"39", @"40", @"41", @"42", @"43", @"44", @"45", @"46", @"47", @"48", @"49", @"50", @"51", @"52", @"53", @"54", @"55", @"56", @"57", @"58", @"59", nil];
+    //
+    //    self.arrayMinute = dataMinute;
 }
 
 -(void)viewWillAppear:(BOOL)animated
@@ -98,14 +97,14 @@
     {
         numberOfRows = [_arrayHour count];
     }
-//    else if (component == 2)
-//    {
-//        numberOfRows = [_arrayMinute count];
-//    }
-//    else
-//    {
-//        numberOfRows = 1;
-//    }
+    //    else if (component == 2)
+    //    {
+    //        numberOfRows = [_arrayMinute count];
+    //    }
+    //    else
+    //    {
+    //        numberOfRows = 1;
+    //    }
     return numberOfRows;
     
 }
@@ -119,12 +118,12 @@
         case 0:
             title = self.arrayHour[row];
             break;
-//        case 2:
-//            title = self.arrayMinute[row];
-//            break;
-//        case 1:
-//            title = @":";
-//            break;
+            //        case 2:
+            //            title = self.arrayMinute[row];
+            //            break;
+            //        case 1:
+            //            title = @":";
+            //            break;
         default:
             break;
     }
@@ -148,15 +147,15 @@
 
 - (IBAction)buttonStartPressed:(id)sender
 {
-    CATransition* transition = [CATransition animation];
-    transition.duration = 0.3f;
-    transition.type = kCATransitionReveal;
-    transition.subtype = kCATransitionFromBottom;
-    [self.navigationController.view.layer addAnimation:transition
-                                                forKey:kCATransition];
-    
-    RBWeeksSleepPlanViewController *controller = [RBWeeksSleepPlanViewController controllerWithStoryBoard:self.storyboard];
-    [self.navigationController pushViewController:controller animated:NO];
+//    CATransition* transition = [CATransition animation];
+//    transition.duration = 0.3f;
+//    transition.type = kCATransitionReveal;
+//    transition.subtype = kCATransitionFromBottom;
+//    [self.navigationController.view.layer addAnimation:transition
+//                                                forKey:kCATransition];
+//    
+//    RBWeeksSleepPlanViewController *controller = [RBWeeksSleepPlanViewController controllerWithStoryBoard:self.storyboard];
+//    [self.navigationController pushViewController:controller animated:NO];
 }
 
 /*

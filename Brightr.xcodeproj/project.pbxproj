@@ -150,6 +150,7 @@
 		AE36104A19B57380008EA1C3 /* _vitality_tree.png in Resources */ = {isa = PBXBuildFile; fileRef = AE360FF019B57380008EA1C3 /* _vitality_tree.png */; };
 		AE36104B19B57380008EA1C3 /* _vitality_tree@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AE360FF119B57380008EA1C3 /* _vitality_tree@2x.png */; };
 		AE36104C19B57827008EA1C3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3C19E35F197A629E00B35857 /* Images.xcassets */; };
+		AE36104F19B5A464008EA1C3 /* RBActivityPlanInputViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AE36104E19B5A464008EA1C3 /* RBActivityPlanInputViewController.m */; };
 		AEBD8C5F19AED4AD00F4C235 /* RBPopUpSleepPlanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AEBD8C5E19AED4AD00F4C235 /* RBPopUpSleepPlanViewController.m */; };
 		AEBD8C6219AED81B00F4C235 /* RBManualInputViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AEBD8C6119AED81B00F4C235 /* RBManualInputViewController.m */; };
 		AEBD8C6B19AF2C1300F4C235 /* RBFifthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AEBD8C6A19AF2C1300F4C235 /* RBFifthViewController.m */; };
@@ -440,6 +441,8 @@
 		AE360FEF19B57380008EA1C3 /* _username_selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "_username_selected@2x.png"; sourceTree = "<group>"; };
 		AE360FF019B57380008EA1C3 /* _vitality_tree.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = _vitality_tree.png; sourceTree = "<group>"; };
 		AE360FF119B57380008EA1C3 /* _vitality_tree@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "_vitality_tree@2x.png"; sourceTree = "<group>"; };
+		AE36104D19B5A464008EA1C3 /* RBActivityPlanInputViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RBActivityPlanInputViewController.h; sourceTree = "<group>"; };
+		AE36104E19B5A464008EA1C3 /* RBActivityPlanInputViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RBActivityPlanInputViewController.m; sourceTree = "<group>"; };
 		AEBD8C5D19AED4AD00F4C235 /* RBPopUpSleepPlanViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RBPopUpSleepPlanViewController.h; sourceTree = "<group>"; };
 		AEBD8C5E19AED4AD00F4C235 /* RBPopUpSleepPlanViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RBPopUpSleepPlanViewController.m; sourceTree = "<group>"; };
 		AEBD8C6019AED81B00F4C235 /* RBManualInputViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RBManualInputViewController.h; sourceTree = "<group>"; };
@@ -581,6 +584,8 @@
 				3C36D68419B49F8700DEE0A4 /* RBMindCoachViewController.m */,
 				3C36D68619B4A11C00DEE0A4 /* RBNutritionCoachViewController.h */,
 				3C36D68719B4A11C00DEE0A4 /* RBNutritionCoachViewController.m */,
+				AE36104D19B5A464008EA1C3 /* RBActivityPlanInputViewController.h */,
+				AE36104E19B5A464008EA1C3 /* RBActivityPlanInputViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -1164,6 +1169,7 @@
 				3CA870FB19A734F700B29070 /* RBCalDoneViewController.m in Sources */,
 				3C19E3EA197C0A9200B35857 /* RBResetPasswordViewController.m in Sources */,
 				3C43088719A341B80085DD3A /* RBThirdCalIntroViewController.m in Sources */,
+				AE36104F19B5A464008EA1C3 /* RBActivityPlanInputViewController.m in Sources */,
 				AEBD8C5F19AED4AD00F4C235 /* RBPopUpSleepPlanViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
